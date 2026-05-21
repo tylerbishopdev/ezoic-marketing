@@ -5,19 +5,19 @@
     "email": "tbishop@ezoic.com"
   },
   "metadata": {
-    "description": "Ezoic's internal marketing plugins. For use by Ezoic employees and contracted partners only. Not for public distribution."
+    "description": "Ezoic's marketing plugins. Proprietary and source-available — © Ezoic Inc. No reuse or redistribution without permission."
   },
   "plugins": [
     {
       "name": "ezoic-marketing",
       "source": "./",
-      "description": "Ezoic's marketing playbook for Claude Code — multi-channel content, sales materials, decks, landing pages, objections, campaigns, positioning, brand review. Loads the canonical Ezoic brand system from iheartezoic.com (MCP / API / llms.txt) and shared references; enforces it across every output. Internal + partner use only.",
+      "description": "Ezoic's marketing playbook for Claude Code — multi-channel content, sales materials, decks, landing pages, objections, campaigns, positioning, brand review. Loads the canonical Ezoic brand system from iheartezoic.com (MCP / API / llms.txt) and shared references; enforces it across every output. Proprietary, source-available — © Ezoic Inc.",
       "category": "marketing",
       "tags": [
         "ezoic",
         "marketing",
         "brand-voice",
-        "internal-only",
+        "proprietary",
         "publishers",
         "web-apps",
         "saas",

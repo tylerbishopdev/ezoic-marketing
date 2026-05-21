@@ -1,27 +1,28 @@
 Copyright (c) 2026 Ezoic Inc. All rights reserved.
 
-PROPRIETARY AND CONFIDENTIAL — INTERNAL + PARTNER USE ONLY
+PROPRIETARY — SOURCE-AVAILABLE
 
-This software and its accompanying reference materials (the "Plugin") are the
-proprietary and confidential property of Ezoic Inc. ("Ezoic"). The Plugin is
-licensed, not sold, and is provided solely for use by Ezoic employees and
-Ezoic-contracted partners in the course of producing Ezoic marketing and sales
-materials.
+This repository and its contents (the "Plugin") are the proprietary property of
+Ezoic Inc. ("Ezoic"). The source is published publicly for convenience of
+installation and reference. It is NOT open source. All rights are reserved.
 
-Permitted:
-  - Internal use by Ezoic employees and contracted partners.
-  - Local modification of references and skills for internal Ezoic use.
+You MAY:
+  - Install and use the Plugin with Claude Code to produce Ezoic marketing and
+    sales materials.
+  - Read the source and the bundled reference materials.
+  - Modify your local copy for your own use of the Plugin.
 
-Not permitted without prior written authorization from Ezoic:
-  - Public distribution, resale, sublicensing, or publication of the Plugin or
-    any substantial portion of it.
-  - Use of the brand voice, positioning, proof points, design system, or other
-    reference content for any organization other than Ezoic.
+You MAY NOT, without prior written permission from Ezoic:
+  - Redistribute, resell, sublicense, or republish the Plugin or any substantial
+    portion of it.
+  - Repackage or reuse the brand voice, positioning, proof points, design system,
+    or other reference content for any organization other than Ezoic, or present
+    it as your own.
 
-The brand assets, marks, and live brand library referenced by this Plugin
-(including those served from iheartezoic.com) remain the exclusive property of
+The Ezoic brand assets, marks, and live brand library referenced by this Plugin
+(including content served from iheartezoic.com) remain the exclusive property of
 Ezoic and are governed by Ezoic's brand usage guidelines.
 
-THE PLUGIN IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED. EZOIC SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY
-ARISING FROM THE USE OF THE PLUGIN.
+THE PLUGIN IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+EZOIC SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM
+THE USE OF THE PLUGIN.

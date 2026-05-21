@@ -1,0 +1,29 @@
+{
+  "name": "ezoic-marketing",
+  "description": "Ezoic's marketing playbook in code — multi-channel content, sales materials, decks, landing pages, objection handling, campaigns, positioning, and brand review. Loads the canonical Ezoic brand system (voice, positioning, audiences, channels, products, proof, design bible) from iheartezoic.com (MCP / API / llms.txt) and the shared references, then enforces it across every output. Direct, confident, technical — revenue infrastructure for the modern web.",
+  "author": {
+    "name": "Ezoic Marketing",
+    "email": "tbishop@ezoic.com"
+  },
+  "homepage": "https://iheartezoic.com",
+  "license": "Proprietary",
+  "keywords": [
+    "ezoic",
+    "marketing",
+    "brand-voice",
+    "revenue-infrastructure",
+    "publishers",
+    "web-apps",
+    "saas",
+    "online-games",
+    "newsletters",
+    "ad-tech",
+    "positioning",
+    "campaign-planning",
+    "content-creation",
+    "case-studies",
+    "landing-pages",
+    "pitch-decks",
+    "objection-handling"
+  ]
+}

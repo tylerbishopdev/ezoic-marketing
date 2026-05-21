@@ -1,0 +1,28 @@
+{
+  "name": "ezoic-internal-marketing",
+  "owner": {
+    "name": "Ezoic Marketing",
+    "email": "tbishop@ezoic.com"
+  },
+  "metadata": {
+    "description": "Ezoic's internal marketing plugins. For use by Ezoic employees and contracted partners only. Not for public distribution."
+  },
+  "plugins": [
+    {
+      "name": "ezoic-marketing",
+      "source": "./",
+      "description": "Ezoic's marketing playbook for Claude Code — multi-channel content, sales materials, decks, landing pages, objections, campaigns, positioning, brand review. Loads the canonical Ezoic brand system from iheartezoic.com (MCP / API / llms.txt) and shared references; enforces it across every output. Internal + partner use only.",
+      "category": "marketing",
+      "tags": [
+        "ezoic",
+        "marketing",
+        "brand-voice",
+        "internal-only",
+        "publishers",
+        "web-apps",
+        "saas",
+        "online-games"
+      ]
+    }
+  ]
+}

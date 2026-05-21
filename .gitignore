@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (only if tooling is ever added)
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# Logs / temp
+*.log
+.tmp/
+tmp/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Internal build/design notes — not part of the shipped plugin
+docs/

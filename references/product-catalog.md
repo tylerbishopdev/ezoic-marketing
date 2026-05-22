@@ -29,7 +29,7 @@ Think of the product suite in three orbits:
 
 1. **Core Revenue Infrastructure** — the always-on layers every customer uses (Ezoic Ads core, ezID, Big Data Analytics, AI Bid Flooring, SPO).
 2. **Packaged Monetization Solutions** — specific productized monetization mechanics that ride on top (Rewarded Ads, Video via Open.Video, SaaS Monetization).
-3. **Programs, Services, and Tools** — Incubator, Levels, Ad Revenue Guarantee, Brand Deal Hunters, Audience Visualizer, EPMV Calculator, PubLab.
+3. **Programs, Services, and Tools** — Incubator, Levels, Brand Deal Hunters, Audience Visualizer, EPMV Calculator, PubLab.
 
 When a marketing request lands, know which orbit it sits in — it changes the channel treatment and the audience.
 
@@ -54,7 +54,6 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 
 - 15+ data signals per user session
 - 6x platform-wide identified revenue growth 2024 → 2025
-- +25% Ad Revenue Guarantee
 - ~80% of applicants rejected — premium, brand-safe network
 - Jounce Media "Premium" classification
 
@@ -268,20 +267,6 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 
 ---
 
-### Ad Revenue Guarantee (+25%)
-
-**What it is:** If a customer earns less using Ezoic than without, Ezoic matches their revenue **plus 25%**. Applies at every Level. No other major platform makes this commitment.
-
-**Use in copy:** Primary objection-handler for "what if it doesn't work for us?" conversations. Also a first-paragraph proof point when risk aversion is the obstacle.
-
-**Positioning anchors:**
-
-- "Revenue guaranteed plus 25%"
-- "Ezoic succeeds only when our customers succeed — and we back it up"
-- "No other major platform makes this commitment"
-
----
-
 ### Brand Deal Hunters
 
 **What it is:** Ezoic's in-house team securing direct advertiser campaigns for VIP, Level 4, and Enterprise customers.
@@ -357,33 +342,13 @@ When marketing Open.Video to creators, use the creator-voice register (independe
 | "Promote rewarded ads for SaaS"              | Rewarded Ads + SaaS Monetization      | Core Platform                                        |
 | "Announce Open.Video for content publishers" | Open.Video                            | Core Platform (as complementary)                     |
 | "Creator wants YouTube independence"         | Open.Video (creator-facing voice)     | —                                                    |
-| "Enterprise sales push"                      | Enterprise Level + Brand Deal Hunters | Ad Revenue Guarantee as objection-killer             |
+| "Enterprise sales push"                      | Enterprise Level + Brand Deal Hunters | Core Platform                                        |
 | "Incubator awareness"                        | Ezoic Incubator                       | Core Platform (growth path)                          |
 | "Analytics / BDA feature launch"             | Big Data Analytics                    | Core Platform                                        |
 | "SaaS free-tier monetization"                | SaaS Monetization + Rewarded Ads      | ezID (for authenticated free users)                  |
 | "Newsletter operator acquisition"            | ezID + Google One Tap                 | Core Platform                                        |
 | "Game monetization expansion"                | Rewarded Ads + Ad Breaks              | Core Platform                                        |
-| "Ad Revenue Guarantee awareness"             | Ad Revenue Guarantee                  | Core Platform (it applies across all Levels)         |
 
 
 **Rule:** Each campaign has **one primary product**. Supporting products orbit it. Multi-product messaging without a primary is how brand coherence dies.
-
----
-
-## When to mention the +25% Ad Revenue Guarantee
-
-It's a powerful proof point — but overuse dilutes it.
-
-**Always mention:**
-
-- Sales enablement / one-pagers
-- Conversion-focused landing pages (especially for prospects evaluating competitors)
-- Upmarket press and investor materials
-- Objection-handling content ("what if it doesn't work?")
-
-**Use sparingly:**
-
-- Thought-leadership blog posts (narrative-focused; the guarantee is a sales tool, not a story hook)
-- Existing-customer communications (they're already convinced)
-- Product-feature deep dives (it's cross-product; doesn't belong in a single feature spec)
 

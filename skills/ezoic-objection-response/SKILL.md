@@ -14,13 +14,13 @@ Turn an objection into a calm, confident reframe backed by proof. Refocus, never
 
 ## Step 1 — Confirm the objection
 
-State the objection in one sentence and name the audience segment raising it. Map it to the canonical pattern in `audience-segments.md` if present (e.g. the DNS myth → "JS snippet. Live in minutes."; "no ad ops team" → "Ezoic *is* the ad ops team"; "what if it doesn't work" → +25% Ad Revenue Guarantee).
+State the objection in one sentence and name the audience segment raising it. Map it to the canonical pattern in `audience-segments.md` if present (e.g. the DNS myth → "JS snippet. Live in minutes."; "no ad ops team" → "Ezoic *is* the ad ops team").
 
 ## Step 2 — Produce the response
 
 Output three parts:
 1. **The reframe** — a direct restatement that moves from the objection to Ezoic's actual position. Lead with what's true about Ezoic today, not what they remember.
-2. **Supporting proof** — one or two "afters" from `proof-points.md` with segment context (e.g. 15%+ EPMV lift on identified traffic; 110%+ U.S. identified; 6x identified-revenue growth; +25% guarantee).
+2. **Supporting proof** — one or two "afters" from `proof-points.md` with segment context (e.g. 15%+ EPMV lift on identified traffic; 110%+ U.S. identified; 6x identified-revenue growth).
 3. **Handoff lines** — one or two rehearsable, memorizable sentences a rep can say verbatim (talk-track register from `channel-playbook.md → Internal Talk Track`).
 
 Keep it short and confident. Never disparage the competitor — if one is named, acknowledge it neutrally and refocus ("No pressure. If you're seeing results there, great. Just know what's here if it's ever worth comparing notes.").

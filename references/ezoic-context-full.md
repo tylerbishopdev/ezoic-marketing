@@ -129,20 +129,6 @@ As of February 2026, Ezoic raised its new publisher minimum to **250,000 monthly
 
 ---
 
-### Ad Revenue Guarantee (+25%)
-
-**What it is:** If a customer earns less using Ezoic than without, Ezoic matches their revenue **plus 25%**. Applies at every Level. No other major platform makes this commitment.
-
-**Use in copy:** Primary objection-handler for "what if it doesn't work for us?" conversations. Also a first-paragraph proof point when risk aversion is the obstacle.
-
-**Positioning anchors:**
-
-- "Revenue guaranteed plus 25%"
-- "Ezoic succeeds only when our customers succeed — and we back it up"
-- "No other major platform makes this commitment"
-
----
-
 ## 5. The Problem Ezoic Solves (External Messaging Framework)
 
 ### The Market Reality (Context for Messaging)
@@ -230,11 +216,7 @@ While most platforms offer rewarded ads as an afterthought for gaming, Ezoic has
 
 Publishers connected through Ezoic's OpenPath integration earn incremental revenue by bypassing SSP middlemen and connecting directly to TTD's advertiser base. This is enterprise-grade supply path optimization, democratized.
 
-### 6. Outcomes-Based Partnership Model
-
-Ezoic guarantees revenue improvement. If a publisher at any Level earns less using Ezoic than without, Ezoic matches the revenue **plus 25%**. No other major platform makes this commitment.
-
-### 7. Video Ownership (Open.Video )
+### 6. Video Ownership (Open.Video )
 
 Publishers hosting video on YouTube give Google SEO signals, audience data, and 45% of revenue. Ezoic's Open.Video allow publishers to host video on their own domain, keep SEO value, own subscriber relationships, and retain 100% of ad revenue.
 
@@ -267,7 +249,7 @@ Ezoic's strategic shift is deliberate and important:
 
 1. **Expertise** — 16+ years of ad tech depth, Google Premier status, TTD partnership, UID2 integration. We sit inside the rooms where ad strategy is made.
 2. **Technical Chops** — AI/ML optimization, identity infrastructure, SPO, video hosting, rewarded ad engineering. We build the tools enterprises pay agencies millions for.
-3. **Outcomes** — Not theory. Real numbers. 6x identified revenue growth YoY. 15%+ EPMV lift from identity. 110% U.S. EPMV improvement for identified users. Revenue guarantee + 25%.
+3. **Outcomes** — Not theory. Real numbers. 6x identified revenue growth YoY. 15%+ EPMV lift from identity. 110% U.S. EPMV improvement for identified users.
 
 ### Messaging Themes for Upmarket (Enterprise/Large Business) Targets
 
@@ -304,7 +286,6 @@ Ezoic's strategic shift is deliberate and important:
 - **10+ years** — Partnership with Google; founding GCPP member
 - **$225B+** — U.S. digital ad market (2023) — the market Ezoic operates in
 - **93%** — Marketers who say first-party data is crucial in a post-cookie world
-- **+25%** — The guarantee: if you earn less with Ezoic, Ezoic matches revenue plus 25%
 - **80%** — Portion of site applicants rejected — Ezoic maintains a premium, brand-safe network
 - **90%** — Video revenue as share of total revenue for some smaller publishers after adding Open.Video
 - **~40–50%** — Decline in organic search CTR from AI Overviews — the disruption context Ezoic is built for
@@ -328,7 +309,6 @@ Ezoic's strategic shift is deliberate and important:
 | **Supply-Path Optimization**  | Eliminates middlemen for direct premium demand access                         | Sites on Ezoic's platform                                          |
 | **Brand Deal Hunters**        | Ezoic's in-house team selling direct ad campaigns                             | Enterprise, VIP, and Level 4 publishers                            |
 | **SaaS Monetization**         | Discrete, ML-optimized ads for freemium SaaS tiers                            | SaaS companies with free user tiers                                |
-| **Ad Revenue Guarantee**      | Revenue-match + 25% if Ezoic underperforms                                    | All new publishers joining the platform                            |
 
 
 ---
@@ -371,7 +351,7 @@ Ezoic's strategic shift is deliberate and important:
 | "Cookies are dying and we don't know what to do"         | All                   | ezID and UID2 integration puts you ahead of 76% of publishers; your first-party data is already more valuable than cookies    |
 | "We're trapped in YouTube / dependent on Google traffic" | Video publishers      | Open.Video remove platform dependency; own your audience and keep 100% of video revenue                                       |
 | "Big agencies get better ad rates than we do"            | Mid/large publishers  | Ezoic's Google Premier status and direct TTD/OpenPath access gives the same demand relationships without the agency middleman |
-| "We tried ad optimization before and it hurt UX"         | All                   | Ezoic's AI tests configurations until UX improves and revenue increases simultaneously — the revenue guarantee backs this up  |
+| "We tried ad optimization before and it hurt UX"         | All                   | Ezoic's AI tests configurations until UX improves and revenue increases simultaneously  |
 
 
 ---

@@ -15,7 +15,6 @@ The concrete results, numbers, credentials, and quotable specifics Ezoic marketi
 | **Identified revenue growth YoY**         | **6x**              | Platform-wide identified revenue, 2024 → 2025                             | Hero stat — press, LinkedIn, keynote, win-back          |
 | **EPMV lift on identified traffic**       | **15%+**            | Average EPMV lift for sites with identified traffic vs. anonymous         | ezID launches, win-back, newsletter-targeting content   |
 | **U.S. identified-user EPMV improvement** | **110%+**           | For identified traffic in U.S. markets                                    | Enterprise pitch, deep-funnel proof, win-back           |
-| **Ad Revenue Guarantee**                  | **+25%**            | If a publisher earns less with Ezoic than without, Ezoic matches plus 25% | Objection handling, landing pages, sales one-pagers     |
 | **Google Premier CPP status**             | **1 of 4 globally** | Premier Certified Publishing Partner — as of March 2025                   | Press boilerplate, enterprise pitch, credentials stack  |
 | **Partnership with Google**               | **10+ years**       | Founding GCPP member                                                      | Press, analyst conversations                            |
 | **Applicant rejection rate**              | **~80%**            | Sites rejected from joining Ezoic — curated, brand-safe network           | Advertiser-side marketing, quality signal for customers |
@@ -147,7 +146,6 @@ Use the right proof for the right audience. See `audience-segments.md` for segme
 
 ### Web apps & SaaS
 
-- +25% Ad Revenue Guarantee
 - 6–15x display CPMs on rewarded ads network-wide
 - ML placement that respects conversion goals
 - Single JS snippet integration
@@ -173,7 +171,6 @@ Use the right proof for the right audience. See `audience-segments.md` for segme
 - +29.2% Network EPMV growth YoY from 2025 to 2026
 - 4.11B monetized user pageviews in Q1 2026
 - Google Premier (1 of 4)
-- +25% revenue guarantee at every Level
 - Direct Ezoic engineering access at Enterprise tier
 - 16+ years in-market
 
@@ -182,7 +179,6 @@ Use the right proof for the right audience. See `audience-segments.md` for segme
 - 20 spots/month (scarcity)
 - Full platform access if accepted
 - Growth path to Level 1–3 at 250K
-- +25% revenue guarantee
 
 ### Grandfathered publisher
 
@@ -194,13 +190,12 @@ Use the right proof for the right audience. See `audience-segments.md` for segme
 
 - 6x identified revenue growth
 - 15%+ EPMV, 110%+ U.S. identified
-- What's launched since they left: ezID, TTD OpenPath, Open.Video, Brand Deal Hunters, +25% guarantee, Enterprise tier
+- What's launched since they left: ezID, TTD OpenPath, Open.Video, Brand Deal Hunters, Enterprise tier
 - JS snippet integration (no DNS — likely an old objection)
 - Re-entry via Incubator is competitive — history doesn't guarantee a spot
 
 ### Competitor-using prospect
 
-- +25% Ad Revenue Guarantee (risk remover)
 - Google Premier (vs. non-Premier competitors)
 - ezID / UID2 / TTD OpenPath (identity differentiators)
 - EPMV Calculator for their specific traffic
@@ -252,7 +247,7 @@ Reusable quotes. Swap in correct attribution when using.
 
 **Medium (2–3 sentences):**
 
-> Ezoic is an AI-driven technology company and one of only four Google Premier Certified Publishing Partners globally. The platform provides full-stack revenue infrastructure — including first-party identity (ezID), AI ad optimization, rewarded ads, video monetization, and direct premium demand access via The Trade Desk OpenPath — for web apps, online games, SaaS businesses, and high-traffic publishers. Ezoic guarantees that publishers earn more with the platform than without it, or matches revenue plus 25%.
+> Ezoic is an AI-driven technology company and one of only four Google Premier Certified Publishing Partners globally. The platform provides full-stack revenue infrastructure — including first-party identity (ezID), AI ad optimization, rewarded ads, video monetization, and direct premium demand access via The Trade Desk OpenPath — for web apps, online games, SaaS businesses, and high-traffic publishers.
 
 **Long (paragraph):**
 

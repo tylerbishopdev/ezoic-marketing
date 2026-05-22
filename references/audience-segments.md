@@ -24,7 +24,6 @@ Ezoic's audience is **not** just "publishers." In 2026, the platform serves **an
 - Specific "free-tier → revenue engine" narrative ("every free session becomes a potential revenue event")
 - Rewarded mechanics framed as user-respecting, not user-exploiting
 - Single JS snippet integration — low engineering cost to try
-- The +25% Ad Revenue Guarantee — low risk
 
 **Voice calibration:**
 - Frame in product/business terms, not ad-tech jargon
@@ -78,7 +77,6 @@ Ezoic's audience is **not** just "publishers." In 2026, the platform serves **an
 - "Your free tier is costing you money. Ezoic makes it generate money — without touching your conversion funnel."
 - Goal-setting infrastructure that prevents ads at conversion-critical friction points
 - ML-optimized discrete ads, not interruptive display
-- The +25% Ad Revenue Guarantee as a no-risk try
 
 **Voice calibration:**
 - SaaS-native (conversion funnel, AARRR metrics, CAC, LTV, free-to-paid conversion)
@@ -164,7 +162,6 @@ Ezoic's audience is **not** just "publishers." In 2026, the platform serves **an
 - Evidence Ezoic has built for complex web applications before
 - Direct engineering escalation path
 - Google Premier status + TTD OpenPath + UID2 (the credential trifecta)
-- The +25% Ad Revenue Guarantee at enterprise scale
 
 **Voice calibration:**
 - Senior, peer-level, technically fluent
@@ -271,7 +268,6 @@ Ezoic's audience is **not** just "publishers." In 2026, the platform serves **an
 - EPMV Calculator — concrete delta for their specific traffic
 - Identity infrastructure story (ezID) as competitive differentiator
 - Google Premier + TTD OpenPath as the credential stack
-- +25% Ad Revenue Guarantee as no-risk try
 
 **Voice calibration:**
 - Never disparage their current platform
@@ -341,12 +337,12 @@ When planning a campaign:
 | "We don't have an ad ops team" | Web App / SaaS / Newsletter | "Ezoic *is* the ad ops team — AI optimization, demand management, analytics, experts included." |
 | "I'm under 250K — can I join?" | Incubator | "Incubator accepts 20 publishers a month. Applying is the path." |
 | "I heard Ezoic needs DNS changes" | Competitor-using | "JS snippet is the default. Live in minutes." |
-| "We left Ezoic, it wasn't working" | Win-back | "A lot has changed — ezID, TTD OpenPath, Open.Video, Brand Deal Hunters, +25% guarantee. 15%+ EPMV lift at 250K+; 110%+ on identified U.S. traffic." |
+| "We left Ezoic, it wasn't working" | Win-back | "A lot has changed — ezID, TTD OpenPath, Open.Video, Brand Deal Hunters. 15%+ EPMV lift at 250K+; 110%+ on identified U.S. traffic." |
 | "Will the 250K change affect me?" | Grandfathered | "No — grandfathered. Nothing changes." |
 | "Are you abandoning smaller publishers?" | Grandfathered / public | "Incubator takes 20 publishers a month. Staying true to our roots." |
 | "Free-tier users earn nothing, is that true?" | SaaS | "Not with Ezoic. ML-optimized ads that don't touch the conversion funnel." |
 | "Cookies are dying — what do we do?" | Newsletter / Content / All | "ezID and UID2 integration. Your first-party data is already worth more than cookies." |
 | "We're stuck on YouTube" | Video content | "Open.Video. Your domain, your revenue (100%), your audience." |
-| "We tried optimization, it hurt UX" | All | "Our AI tests configurations until UX improves and revenue increases simultaneously — the +25% guarantee backs this." |
-| "Why not just use AdSense?" | Competitor-using / Scale prospect | Do not disparage. Use EPMV Calculator + identity story + full-stack framing (ezID + SPO + Brand Deal Hunters + guarantee) + JS snippet friction-killer. |
+| "We tried optimization, it hurt UX" | All | "Our AI tests configurations until UX improves and revenue increases simultaneously." |
+| "Why not just use AdSense?" | Competitor-using / Scale prospect | Do not disparage. Use EPMV Calculator + identity story + full-stack framing (ezID + SPO + Brand Deal Hunters) + JS snippet friction-killer. |
 | "Rewarded ads only work for games" | SaaS / Web App / Content | "We've built rewarded infrastructure for any digital business — content reveals, feature unlocks, LLM prompts, streaming skips, downloads, community access." |

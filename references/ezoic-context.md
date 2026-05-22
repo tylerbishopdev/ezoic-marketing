@@ -154,15 +154,11 @@ Enterprise-grade identity infrastructure (UID2, hashed email/phone, Google One T
 
 While most platforms offer rewarded ads only in gaming contexts, Ezoic has built rewarded ad infrastructure for any digital business: content reveals, feature unlocks, downloads, discount reveals, SaaS trial extensions, LLM prompt credits, streaming music skips, early event access, exclusive community areas, virtual currency, and more.[^18]
 
-### 5. Revenue Guarantee (+25%)
-
-Ezoic guarantees revenue improvement at every service level. If a publisher earns less using Ezoic than without, Ezoic matches revenue plus 25%. No other major platform makes this commitment.[^22]
-
-### 6. Publisher-Owned Video (Open.Video)
+### 5. Publisher-Owned Video (Open.Video)
 
 Publishers hosting video on YouTube give Google SEO signals, audience data, and 45% of revenue. Ezoic's Open.Video allows publishers to host video on their own domain, keep SEO value, own subscriber relationships, and retain 100% of ad revenue — the first scalable solution of its kind.[^7]
 
-### 7. Outcomes-Based Partnership Model
+### 6. Outcomes-Based Partnership Model
 
 Not a set-and-forget plugin. Continuous ML optimization + human expert strategists + engineering access at enterprise tier. Ezoic succeeds only when publishers succeed — the incentive structures are fully aligned.
 
@@ -198,7 +194,7 @@ Not a set-and-forget plugin. Continuous ML optimization + human expert strategis
 
 1. **Expertise** — 16+ years of ad tech depth, Google Premier status, TTD partnership, UID2 integration. Ezoic sits inside the rooms where ad strategy is made.[^10][^12]
 2. **Technical Chops** — AI/ML optimization, first-party identity infrastructure, supply-path optimization, publisher-owned video, rewarded ad engineering. Tools enterprises pay agencies millions to build — delivered as a product.[^5][^4]
-3. **Outcomes** — 6x identified revenue growth YoY. 15%+ average EPMV lift from identity. 110%+ U.S. EPMV improvement for identified users. Revenue guarantee plus 25%.[^22][^4]
+3. **Outcomes** — 6x identified revenue growth YoY. 15%+ average EPMV lift from identity. 110%+ U.S. EPMV improvement for identified users.[^4]
 
 ---
 
@@ -228,7 +224,6 @@ Not a set-and-forget plugin. Continuous ML optimization + human expert strategis
 | **110%+** — U.S. EPMV improvement for identified users                           | Ezoic internal study[^4]                                |
 | **1 of 4** — One of only 4 Google Premier Certified Publishing Partners globally | PR Newswire, March 2025[^10]                            |
 | **10+ years** — Partnership with Google; founding GCPP member                    | Ezoic Press, March 2025[^11]                            |
-| **+25%** — Revenue guarantee over-match                                          | Ezoic Levels page[^22]                                  |
 | **~80%** — Sites rejected from joining Ezoic                                     | Internal quality standards[^15]                         |
 | **93%** — Marketers who say first-party data is crucial post-cookie              | Industry research                                       |
 | **40–50%** — Decline in organic search CTR from AI Overviews                     | DataSlayer/Seer Interactive analysis cited by Ezoic[^4] |
@@ -287,7 +282,7 @@ All brand style informatio0n is available at iheartezoic.com [https://iheartezoi
 | "Cookies are dying and we don't know what to do"         | ezID and UID2 integration puts publishers ahead of 76% of the market; first-party data is already worth more than cookies[^9][^19]          |
 | "We're trapped in YouTube / dependent on Google traffic" | Open.Video removes platform dependency; own your video audience and keep 100% of revenue[^7]                                       |
 | "Big agencies get better ad rates than we do"            | Ezoic's Google Premier status and direct TTD/OpenPath access provides the same demand relationships, without the agency middleman[^10][^12] |
-| "We tried ad optimization before and it hurt UX"         | Ezoic's AI tests configurations until UX improves and revenue increases simultaneously — the revenue guarantee backs this up[^22][^6]       |
+| "We tried ad optimization before and it hurt UX"         | Ezoic's AI tests configurations until UX improves and revenue increases simultaneously[^6]       |
 
 
 ---
@@ -309,10 +304,10 @@ All brand style informatio0n is available at iheartezoic.com [https://iheartezoi
 Ezoic is an AI-driven technology platform and Google Premier Certified Publishing Partner that helps web apps, games, SaaS tools, and digital publishers maximize ad revenue through first-party data, AI optimization, and premium demand access.
 
 **Medium (2–3 sentences):**
-Ezoic is an AI-driven technology company and one of only four Google Premier Certified Publishing Partners globally. The platform provides full-stack revenue infrastructure — including first-party identity (ezID), AI ad optimization, rewarded ads, video monetization, and direct premium demand access via The Trade Desk OpenPath — for web apps, online games, SaaS businesses, and high-traffic publishers. Ezoic guarantees that publishers earn more with the platform than without it, or matches revenue plus 25%.
+Ezoic is an AI-driven technology company and one of only four Google Premier Certified Publishing Partners globally. The platform provides full-stack revenue infrastructure — including first-party identity (ezID), AI ad optimization, rewarded ads, video monetization, and direct premium demand access via The Trade Desk OpenPath — for web apps, online games, SaaS businesses, and high-traffic publishers.
 
 **Long (paragraph):**
-Ezoic is an AI-driven technology company headquartered in Carlsbad, California, and one of only four Google Premier Certified Publishing Partners worldwide. Founded over 16 years ago, Ezoic has built the most comprehensive revenue infrastructure platform for digital businesses operating at scale — including web apps, online games, SaaS tools, newsletter operators, and high-traffic content publishers. The platform combines machine learning ad optimization, enterprise first-party identity (ezID, UID2, Google One Tap), rewarded ad formats, publisher-owned video monetization (Open.Video), supply-path optimization via The Trade Desk OpenPath, and industry-leading analytics (Big Data Analytics). Ezoic's platform delivered 6x growth in identified publisher revenue year-over-year and consistently drives 15%+ EPMV improvements for publishers who activate first-party identity. Ezoic backs all of this with a revenue guarantee: if publishers don't earn more with Ezoic, Ezoic matches the difference plus 25%.
+Ezoic is an AI-driven technology company headquartered in Carlsbad, California, and one of only four Google Premier Certified Publishing Partners worldwide. Founded over 16 years ago, Ezoic has built the most comprehensive revenue infrastructure platform for digital businesses operating at scale — including web apps, online games, SaaS tools, newsletter operators, and high-traffic content publishers. The platform combines machine learning ad optimization, enterprise first-party identity (ezID, UID2, Google One Tap), rewarded ad formats, publisher-owned video monetization (Open.Video), supply-path optimization via The Trade Desk OpenPath, and industry-leading analytics (Big Data Analytics). Ezoic's platform delivered 6x growth in identified publisher revenue year-over-year and consistently drives 15%+ EPMV improvements for publishers who activate first-party identity.
 
 ---
 

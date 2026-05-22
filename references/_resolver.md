@@ -88,7 +88,7 @@ If a required reference is missing, name which one and stop. Missing reference =
 7. **No CPM dollar claims without a cited source.** No exceptions.
 8. **Category framing.** Ezoic is **revenue infrastructure for the modern web** / **the operating layer for independent web businesses**. Never "ad network," "plugin," or "tool."
 9. **Banned words auto-rewrite.** revolutionary, game-changing, best-in-class, cutting-edge, world-class, next-generation, disruptive, unleash, empower, elevate, supercharge, transform (as a verb about us), leverage, "in today's fast-paced digital landscape." See `brand-voice.md → Anti-patterns`.
-10. **Capitalization & terminology (exact).** Ezoic · ezID · EPMV · Open.Video · JS snippet · Google Premier Certified Publishing Partner (GCPP) · UID2 · The Trade Desk OpenPath · Big Data Analytics (BDA) · Supply-Path Optimization (SPO) · Brand Deal Hunters · AI Bid Flooring · Ad Revenue Guarantee · Levels. See `brand-voice.md → Capitalization & terminology`.
+10. **Capitalization & terminology (exact).** Ezoic · ezID · EPMV · Open.Video · JS snippet · Google Premier Certified Publishing Partner (GCPP) · UID2 · The Trade Desk OpenPath · Big Data Analytics (BDA) · Supply-Path Optimization (SPO) · Brand Deal Hunters · AI Bid Flooring · Levels. See `brand-voice.md → Capitalization & terminology`.
 11. **One narrative frame per asset.** Don't stack the five strategic narratives. The same trope in 3+ assets across a campaign is burning it.
 12. **Refocus, never attack.** No negative competitor-trashing in external materials, ever.
 

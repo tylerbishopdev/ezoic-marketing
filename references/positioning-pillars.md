@@ -55,7 +55,7 @@ Why this matters: we **build the tools enterprises pay agencies millions to cons
 Use when: product pages, technical content, sales enablement, comparison conversations, developer/engineer-audience content.
 
 ### Pillar 3: Outcomes
-> 6x platform-wide identified revenue growth YoY. 15%+ EPMV lift for sites with identified traffic. 110%+ U.S. EPMV improvement for identified users. Revenue guarantee + 25%.
+> 6x platform-wide identified revenue growth YoY. 15%+ EPMV lift for sites with identified traffic. 110%+ U.S. EPMV improvement for identified users.
 
 Why this matters: we have **results**, not theory. Every claim is backed by a number.
 
@@ -109,7 +109,7 @@ Rung 4: STRATEGIC FRAMING
 
 Rung 3: BUSINESS OUTCOME
         "Identified traffic earns 110%+ more EPMV. Sites using ezID see 15%+ overall
-         lift. Revenue guaranteed plus 25%."
+         lift."
         (For: sales decks, landing pages, executive email, case studies)
 
 Rung 2: PRODUCT CAPABILITY
@@ -140,7 +140,7 @@ Reference these when drafting. Adapt for channel but do not drift from the core 
 > The web has changed. Cookies are dead. AI Overviews strip search clicks. Walled gardens have captured the majority of digital ad spend. For serious digital businesses, traffic is no longer a strategy — revenue now compounds through engagement, identity, and first-party data. That's what Ezoic builds.
 
 ### The outcomes story (sales / win-back)
-> Sites on Ezoic with activated first-party identity see **15%+ higher EPMV** on average — and **110%+ improvement** on U.S. identified traffic. Platform-wide identified revenue grew **6x** from 2024 to 2025. We back all of this with a revenue guarantee: if you earn less with Ezoic, we match your revenue **plus 25%**.
+> Sites on Ezoic with activated first-party identity see **15%+ higher EPMV** on average — and **110%+ improvement** on U.S. identified traffic. Platform-wide identified revenue grew **6x** from 2024 to 2025.
 
 ### The "what we built" story (enterprise)
 > We've already built what you'd pay an agency team to build: AI ad optimization, enterprise identity infrastructure, supply-path optimization, direct TTD/OpenPath access, publisher-owned video, and a dedicated direct-sales team — delivered as a product. Enterprise customers get Ezoic engineering access, 24/7 support, and custom solutions on top.
@@ -158,7 +158,6 @@ The "afters" that matter most right now:
 - **6x** platform-wide identified revenue growth, 2024 → 2025
 - **15%+** EPMV lift for sites with identified traffic
 - **110%+** U.S. EPMV improvement for identified users
-- **+25%** Ad Revenue Guarantee if we don't beat your baseline
 - **4 of 4** Google Premier Certified Publishing Partners globally
 - **~80%** applicant rejection rate (premium, brand-safe network)
 
@@ -180,7 +179,6 @@ Ezoic does not name competitors negatively in external marketing. Ever. See `ezo
 - "JS snippet. Live in minutes." → implicit contrast with DNS-based or SDK-heavy integrations
 - "Built for web apps, games, SaaS, newsletters, and publishers" → implicit contrast with content-only platforms (Mediavine, Raptive)
 - "Enterprise identity infrastructure without an enterprise team" → implicit contrast with building in-house
-- "+25% revenue guarantee" → implicit contrast with platforms that don't stand behind their own performance
 
 When a competitor is brought up by a prospect, always **refocus, not attack**:
 - "We're focused on digital businesses at scale that need real infrastructure, not just ad brokerage."
@@ -198,10 +196,9 @@ The differentiators that make something Ezoic-specific:
 2. **Audience spans web apps + games + SaaS + newsletters + publishers** — not just content
 3. **Google Premier (1 of 4 globally) + TTD OpenPath + UID2 integrator** — the credential trifecta
 4. **ezID as enterprise identity, delivered as a product** — our technical flagship
-5. **+25% Ad Revenue Guarantee** — no one else makes this commitment
-6. **Rewarded ads for any business type** — not just gaming
-7. **Open.Video for publisher-owned video** — a real alternative to YouTube
-8. **16+ years in-market + founding GCPP member** — institutional credibility
+5. **Rewarded ads for any business type** — not just gaming
+6. **Open.Video for publisher-owned video** — a real alternative to YouTube
+7. **16+ years in-market + founding GCPP member** — institutional credibility
 
 If a draft doesn't channel at least two of these, it's generic. Rewrite until it's ours.
 

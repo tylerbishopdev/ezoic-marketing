@@ -351,7 +351,7 @@ Ezoic's strategic shift is deliberate and important:
 | "Cookies are dying and we don't know what to do"         | All                   | ezID and UID2 integration puts you ahead of 76% of publishers; your first-party data is already more valuable than cookies    |
 | "We're trapped in YouTube / dependent on Google traffic" | Video publishers      | Open.Video remove platform dependency; own your audience and keep 100% of video revenue                                       |
 | "Big agencies get better ad rates than we do"            | Mid/large publishers  | Ezoic's Google Premier status and direct TTD/OpenPath access gives the same demand relationships without the agency middleman |
-| "We tried ad optimization before and it hurt UX"         | All                   | Ezoic's AI tests configurations until UX improves and revenue increases simultaneously  |
+| "We tried ad optimization before and it hurt UX"         | All                   | Ezoic's AI tests configurations until UX improves and revenue increases simultaneously                                          |
 
 
 ---

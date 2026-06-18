@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "ezoic-brand": {
-      "type": "http",
-      "url": "https://iheartezoic.com/api/mcp"
-    }
-  }
-}

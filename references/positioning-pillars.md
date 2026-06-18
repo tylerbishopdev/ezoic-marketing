@@ -109,7 +109,7 @@ Rung 4: STRATEGIC FRAMING
 
 Rung 3: BUSINESS OUTCOME
         "Identified traffic earns 110%+ more EPMV. Sites using ezID see 15%+ overall
-         lift."
+         lift across the network."
         (For: sales decks, landing pages, executive email, case studies)
 
 Rung 2: PRODUCT CAPABILITY

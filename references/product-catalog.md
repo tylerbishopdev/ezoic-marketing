@@ -342,7 +342,7 @@ When marketing Open.Video to creators, use the creator-voice register (independe
 | "Promote rewarded ads for SaaS"              | Rewarded Ads + SaaS Monetization      | Core Platform                                        |
 | "Announce Open.Video for content publishers" | Open.Video                            | Core Platform (as complementary)                     |
 | "Creator wants YouTube independence"         | Open.Video (creator-facing voice)     | —                                                    |
-| "Enterprise sales push"                      | Enterprise Level + Brand Deal Hunters | Core Platform                                        |
+| "Enterprise sales push"                      | Enterprise Level + Brand Deal Hunters | TTD OpenPath + identity data depth                   |
 | "Incubator awareness"                        | Ezoic Incubator                       | Core Platform (growth path)                          |
 | "Analytics / BDA feature launch"             | Big Data Analytics                    | Core Platform                                        |
 | "SaaS free-tier monetization"                | SaaS Monetization + Rewarded Ads      | ezID (for authenticated free users)                  |
@@ -351,4 +351,3 @@ When marketing Open.Video to creators, use the creator-voice register (independe
 
 
 **Rule:** Each campaign has **one primary product**. Supporting products orbit it. Multi-product messaging without a primary is how brand coherence dies.
-

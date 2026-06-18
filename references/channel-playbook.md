@@ -2,7 +2,7 @@
 
 Per-channel specs for every major Ezoic marketing channel. Each section tells you: what this channel is for, who reads it, how it's structured, the voice calibration, and the output format the skill should produce.
 
-Every skill in this plugin consults this file when producing a channel-specific deliverable.
+Every routine in this skill consults this file when producing a channel-specific deliverable.
 
 **For visual direction on every deliverable that will be seen (landing pages, social images, deck slides, ads, print):** always cross-reference `ezoic-style-design-bible.md` and the live asset catalog (`/api/ezoic-brand/assets`). Audiences see the brand before they read it — visual coherence is as load-bearing as copy.
 

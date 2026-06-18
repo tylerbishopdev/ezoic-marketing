@@ -282,7 +282,7 @@ All brand style informatio0n is available at iheartezoic.com [https://iheartezoi
 | "Cookies are dying and we don't know what to do"         | ezID and UID2 integration puts publishers ahead of 76% of the market; first-party data is already worth more than cookies[^9][^19]          |
 | "We're trapped in YouTube / dependent on Google traffic" | Open.Video removes platform dependency; own your video audience and keep 100% of revenue[^7]                                       |
 | "Big agencies get better ad rates than we do"            | Ezoic's Google Premier status and direct TTD/OpenPath access provides the same demand relationships, without the agency middleman[^10][^12] |
-| "We tried ad optimization before and it hurt UX"         | Ezoic's AI tests configurations until UX improves and revenue increases simultaneously[^6]       |
+| "We tried ad optimization before and it hurt UX"         | Ezoic's AI tests configurations until UX improves and revenue increases simultaneously[^6]                                                  |
 
 
 ---

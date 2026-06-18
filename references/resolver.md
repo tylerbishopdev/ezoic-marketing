@@ -1,12 +1,14 @@
 # Ezoic Marketing — Source Resolver & Brand Contract
 
-Every skill in this plugin reads this file **first**, before producing or reviewing anything. It defines three things:
+Every routine in this skill reads this file **first**, before producing or reviewing anything. It defines three things:
 
 1. **Where canonical truth comes from, and in what order** (the 3-tier resolver).
 2. **The brand-enforcement contract** every output must pass.
 3. **The smell test** that runs as the final step in every skill.
 
-All local references live in `${CLAUDE_PLUGIN_ROOT}/references/`. The live brand library lives at `iheartezoic.com` (MCP, REST API, and `llms.txt` / `llms-full.txt`).
+All local references live in `<skill>/references/` (the `references/` folder bundled with this skill). The live brand library lives at `iheartezoic.com` (REST API and `llms.txt` / `llms-full.txt`).
+
+> **Perplexity environment note:** This skill was converted from a Claude Code plugin. Tier 1 (MCP server `ezoic-brand`) is documented for fidelity but **is not available in Perplexity Computer** — start resolution at Tier 2 (live API) and fall through to Tier 3 (local references). If/when an `ezoic-brand` connector becomes available via `list_external_tools`, prefer it as Tier 1.
 
 ---
 
@@ -14,7 +16,7 @@ All local references live in `${CLAUDE_PLUGIN_ROOT}/references/`. The live brand
 
 Resolve every brand fact in this order. Use the highest tier available; fall through on absence.
 
-### Tier 1 — MCP server `ezoic-brand` (preferred when approved + reachable)
+### Tier 1 — MCP server `ezoic-brand` *(not available in Perplexity Computer — kept for spec fidelity; check `list_external_tools` for an `ezoic-brand` connector before assuming unavailable)*
 
 | Tool | Use |
 |---|---|
@@ -23,7 +25,9 @@ Resolve every brand fact in this order. Use the highest tier available; fall thr
 | `list_brand_assets(root?, query?)` | Live asset catalog. Roots: `brand`, `design-elements`, `photo-backs`, `fonts`, `all`. |
 | `get_brand_asset(publicPath)` | One asset's metadata + live `https://iheartezoic.com` URL (e.g. `/brand/lockup-light.png`). |
 
-### Tier 2 — WebFetch the live API (when MCP is unapproved or unreachable)
+### Tier 2 — Fetch the live API (default starting tier in Perplexity Computer)
+
+Use the `fetch_url` tool for these endpoints:
 
 ```
 GET https://iheartezoic.com/llms.txt                     # compact index
@@ -37,7 +41,7 @@ GET https://iheartezoic.com/api/ezoic-brand/assets/grouped
 
 ### Tier 3 — Local references (offline / fastest)
 
-`${CLAUDE_PLUGIN_ROOT}/references/*.md` — the files listed under **Boot sequence** below.
+`<skill>/references/*.md` (the `references/` folder bundled with this skill) — the files listed under **Boot sequence** below. Read with the `read` tool.
 
 **If Tier 3 also lacks a needed fact → STOP. Ask the user. Never fabricate.**
 
@@ -59,7 +63,7 @@ GET https://iheartezoic.com/api/ezoic-brand/assets/grouped
 2. For style/design truth, prefer Tier 1 `read_brand_guide(section="style")` → Tier 2 `/llms-full.txt` → Tier 3 `ezoic-style-design-bible.md`. Cache for the session.
 3. Load the skill's specific references (each `SKILL.md` names which ones it needs).
 
-Local references — all in `${CLAUDE_PLUGIN_ROOT}/references/`:
+Local references — all in `<skill>/references/` (this skill's `references/` folder; read with the `read` tool):
 
 | File | What it carries |
 |---|---|

@@ -297,7 +297,7 @@ Ezoic's audience is **not** just "publishers." In 2026, the platform serves **an
 
 **Primary channels:** Industry events (IAB ALM, Programmatic I/O, Cannes Lions), agency briefings, inventory sell-sheets, TTD co-marketing.
 
-**Note:** This segment is secondary to customer-side marketing. Most plugin use cases will be customer-side.
+**Note:** This segment is secondary to customer-side marketing. Most skill invocations will be customer-side.
 
 ---
 
@@ -337,7 +337,7 @@ When planning a campaign:
 | "We don't have an ad ops team" | Web App / SaaS / Newsletter | "Ezoic *is* the ad ops team — AI optimization, demand management, analytics, experts included." |
 | "I'm under 250K — can I join?" | Incubator | "Incubator accepts 20 publishers a month. Applying is the path." |
 | "I heard Ezoic needs DNS changes" | Competitor-using | "JS snippet is the default. Live in minutes." |
-| "We left Ezoic, it wasn't working" | Win-back | "A lot has changed — ezID, TTD OpenPath, Open.Video, Brand Deal Hunters. 15%+ EPMV lift at 250K+; 110%+ on identified U.S. traffic." |
+| "We left Ezoic, it wasn't working" | Win-back | "A lot has changed — ezID, TTD OpenPath, Open.Video, Brand Deal Hunters, Enterprise tier. 15%+ EPMV lift at 250K+; 110%+ on identified U.S. traffic." |
 | "Will the 250K change affect me?" | Grandfathered | "No — grandfathered. Nothing changes." |
 | "Are you abandoning smaller publishers?" | Grandfathered / public | "Incubator takes 20 publishers a month. Staying true to our roots." |
 | "Free-tier users earn nothing, is that true?" | SaaS | "Not with Ezoic. ML-optimized ads that don't touch the conversion funnel." |

@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ezoic — Brand Standards</title>
+<meta name="description" content="The Ezoic brand standards: logo, color, typography, voice, and usage. Editorial, high-contrast, restrained, and premium." />
+<meta name="color-scheme" content="light" />
+<meta property="og:title" content="Ezoic — Brand Standards" />
+<meta property="og:description" content="Logo, color, typography, voice, and usage for the Ezoic brand." />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 127'%3E%3Cpath fill='%2374B43C' fill-rule='evenodd' clip-rule='evenodd' d='M64 127C99.3462 127 128 98.5701 128 63.5C128 28.4299 99.3462 0 64 0C28.6538 0 0 28.4299 0 63.5C0 98.5701 28.6538 127 64 127ZM64.0098 112.569C91.3227 112.569 113.464 90.6002 113.464 63.5006C113.464 59.8043 113.052 56.2036 112.272 52.741L70.6551 81.6759C70.6775 81.948 70.6889 82.2233 70.6889 82.5012C70.6889 88.0327 66.1695 92.5168 60.5945 92.5168C55.0194 92.5168 50.5 88.0327 50.5 82.5012C50.5 76.9697 55.0194 72.4856 60.5945 72.4856C62.0911 72.4856 63.5116 72.8088 64.7891 73.3886L108.842 42.7597C100.965 26.0267 83.852 14.4324 64.0098 14.4324C36.6968 14.4324 14.5552 36.4009 14.5552 63.5006C14.5552 67.1388 14.9543 70.6845 15.7114 74.097L57.3863 45.2897C57.3545 44.9662 57.3383 44.6383 57.3383 44.3065C57.3383 38.7751 61.8577 34.2909 67.4327 34.2909C73.0077 34.2909 77.5272 38.7751 77.5272 44.3065C77.5272 49.838 73.0077 54.3221 67.4327 54.3221C65.972 54.3221 64.5838 54.0143 63.3303 53.4604L19.0853 84.0444C26.9204 100.883 44.0897 112.569 64.0098 112.569Z'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Red+Hat+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   Ezoic Brand Standards — light, editorial, premium
+   Palette grounded in the public asset catalog (iheartezoic.com)
+   ============================================================ */
+:root{
+  /* Green family — Forest & Lime sampled from /brand assets; Ezoic Green is their vivid midpoint */
+  --green:#74B43C;        /* primary accent — Ezoic Green */
+  --green-deep:#5E9A2D;   /* hover / depth on the accent */
+  --forest:#578A19;       /* real: emblem-green.png */
+  --lime:#A2D860;         /* real: mark-lime.png */
+  --wash:#EDF5DF;         /* soft green tint — backgrounds, selection */
+  --wash-line:#D6E7BD;
+
+  /* Neutrals — anchored to official tokens */
+  --ink:#16181A;          /* near-black 0B0C0B family */
+  --graphite:#383B38;
+  --slate:#5C615C;        /* muted body text */
+  --silver:#949A93;       /* metadata, labels (~ muted-inverse #979797) */
+  --mist:#D7DCD1;         /* hairlines */
+  --cloud:#EBEFE5;        /* quiet panel fill */
+  --paper:#F6F8F2;        /* page (~ off-white #F5F9F1) */
+  --white:#FFFFFF;
+
+  --maxw:1320px;
+  --pad:clamp(20px,5vw,56px);
+  --r-sm:10px; --r:16px; --r-lg:26px; --r-pill:999px;
+  --shadow-1:0 1px 2px rgba(22,24,26,.05);
+  --shadow-2:0 2px 6px rgba(22,24,26,.05), 0 18px 44px -22px rgba(22,24,26,.22);
+  --shadow-3:0 30px 80px -40px rgba(22,24,26,.40);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'Red Hat Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--font);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.55;
+  font-weight:450;
+  letter-spacing:-.011em;
+  font-feature-settings:"cv05","ss01";
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+::selection{background:var(--wash);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+section{position:relative}
+.sec{padding-block:clamp(72px,12vw,150px)}
+.sec--tight{padding-block:clamp(56px,8vw,104px)}
+.rule{height:1px;background:var(--mist);border:0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12.5px;font-weight:600;letter-spacing:.02em;color:var(--slate);
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px var(--wash)}
+.eyebrow .mono{font-family:var(--mono);font-weight:500;color:var(--silver);letter-spacing:0}
+.kicker{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--silver);text-transform:none}
+
+h1,h2,h3{letter-spacing:-.035em;line-height:1.02;font-weight:800}
+.display{font-size:clamp(40px,7.2vw,86px);line-height:.98;letter-spacing:-.045em;font-weight:800}
+h2.title{font-size:clamp(30px,4.6vw,52px);letter-spacing:-.038em;font-weight:800}
+h3{font-size:clamp(19px,2.2vw,23px);letter-spacing:-.026em;font-weight:700;line-height:1.15}
+.lede{font-size:clamp(17px,1.6vw,20.5px);line-height:1.5;color:var(--slate);font-weight:450;letter-spacing:-.014em}
+.mono{font-family:var(--mono);font-variant-ligatures:none}
+.muted{color:var(--slate)}
+.dim{color:var(--silver)}
+.green{color:var(--forest)}
+
+/* section header block */
+.sec-head{display:grid;grid-template-columns:1fr;gap:18px;max-width:760px;margin-bottom:clamp(40px,6vw,72px)}
+.sec-head .num{font-family:var(--mono);font-size:13px;color:var(--green-deep);font-weight:600}
+.sec-head p{color:var(--slate);font-size:clamp(16px,1.5vw,18.5px);max-width:62ch}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  height:46px;padding:0 22px;border-radius:var(--r-pill);
+  font-weight:600;font-size:14.5px;letter-spacing:-.01em;
+  transition:transform .25s var(--ease),background .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease),color .2s;
+  white-space:nowrap;
+}
+.btn .ar{transition:transform .3s var(--ease)}
+.btn:hover .ar{transform:translateX(4px)}
+.btn--primary{background:var(--green);color:#0d1407;box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 8px 22px -10px rgba(116,180,60,.8)}
+.btn--primary:hover{background:var(--green-deep);transform:translateY(-1px)}
+.btn--ghost{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 1px var(--mist),var(--shadow-1)}
+.btn--ghost:hover{box-shadow:inset 0 0 0 1px var(--silver),var(--shadow-2);transform:translateY(-1px)}
+.btn--ink{background:var(--ink);color:var(--paper)}
+.btn--ink:hover{background:#000;transform:translateY(-1px)}
+.btn--sm{height:38px;padding:0 16px;font-size:13px}
+
+/* ---------- header / nav ---------- */
+.head{position:sticky;top:0;z-index:60;transition:background .3s var(--ease),box-shadow .3s var(--ease),backdrop-filter .3s}
+.head__in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+.head.scrolled{background:rgba(246,248,242,.82);backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--mist)}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.03em;font-size:18.5px}
+.brand .em{width:27px;height:27px;color:var(--green);flex:none}
+.brand b{font-weight:800}
+.brand .tag{font-family:var(--mono);font-size:10.5px;font-weight:500;color:var(--silver);letter-spacing:.02em;padding:3px 7px;border-radius:6px;background:var(--cloud);margin-left:2px}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{
+  font-size:14px;font-weight:500;color:var(--slate);padding:8px 13px;border-radius:var(--r-pill);
+  transition:color .2s,background .2s;position:relative;
+}
+.nav a:hover{color:var(--ink);background:var(--white)}
+.nav a.active{color:var(--ink)}
+.nav a.active::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:2px;border-radius:2px;background:var(--green)}
+.head__cta{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:42px;height:42px;border-radius:12px;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px var(--mist);background:var(--white)}
+.burger span{width:17px;height:1.6px;background:var(--ink);position:relative;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:17px;height:1.6px;background:var(--ink)}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-top:clamp(48px,8vw,92px);padding-bottom:clamp(56px,9vw,112px);overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{margin:22px 0 0}
+.hero .lede{margin-top:26px;max-width:48ch}
+.hero__cta{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero__meta{margin-top:40px;display:flex;flex-wrap:wrap;gap:28px}
+.hero__meta div{display:flex;flex-direction:column;gap:3px}
+.hero__meta dt{font-family:var(--mono);font-size:11.5px;color:var(--silver)}
+.hero__meta dd{font-size:14.5px;font-weight:600;color:var(--graphite)}
+/* emblem stage */
+.stage{position:relative;aspect-ratio:1;display:grid;place-items:center;border-radius:var(--r-lg);
+  background:
+    radial-gradient(120% 120% at 30% 22%,#fff 0%,var(--wash) 46%,#dfeecb 100%);
+  box-shadow:var(--shadow-2),inset 0 0 0 1px rgba(255,255,255,.7);
+  overflow:hidden;isolation:isolate}
+.stage::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");mix-blend-mode:soft-light;opacity:.5;z-index:1}
+.stage::after{content:"";position:absolute;width:64%;height:64%;border-radius:50%;border:1px dashed var(--wash-line);opacity:.8}
+.stage .em{width:54%;height:54%;color:var(--green);position:relative;z-index:2;filter:drop-shadow(0 18px 36px rgba(87,138,25,.34))}
+.stage .ring{position:absolute;width:84%;height:84%;border-radius:50%;border:1px solid rgba(116,180,60,.28);z-index:1}
+.stage .chip{position:absolute;z-index:3;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);box-shadow:var(--shadow-1),inset 0 0 0 1px var(--mist);
+  border-radius:var(--r-pill);padding:7px 13px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:7px}
+.chip .sw{width:12px;height:12px;border-radius:50%}
+.chip--green{top:13%;left:6%}
+.chip--ink{bottom:14%;right:5%}
+.chip--mono{bottom:7%;left:12%;font-family:var(--mono);font-weight:500;color:var(--slate)}
+
+/* ---------- logo strip (trust row) ---------- */
+.strip{display:flex;flex-wrap:wrap;align-items:center;gap:14px clamp(24px,5vw,60px);padding-block:30px}
+.strip span{font-family:var(--mono);font-size:11.5px;color:var(--silver)}
+.strip img{height:24px;width:auto;opacity:.7;filter:grayscale(1);transition:opacity .25s,filter .25s}
+.strip img:hover{opacity:1;filter:none}
+
+/* ---------- generic card ---------- */
+.card{background:var(--white);border-radius:var(--r);box-shadow:var(--shadow-1),inset 0 0 0 1px var(--mist);transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
+.card:hover{box-shadow:var(--shadow-2),inset 0 0 0 1px var(--silver)}
+.grid{display:grid;gap:18px}
+
+/* ---------- logo section ---------- */
+.logo-main{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}
+.logo-hero{display:grid;place-items:center;min-height:300px;padding:40px;background:var(--white);border-radius:var(--r);box-shadow:var(--shadow-1),inset 0 0 0 1px var(--mist);position:relative}
+.logo-hero img{width:min(420px,80%)}
+.logo-hero .tagchip{position:absolute;top:16px;left:16px}
+.tagchip{font-family:var(--mono);font-size:11px;color:var(--slate);background:var(--cloud);padding:5px 10px;border-radius:7px;font-weight:500}
+.logo-onink{background:var(--ink);color:var(--paper)}
+.logo-onink .tagchip{background:rgba(255,255,255,.1);color:#cfd4cd}
+.logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.specimen{display:flex;flex-direction:column;gap:0;overflow:hidden}
+.specimen .frame{aspect-ratio:4/3;display:grid;place-items:center;padding:26px;background:var(--white)}
+.specimen .frame.alt{background:var(--cloud)}
+.specimen .frame.ink{background:var(--ink)}
+.specimen .frame.wash{background:radial-gradient(120% 120% at 30% 20%,#fff,var(--wash))}
+.specimen .em{width:78px;height:78px}
+.specimen .meta{padding:14px 16px;border-top:1px solid var(--mist);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.specimen .meta b{font-size:13.5px;font-weight:600}
+.specimen .meta .mono{font-size:11px;color:var(--silver)}
+
+/* clear space + misuse */
+.usage-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.clearspace{padding:26px;display:flex;flex-direction:column;gap:18px}
+.clearspace .demo{position:relative;background:var(--cloud);border-radius:var(--r-sm);padding:38px;display:grid;place-items:center;overflow:hidden}
+.clearspace .box{position:relative;padding:34px}
+.clearspace .box::before{content:"";position:absolute;inset:0;border:1px dashed var(--green);border-radius:8px;opacity:.6}
+.clearspace .box span{position:absolute;font-family:var(--mono);font-size:10px;color:var(--green-deep);background:var(--white);padding:1px 5px;border-radius:4px}
+.clearspace .box span.t{top:-8px;left:50%;transform:translateX(-50%)}
+.clearspace .box span.l{left:-12px;top:50%;transform:translateY(-50%)}
+.clearspace img{height:42px}
+.dos .row{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--mist)}
+.dos .row:first-child{border-top:0}
+.dos .ic{width:22px;height:22px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
+.dos .ic.y{background:var(--wash);color:var(--green-deep);box-shadow:inset 0 0 0 1px var(--wash-line)}
+.dos .ic.n{background:#fdecec;color:#cf3b3b;box-shadow:inset 0 0 0 1px #f6d5d5}
+.dos .row p{font-size:14px;color:var(--graphite)}
+.dos h4{font-size:13px;font-weight:700;color:var(--slate);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+
+/* ---------- color ---------- */
+.pal-primary{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:18px;margin-bottom:18px}
+.swatch{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-1),inset 0 0 0 1px var(--mist);cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.swatch:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.swatch .chip{height:148px;position:relative;display:flex;align-items:flex-end;padding:14px}
+.swatch.big .chip{height:210px}
+.swatch .copy{position:absolute;top:12px;right:12px;font-family:var(--mono);font-size:10.5px;padding:4px 8px;border-radius:var(--r-pill);background:rgba(255,255,255,.85);color:var(--ink);opacity:0;transform:translateY(-4px);transition:.25s var(--ease)}
+.swatch:hover .copy{opacity:1;transform:none}
+.swatch .role{position:absolute;left:14px;bottom:14px;font-size:12px;font-weight:600}
+.swatch .info{padding:13px 15px;background:var(--white);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.swatch .info b{font-size:14px;font-weight:600}
+.swatch .info .mono{font-size:11.5px;color:var(--silver)}
+.neutral-row{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.nsw{border-radius:12px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--mist);cursor:pointer;transition:transform .25s var(--ease)}
+.nsw:hover{transform:translateY(-3px)}
+.nsw .c{height:84px}
+.nsw .l{padding:9px 10px 11px;background:var(--white)}
+.nsw .l b{font-size:12px;display:block;font-weight:600}
+.nsw .l .mono{font-size:10px;color:var(--silver)}
+.callout{margin-top:22px;padding:20px 22px;border-radius:var(--r);background:var(--wash);box-shadow:inset 0 0 0 1px var(--wash-line);display:flex;gap:14px;align-items:flex-start}
+.callout .em{width:26px;height:26px;color:var(--green-deep);flex:none;margin-top:1px}
+.callout p{font-size:14.5px;color:#33491a}
+.callout b{color:var(--forest)}
+
+/* ---------- type ---------- */
+.type-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.type-card{padding:clamp(24px,3vw,38px)}
+.type-spec{font-size:clamp(54px,8vw,104px);line-height:.92;letter-spacing:-.05em;font-weight:800}
+.type-spec.mono{font-family:var(--mono);font-weight:500;letter-spacing:-.02em;font-size:clamp(40px,6vw,76px)}
+.type-meta{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 18px}
+.pill{font-family:var(--mono);font-size:11.5px;color:var(--slate);background:var(--cloud);padding:5px 11px;border-radius:var(--r-pill);font-weight:500}
+.type-card p{font-size:14.5px;color:var(--slate)}
+.weights{display:flex;flex-wrap:wrap;gap:18px;margin-top:6px;align-items:baseline}
+.weights span{font-size:25px;letter-spacing:-.03em}
+.scale{margin-top:18px}
+.scale .line{display:flex;align-items:baseline;gap:18px;padding:13px 0;border-top:1px solid var(--mist)}
+.scale .line .lbl{font-family:var(--mono);font-size:11px;color:var(--silver);width:120px;flex:none}
+.scale .line .ex{letter-spacing:-.035em;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- voice ---------- */
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
+.voice-card{padding:28px;display:flex;flex-direction:column;gap:12px;min-height:210px}
+.voice-card .n{font-family:var(--mono);font-size:12px;color:var(--green-deep);font-weight:600}
+.voice-card h3{font-size:22px}
+.voice-card p{font-size:14.5px;color:var(--slate)}
+.terms{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-1),inset 0 0 0 1px var(--mist)}
+.terms th,.terms td{text-align:left;padding:15px 20px;border-top:1px solid var(--mist);font-size:14.5px;vertical-align:top}
+.terms thead th{border-top:0;font-size:11.5px;font-family:var(--mono);font-weight:500;color:var(--silver);letter-spacing:.02em}
+.terms td:first-child{font-weight:700;white-space:nowrap;width:1%}
+.terms td .mono{color:var(--forest)}
+.terms td:last-child{color:var(--slate)}
+
+/* ---------- usage / banned ---------- */
+.do-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.do-col{padding:28px}
+.do-col h3{display:flex;align-items:center;gap:11px;margin-bottom:8px}
+.do-col h3 .tag{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-weight:800;font-size:14px}
+.do-col.y h3 .tag{background:var(--wash);color:var(--green-deep)}
+.do-col.n h3 .tag{background:#fdecec;color:#cf3b3b}
+.do-col ul{list-style:none;margin-top:8px}
+.do-col li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--mist);font-size:14.5px;color:var(--graphite)}
+.do-col li::before{content:"";width:6px;height:6px;border-radius:50%;margin-top:8px;flex:none}
+.do-col.y li::before{background:var(--green)}
+.do-col.n li::before{background:#df5a5a}
+
+/* ---------- assets / download ---------- */
+.dl-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.dl-card{padding:clamp(26px,3vw,40px);display:flex;flex-direction:column;gap:18px;background:var(--ink);color:var(--paper);border-radius:var(--r);position:relative;overflow:hidden}
+.dl-card .em{width:120px;height:120px;color:var(--green);position:absolute;right:-18px;top:-18px;opacity:.16}
+.dl-card h3{font-size:26px;color:var(--white);max-width:18ch}
+.dl-card p{color:#bcc2ba;font-size:14.5px;max-width:42ch}
+.dl-card .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.dl-list{padding:clamp(22px,3vw,32px)}
+.dl-list a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 4px;border-top:1px solid var(--mist);transition:padding .2s var(--ease),color .2s}
+.dl-list a:first-of-type{border-top:0}
+.dl-list a:hover{padding-left:10px;color:var(--forest)}
+.dl-list a b{font-size:14.5px;font-weight:600}
+.dl-list a .mono{font-size:11.5px;color:var(--silver)}
+.dl-list a .ar{color:var(--silver);transition:transform .25s var(--ease)}
+.dl-list a:hover .ar{transform:translateX(4px);color:var(--green-deep)}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:var(--paper);padding-block:clamp(56px,8vw,88px);margin-top:8px}
+.foot__top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;align-items:start}
+.foot .brand{color:var(--paper)}
+.foot .brand .em{color:var(--green)}
+.foot p{color:#aab0a8;font-size:14px;max-width:36ch;margin-top:16px}
+.foot h5{font-family:var(--mono);font-size:11.5px;color:#7e847d;font-weight:500;margin-bottom:14px;letter-spacing:.03em}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot ul a{color:#cfd4cd;font-size:14px;transition:color .2s}
+.foot ul a:hover{color:var(--green)}
+.foot__bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#7e847d}
+.foot__bottom .mono{font-family:var(--mono)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:var(--r-pill);font-size:13px;font-weight:600;box-shadow:var(--shadow-3);opacity:0;pointer-events:none;transition:.3s var(--ease);z-index:90;display:flex;align-items:center;gap:9px}
+.toast .sw{width:13px;height:13px;border-radius:50%}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .hero__grid{grid-template-columns:1fr;gap:40px}
+  .stage{max-width:440px;margin-inline:auto;width:100%}
+  .logo-main,.logo-grid,.pal-primary,.type-grid,.voice-grid,.do-grid,.dl-grid,.usage-2,.foot__top{grid-template-columns:1fr}
+  .logo-grid{grid-template-columns:1fr 1fr}
+  .neutral-row{grid-template-columns:repeat(4,1fr)}
+  .nav{display:none}
+  .burger{display:flex}
+  .head__cta .btn--ghost{display:none}
+}
+@media (max-width:560px){
+  .logo-grid,.neutral-row,.voice-grid{grid-template-columns:1fr 1fr}
+  .hero__meta{gap:18px}
+  .foot__bottom{flex-direction:column}
+  .terms thead{display:none}
+  .terms td{display:block;border-top:0;padding:4px 20px}
+  .terms tr{display:block;border-top:1px solid var(--mist);padding-block:12px}
+}
+/* mobile menu */
+.msheet{position:fixed;inset:0;z-index:80;background:rgba(22,24,26,.4);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:.3s}
+.msheet.open{opacity:1;pointer-events:auto}
+.msheet__panel{position:absolute;top:12px;right:12px;left:12px;background:var(--paper);border-radius:var(--r);padding:18px;box-shadow:var(--shadow-3);transform:translateY(-12px);transition:.35s var(--ease)}
+.msheet.open .msheet__panel{transform:none}
+.msheet a{display:block;padding:14px 12px;font-size:17px;font-weight:600;border-radius:10px;color:var(--ink)}
+.msheet a:hover{background:var(--white)}
+.msheet .btn{margin-top:8px;width:100%;justify-content:center}
+</style>
+</head>
+<body>
+
+<!-- EMBLEM SYMBOL (recolorable via currentColor) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="emblem" viewBox="0 0 128 127">
+    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M64 127C99.3462 127 128 98.5701 128 63.5C128 28.4299 99.3462 0 64 0C28.6538 0 0 28.4299 0 63.5C0 98.5701 28.6538 127 64 127ZM64.0098 112.569C91.3227 112.569 113.464 90.6002 113.464 63.5006C113.464 59.8043 113.052 56.2036 112.272 52.741L70.6551 81.6759C70.6775 81.948 70.6889 82.2233 70.6889 82.5012C70.6889 88.0327 66.1695 92.5168 60.5945 92.5168C55.0194 92.5168 50.5 88.0327 50.5 82.5012C50.5 76.9697 55.0194 72.4856 60.5945 72.4856C62.0911 72.4856 63.5116 72.8088 64.7891 73.3886L108.842 42.7597C100.965 26.0267 83.852 14.4324 64.0098 14.4324C36.6968 14.4324 14.5552 36.4009 14.5552 63.5006C14.5552 67.1388 14.9543 70.6845 15.7114 74.097L57.3863 45.2897C57.3545 44.9662 57.3383 44.6383 57.3383 44.3065C57.3383 38.7751 61.8577 34.2909 67.4327 34.2909C73.0077 34.2909 77.5272 38.7751 77.5272 44.3065C77.5272 49.838 73.0077 54.3221 67.4327 54.3221C65.972 54.3221 64.5838 54.0143 63.3303 53.4604L19.0853 84.0444C26.9204 100.883 44.0897 112.569 64.0098 112.569Z"/>
+  </symbol>
+</svg>
+
+<!-- ===================== HEADER ===================== -->
+<header class="head" id="head">
+  <div class="wrap head__in">
+    <a class="brand" href="#top" aria-label="Ezoic brand standards home">
+      <svg class="em" aria-hidden="true"><use href="#emblem"/></svg>
+      <b>Ezoic</b><span class="tag">Brand</span>
+    </a>
+    <nav class="nav" aria-label="Section">
+      <a href="#logo">Logo</a>
+      <a href="#color">Color</a>
+      <a href="#type">Type</a>
+      <a href="#voice">Voice</a>
+      <a href="#usage">Usage</a>
+      <a href="#assets">Assets</a>
+    </nav>
+    <div class="head__cta">
+      <a class="btn btn--ghost btn--sm" href="https://iheartezoic.com" target="_blank" rel="noopener">Live guide</a>
+      <a class="btn btn--primary btn--sm" href="https://iheartezoic.com/api/ezoic-brand/assets/download?root=all" target="_blank" rel="noopener">Download <span class="ar">↓</span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="reveal">
+      <span class="eyebrow">Brand standards <span class="mono">· Vol. 02 / 2026</span></span>
+      <h1 class="display">The Ezoic brand,<br>built to <span class="green">do real work.</span></h1>
+      <p class="lede">An editorial, high-contrast, restrained system. Off-white and near-black carry the experience — Ezoic green is the single accent, and it earns every appearance. Revenue infrastructure for the modern web, drawn with intent.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#logo">Explore the system <span class="ar">→</span></a>
+        <a class="btn btn--ghost" href="#assets">Get the assets</a>
+      </div>
+      <dl class="hero__meta">
+        <div><dt class="mono">Accent</dt><dd>Ezoic Green · #74B43C</dd></div>
+        <div><dt class="mono">Type</dt><dd>Inter · Red Hat Mono</dd></div>
+        <div><dt class="mono">Mode</dt><dd>Light, always</dd></div>
+      </dl>
+    </div>
+    <div class="reveal stage" aria-hidden="true">
+      <span class="ring"></span>
+      <svg class="em"><use href="#emblem"/></svg>
+      <span class="chip chip--green"><span class="sw" style="background:#74B43C"></span>Ezoic Green</span>
+      <span class="chip chip--ink"><span class="sw" style="background:#16181A"></span>Near-black</span>
+      <span class="chip chip--mono">Aa · Inter</span>
+    </div>
+  </div>
+</section>
+
+<!-- trust strip: real wordmark variants in context -->
+<div class="wrap">
+  <hr class="rule" />
+  <div class="strip reveal">
+    <span>One mark, four finishes —</span>
+    <img src="assets/brand/wordmark-dark.png" alt="Ezoic wordmark, near-black" />
+    <img src="assets/brand/logo-alt-dark.png" alt="Ezoic alternate logo" />
+    <img src="assets/brand/ezid-dark.png" alt="ezID sub-brand lockup" style="height:34px" />
+    <img src="assets/brand/lockup-dark.png" alt="Ezoic primary lockup" style="height:30px" />
+  </div>
+  <hr class="rule" />
+</div>
+
+<!-- ===================== LOGO ===================== -->
+<section class="sec" id="logo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">01 — Logo</span>
+      <h2 class="title">One emblem. Used with restraint.</h2>
+      <p>The badge sits left, the wordmark right. Use the approved files from the asset catalog — never redraw, recolor, stretch, retype, or add effects to the mark. Give it room and let it breathe.</p>
+    </div>
+
+    <div class="logo-main reveal">
+      <div class="logo-hero">
+        <span class="tagchip">Primary lockup</span>
+        <img src="assets/brand/lockup-dark.png" alt="Ezoic primary horizontal lockup — emblem and wordmark" />
+      </div>
+      <div class="logo-hero logo-onink">
+        <span class="tagchip">On near-black</span>
+        <img src="assets/brand/lockup-light.png" alt="Ezoic lockup reversed for dark surfaces" />
+      </div>
+    </div>
+
+    <div class="logo-grid reveal" style="margin-top:18px">
+      <div class="card specimen">
+        <div class="frame wash"><svg class="em" style="color:#74B43C"><use href="#emblem"/></svg></div>
+        <div class="meta"><b>Emblem · Green</b><span class="mono">#74B43C</span></div>
+      </div>
+      <div class="card specimen">
+        <div class="frame"><svg class="em" style="color:#16181A"><use href="#emblem"/></svg></div>
+        <div class="meta"><b>Emblem · Ink</b><span class="mono">#16181A</span></div>
+      </div>
+      <div class="card specimen">
+        <div class="frame alt"><svg class="em" style="color:#949A93"><use href="#emblem"/></svg></div>
+        <div class="meta"><b>Emblem · Silver</b><span class="mono">#949A93</span></div>
+      </div>
+      <div class="card specimen">
+        <div class="frame ink"><svg class="em" style="color:#F6F8F2"><use href="#emblem"/></svg></div>
+        <div class="meta"><b>Emblem · Reverse</b><span class="mono">on near-black</span></div>
+      </div>
+    </div>
+
+    <div class="usage-2 reveal" style="margin-top:18px">
+      <div class="card clearspace">
+        <h3>Clear space &amp; minimum room</h3>
+        <p class="muted" style="font-size:14px">Keep at least the badge height — labelled <b class="mono green">x</b> — clear on every side. Nothing crowds the mark.</p>
+        <div class="demo">
+          <div class="box">
+            <span class="t">x</span><span class="l">x</span>
+            <img src="assets/brand/lockup-dark.png" alt="Lockup with clear-space guides" />
+          </div>
+        </div>
+      </div>
+      <div class="card clearspace dos">
+        <h3>Handling the mark</h3>
+        <div class="row"><span class="ic y">✓</span><div><h4>Do</h4><p>Use approved files at full opacity, with generous clear space, on quiet surfaces.</p></div></div>
+        <div class="row"><span class="ic n">✕</span><div><h4>Don't</h4><p>Recolor outside the palette, stretch or rotate, add shadows or outlines, or rebuild the emblem by hand.</p></div></div>
+        <div class="row"><span class="ic n">✕</span><div><h4>Don't</h4><p>Place the mark on busy imagery without an approved veil, or shrink it below legibility.</p></div></div>
+        <div class="row"><span class="ic y">✓</span><div><h4>ezID</h4><p>Use the <b class="mono">ezID</b> sub-brand lockup only where that product is actually represented.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule" /></div>
+
+<!-- ===================== COLOR ===================== -->
+<section class="sec" id="color">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">02 — Color</span>
+      <h2 class="title">A single green, doing real work.</h2>
+      <p>Off-white and near-black carry the system. Ezoic green is the one accent — for focal marks, primary actions, and signature moments. Forest and Lime support it; they never replace it. Click any swatch to copy its value.</p>
+    </div>
+
+    <div class="pal-primary reveal">
+      <div class="swatch big" data-hex="#74B43C">
+        <div class="chip" style="background:linear-gradient(150deg,#7ABB43,#578A19)">
+          <span class="copy">click to copy</span>
+          <span class="role" style="color:#0d1407">Single accent · CTAs, focal marks, signature</span>
+        </div>
+        <div class="info"><b>Ezoic Green</b><span class="mono">#74B43C</span></div>
+      </div>
+      <div class="swatch" data-hex="#578A19">
+        <div class="chip" style="background:#578A19"><span class="copy">click to copy</span><span class="role" style="color:#eaf3dc">Depth · text-safe green</span></div>
+        <div class="info"><b>Forest</b><span class="mono">#578A19</span></div>
+      </div>
+      <div class="swatch" data-hex="#A2D860">
+        <div class="chip" style="background:#A2D860"><span class="copy">click to copy</span><span class="role" style="color:#2c3d14">Support · charts, tints</span></div>
+        <div class="info"><b>Lime</b><span class="mono">#A2D860</span></div>
+      </div>
+    </div>
+
+    <div class="neutral-row reveal">
+      <div class="nsw" data-hex="#16181A"><div class="c" style="background:#16181A"></div><div class="l"><b>Ink</b><span class="mono">#16181A</span></div></div>
+      <div class="nsw" data-hex="#383B38"><div class="c" style="background:#383B38"></div><div class="l"><b>Graphite</b><span class="mono">#383B38</span></div></div>
+      <div class="nsw" data-hex="#5C615C"><div class="c" style="background:#5C615C"></div><div class="l"><b>Slate</b><span class="mono">#5C615C</span></div></div>
+      <div class="nsw" data-hex="#949A93"><div class="c" style="background:#949A93"></div><div class="l"><b>Silver</b><span class="mono">#949A93</span></div></div>
+      <div class="nsw" data-hex="#D7DCD1"><div class="c" style="background:#D7DCD1"></div><div class="l"><b>Mist</b><span class="mono">#D7DCD1</span></div></div>
+      <div class="nsw" data-hex="#EBEFE5"><div class="c" style="background:#EBEFE5"></div><div class="l"><b>Cloud</b><span class="mono">#EBEFE5</span></div></div>
+      <div class="nsw" data-hex="#F6F8F2"><div class="c" style="background:#F6F8F2"></div><div class="l"><b>Paper</b><span class="mono">#F6F8F2</span></div></div>
+      <div class="nsw" data-hex="#FFFFFF"><div class="c" style="background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--mist)"></div><div class="l"><b>White</b><span class="mono">#FFFFFF</span></div></div>
+    </div>
+
+    <div class="callout reveal">
+      <svg class="em"><use href="#emblem"/></svg>
+      <p><b>Discipline over decoration.</b> Don't introduce new brand hues for surfaces, charts, or components. Neutrals build the page; green makes the point. The old mint-led dark system is retired — this is light, always.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule" /></div>
+
+<!-- ===================== TYPOGRAPHY ===================== -->
+<section class="sec" id="type">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">03 — Typography</span>
+      <h2 class="title">Inter sets the voice. Mono states the facts.</h2>
+      <p>Inter carries display and body — tight tracking, confident weight, sentence case. Red Hat Mono is reserved for code, file paths, hex, and exact technical values. Mono is never decoration.</p>
+    </div>
+
+    <div class="type-grid reveal">
+      <div class="card type-card">
+        <div class="type-spec">Ag</div>
+        <div class="type-meta"><span class="pill">Inter</span><span class="pill">Display &amp; Body</span><span class="pill">tracking −0.04em</span></div>
+        <div class="weights">
+          <span style="font-weight:400">Regular</span>
+          <span style="font-weight:500">Medium</span>
+          <span style="font-weight:600">Semibold</span>
+          <span style="font-weight:800">Extrabold</span>
+        </div>
+        <p style="margin-top:16px">Primary typeface for everything readers see — headlines, UI, and long-form copy.</p>
+      </div>
+      <div class="card type-card">
+        <div class="type-spec mono">01</div>
+        <div class="type-meta"><span class="pill">Red Hat Mono</span><span class="pill">Technical only</span><span class="pill">no ligatures</span></div>
+        <div class="weights" style="font-family:var(--mono)">
+          <span style="font-weight:400;font-size:20px">JS snippet</span>
+          <span style="font-weight:500;font-size:20px">EPMV</span>
+          <span style="font-weight:500;font-size:20px">#74B43C</span>
+        </div>
+        <p style="margin-top:16px">Code blocks, setup snippets, copy-paste boxes, hex, and exact values — nothing else.</p>
+      </div>
+    </div>
+
+    <div class="card type-card reveal scale" style="margin-top:18px">
+      <div class="line"><span class="lbl">Display / 86</span><span class="ex" style="font-size:clamp(30px,5vw,58px)">Revenue infrastructure</span></div>
+      <div class="line"><span class="lbl">Title / 52</span><span class="ex" style="font-size:clamp(24px,3.4vw,40px)">For the modern web</span></div>
+      <div class="line"><span class="lbl">Heading / 23</span><span class="ex" style="font-size:22px">The operating layer for independent businesses</span></div>
+      <div class="line"><span class="lbl">Body / 18</span><span class="ex" style="font-size:18px;font-weight:450;color:var(--slate)">Say what you mean, plainly and with confidence.</span></div>
+      <div class="line"><span class="lbl">Mono / 14</span><span class="ex mono" style="font-size:14px;font-weight:500;color:var(--forest)">--accent: #74B43C;</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule" /></div>
+
+<!-- ===================== VOICE ===================== -->
+<section class="sec" id="voice">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">04 — Voice</span>
+      <h2 class="title">Direct. Confident. Technical.</h2>
+      <p>Three constants. No marketing fog, no hedging that hides a weak claim. State verified things plainly, and frame Ezoic as revenue infrastructure — not a generic vendor, ad network, or plugin.</p>
+    </div>
+
+    <div class="voice-grid reveal">
+      <div class="card voice-card">
+        <span class="n">01</span><h3>Direct</h3>
+        <p>Say what you mean. Cut the fog. If a claim is weak, don't dress it up — sharpen it or drop it.</p>
+      </div>
+      <div class="card voice-card">
+        <span class="n">02</span><h3>Confident</h3>
+        <p>State verified things plainly. Confidence is about truth, not volume. Don't oversell what's real.</p>
+      </div>
+      <div class="card voice-card">
+        <span class="n">03</span><h3>Technical</h3>
+        <p>Frame Ezoic as revenue infrastructure and an operating layer for independent web businesses.</p>
+      </div>
+    </div>
+
+    <table class="terms reveal">
+      <thead><tr><th>Term</th><th>Write it as</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Ezoic</td><td><span class="mono">Ezoic</span></td><td>Never EZOIC or lowercase ezoic outside logo and domain contexts.</td></tr>
+        <tr><td>ezID</td><td><span class="mono">ezID</span></td><td>Lowercase <b>ez</b>, capital <b>ID</b>. The identity sub-brand.</td></tr>
+        <tr><td>EPMV</td><td><span class="mono">EPMV</span></td><td>All caps. Expand to "Earnings Per Thousand Visitors" on first use for non-publishers.</td></tr>
+        <tr><td>JS snippet</td><td><span class="mono">JS snippet</span></td><td>Preferred wording for the lightweight integration.</td></tr>
+        <tr><td>Open.Video</td><td><span class="mono">Open.Video</span></td><td>The period is part of the name.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule" /></div>
+
+<!-- ===================== USAGE / BANNED ===================== -->
+<section class="sec" id="usage">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">05 — Usage</span>
+      <h2 class="title">What the system is — and isn't.</h2>
+      <p>The brand reads as editorial, technical, and restrained. These guardrails keep every page, deck, and one-pager on-system without copying the homepage blindly.</p>
+    </div>
+
+    <div class="do-grid reveal">
+      <div class="card do-col y">
+        <h3><span class="tag">✓</span> Do</h3>
+        <ul>
+          <li>Lead with one dominant idea per section and plenty of negative space.</li>
+          <li>Use approved logos, marks, and assets from the live catalog.</li>
+          <li>Let off-white and near-black carry it; spend green where it counts.</li>
+          <li>Set rounded green pill primary actions with near-black text.</li>
+          <li>Reserve mono for code, hex, file paths, and exact values.</li>
+          <li>Leave metric and quote slots open until a cited value exists.</li>
+        </ul>
+      </div>
+      <div class="card do-col n">
+        <h3><span class="tag">✕</span> Don't</h3>
+        <ul>
+          <li>Fake logos, lockups, or unapproved stand-ins presented as real.</li>
+          <li>All-caps heading or eyebrow systems outside narrow technical use.</li>
+          <li>Generic SaaS card grids, heavy cards, or dashboard layouts as the default.</li>
+          <li>Standalone gradient-blur blobs or grid-pattern filler as "atmosphere."</li>
+          <li>Decorative monospace or mono-heavy layouts.</li>
+          <li>Unsourced metrics, quotes, customers, or invented product claims.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><hr class="rule" /></div>
+
+<!-- ===================== ASSETS / DOWNLOAD ===================== -->
+<section class="sec" id="assets">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">06 — Assets</span>
+      <h2 class="title">Take the real files.</h2>
+      <p>Every mark here is served from the canonical catalog at iheartezoic.com. Pull a single asset or the full set — and use the live catalog before placing any logo, mark, photo backdrop, or font.</p>
+    </div>
+
+    <div class="dl-grid reveal">
+      <div class="dl-card">
+        <svg class="em"><use href="#emblem"/></svg>
+        <span class="kicker" style="color:#9aa093">Full asset pack</span>
+        <h3>Logos, marks, sub-brand &amp; fonts — zipped.</h3>
+        <p>Approved emblem, wordmark, lockup, alternate logo, and ezID files in every approved finish, plus the brand fonts.</p>
+        <div class="row">
+          <a class="btn btn--primary" href="https://iheartezoic.com/api/ezoic-brand/assets/download?root=all" target="_blank" rel="noopener">Download all <span class="ar">↓</span></a>
+          <a class="btn btn--ghost" href="https://iheartezoic.com/api/ezoic-brand/assets/download?root=brand" target="_blank" rel="noopener" style="background:transparent;color:var(--paper);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)">Brand only</a>
+        </div>
+      </div>
+      <div class="card dl-list">
+        <a href="https://iheartezoic.com/brand/lockup-dark.png" target="_blank" rel="noopener"><span><b>Primary lockup</b><br><span class="mono">/brand/lockup-dark.png</span></span><span class="ar">→</span></a>
+        <a href="https://iheartezoic.com/brand/emblem-green.png" target="_blank" rel="noopener"><span><b>Emblem · green</b><br><span class="mono">/brand/emblem-green.png</span></span><span class="ar">→</span></a>
+        <a href="https://iheartezoic.com/brand/wordmark-dark.png" target="_blank" rel="noopener"><span><b>Wordmark</b><br><span class="mono">/brand/wordmark-dark.png</span></span><span class="ar">→</span></a>
+        <a href="https://iheartezoic.com/brand/ezid-dark.png" target="_blank" rel="noopener"><span><b>ezID sub-brand</b><br><span class="mono">/brand/ezid-dark.png</span></span><span class="ar">→</span></a>
+        <a href="https://iheartezoic.com/llms.txt" target="_blank" rel="noopener"><span><b>Machine-readable guide</b><br><span class="mono">/llms.txt · /api/ezoic-brand</span></span><span class="ar">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div>
+        <a class="brand" href="#top"><svg class="em" aria-hidden="true"><use href="#emblem"/></svg><b>Ezoic</b></a>
+        <p>Revenue infrastructure for the modern web. The operating layer for independent web businesses.</p>
+      </div>
+      <div>
+        <h5>Standards</h5>
+        <ul>
+          <li><a href="#logo">Logo</a></li>
+          <li><a href="#color">Color</a></li>
+          <li><a href="#type">Typography</a></li>
+          <li><a href="#voice">Voice</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Canonical source</h5>
+        <ul>
+          <li><a href="https://iheartezoic.com" target="_blank" rel="noopener">iheartezoic.com</a></li>
+          <li><a href="https://iheartezoic.com/api/ezoic-brand" target="_blank" rel="noopener">Brand API</a></li>
+          <li><a href="https://iheartezoic.com/llms.txt" target="_blank" rel="noopener">llms.txt</a></li>
+          <li><a href="https://iheartezoic.com/api/ezoic-brand/assets/download?root=all" target="_blank" rel="noopener">Asset pack</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span class="mono">Ezoic Brand Standards · Vol. 02 / 2026 · Light edition</span>
+      <span>Confidential — Ezoic internal &amp; approved-partner use.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><span class="sw" id="toastSw"></span><span id="toastMsg">Copied</span></div>
+
+<!-- mobile sheet -->
+<div class="msheet" id="msheet">
+  <div class="msheet__panel">
+    <a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Typography</a>
+    <a href="#voice">Voice</a><a href="#usage">Usage</a><a href="#assets">Assets</a>
+    <a class="btn btn--primary" href="https://iheartezoic.com/api/ezoic-brand/assets/download?root=all" target="_blank" rel="noopener">Download assets ↓</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  // sticky header state
+  var head=document.getElementById('head');
+  var onScroll=function(){head.classList.toggle('scrolled',window.scrollY>8)};
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // active nav highlight
+  var links=[].slice.call(document.querySelectorAll('.nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id);});
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){spy.observe(s);});
+
+  // copy-to-clipboard for swatches
+  var toast=document.getElementById('toast'),tmsg=document.getElementById('toastMsg'),tsw=document.getElementById('toastSw'),tt;
+  function copy(hex){
+    var done=function(){
+      tmsg.textContent=hex+' copied';tsw.style.background=hex;
+      toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show');},1600);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(hex).then(done).catch(done);}
+    else{var i=document.createElement('input');i.value=hex;document.body.appendChild(i);i.select();try{document.execCommand('copy');}catch(e){}i.remove();done();}
+  }
+  document.querySelectorAll('[data-hex]').forEach(function(el){
+    el.addEventListener('click',function(){copy(el.getAttribute('data-hex'));});
+  });
+
+  // mobile menu
+  var burger=document.getElementById('burger'),sheet=document.getElementById('msheet');
+  function toggle(open){sheet.classList.toggle('open',open);burger.setAttribute('aria-expanded',open?'true':'false');document.body.style.overflow=open?'hidden':'';}
+  burger&&burger.addEventListener('click',function(){toggle(!sheet.classList.contains('open'));});
+  sheet.addEventListener('click',function(e){if(e.target===sheet||e.target.tagName==='A'){toggle(false);}});
+})();
+</script>
+</body>
+</html>

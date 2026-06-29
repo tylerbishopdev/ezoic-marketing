@@ -42,7 +42,9 @@ The green family is traceable to the real public asset catalog rather than guess
 - Live download links point at the real endpoints
   (`/api/ezoic-brand/assets/download?root=all`). No fake or stand-in marks.
 
-Fonts (Inter, Red Hat Mono) load from Google Fonts with a system fallback stack.
+Typography is **self-hosted from the brand's own font files** (no webfont-CDN dependency): Inter with
+optical sizing — **28pt Display** for headlines, **18pt Text** for body — and **Reddit Mono**
+(variable, 200–900) for technical/mono, replacing Red Hat Mono per the attached direction.
 
 ## Logo integrity & accessibility
 
@@ -57,8 +59,11 @@ Fonts (Inter, Red Hat Mono) load from Google Fonts with a system fallback stack.
 
 ## Sections
 
-Logo · Color · Typography · Voice · Usage (do/don't) · Assets — plus a sticky nav with
-scroll-spy, click-to-copy color swatches, quiet scroll-reveal motion, and a mobile menu.
+Six numbered sections — Logo · Color · Typography · Voice · Usage · Assets — in a ruled, type-led
+**brand-manual rhythm**: mono index numbers, hairline rules, two full-bleed near-black bands, a
+contiguous neutral tone strip (not swatch cards), and a large type specimen. No SaaS card grids.
+Sticky scroll-spy nav, click-to-copy color values, quiet scroll-reveal (with a no-JS fallback so
+content is never hidden), and a mobile menu.
 
 ## Porting to production
 

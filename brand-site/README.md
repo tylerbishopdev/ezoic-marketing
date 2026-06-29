@@ -44,6 +44,17 @@ The green family is traceable to the real public asset catalog rather than guess
 
 Fonts (Inter, Red Hat Mono) load from Google Fonts with a system fallback stack.
 
+## Logo integrity & accessibility
+
+- **The wordmark is never typeset.** Per the brand surface-pairing rule, the header uses the real
+  `lockup-dark.png` (lowercase `ezoic`) on the light surface and the footer uses `lockup-light.png`
+  on near-black. No font-composed stand-ins.
+- **The emblem only appears in approved colors** — green `#578A19` (emblem-green), ink, silver, or
+  reversed. The brighter `#74B43C` is the UI accent (buttons, highlights) and is never applied to
+  the mark.
+- **All text meets WCAG AA** on the light surfaces, verified by measured ratios: body 7.4:1,
+  metadata/hex labels 5.8–6.2:1, green text 6.5:1+, button text on green 7.4:1.
+
 ## Sections
 
 Logo · Color · Typography · Voice · Usage (do/don't) · Assets — plus a sticky nav with

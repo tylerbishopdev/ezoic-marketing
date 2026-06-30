@@ -29,6 +29,8 @@ git clone git@github.com:tylerbishopdev/ezoic-marketing.git ~/.claude/skills/ezo
 
 The live brand system at **[iheartezoic.com](https://iheartezoic.com)** (REST API · `llms.txt` · MCP server) is the canonical tier. The bundled `references/` are the offline tier. Always check the live asset catalog before placing a logo, mark, photo backdrop, or font.
 
+Logo, wordmark, and lockup specimens must use approved asset catalog files. The wordmark is never typeset; no font-composed stand-ins.
+
 ---
 
 Author: Tyler Bishop (CMO, Ezoic).

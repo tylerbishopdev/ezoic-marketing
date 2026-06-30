@@ -59,8 +59,10 @@ optical sizing — **28pt Display** for headlines, **18pt Text** for body — an
   on near-black. No font-composed stand-ins.
 - **The emblem only appears in palette colors** — green `#70A92A`, charcoal `#222423`, steel
   `#969696`, or reversed (white on charcoal).
-- **All text meets WCAG AA**, verified by measured ratios (secondary text 7.2:1, on-dark 5.3–12:1,
-  button text on green 5.5:1). Green and steel are kept off small-text-on-white, where they'd fail.
+- **Text meets WCAG AA** (secondary text 7.2:1, on-dark 5.3–12:1), with one deliberate brand
+  exception: the primary button uses **white on green** (`#FFFFFF` on `#70A92A` ≈ 2.8:1) — the
+  classic Ezoic look. Charcoal-on-green would be AA (5.7:1) if compliance is preferred over the look.
+  Green and steel are otherwise kept off small-text-on-white.
 
 ## Sections
 

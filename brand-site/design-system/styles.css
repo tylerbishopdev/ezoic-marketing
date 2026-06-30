@@ -1,0 +1,312 @@
+/* ============================================================================
+   EZOIC BRAND DESIGN SYSTEM — Tailwind v4 + shadcn/ui theme layer
+   Distilled from brand-site/index.html (Vol. 02 / 2026, light edition).
+   Source of truth for assets/voice/usage stays brand-site/index.html and
+   the live catalog at iheartezoic.com — this file ports VISUAL TOKENS only.
+   Re-derive from index.html if the two ever diverge.
+   ============================================================================
+
+   BRAND CONSTRAINTS — read before touching this file or building on it:
+
+   1. Exclusive 5-hex palette. Do not introduce any color outside
+      Green #70A92A, Charcoal #252726, Graphite #575757, Steel #969696,
+      Paper #E3E3E3. Tints/shades must be alpha or color-mix() derivatives
+      of these five — never a new hue. (`--color-destructive` and
+      `--color-chart-5` below are the two documented exceptions, both
+      flagged and pending brand sign-off — see README "Known gaps".)
+   2. No all-caps. Hierarchy comes from scale/weight/spacing, never
+      text-transform: uppercase.
+   3. Mono (Reddit Mono) is reserved for real code, file paths, hex
+      values, and exact technical values. Never decorative, never a
+      heading or label face.
+   4. Letter-spacing: -5% (-.05em) on headings, -2% (-.02em) on
+      everything else. No exceptions.
+   5. Light, always. There is no approved dark theme — the near-black
+      "ink" surfaces (footer, full-bleed bands) are local accents within
+      the light system, not a global dark mode. Do not add a `.dark`
+      variant without an explicit brand decision.
+   6. Green is the single accent — reserved for fills, the mark, and
+      primary actions. It is NOT used as small text on light backgrounds
+      (2.8:1 contrast — fails WCAG AA) and it is NOT wired to generic
+      hover/accent UI states (`--color-accent` below is neutral on purpose).
+   7. The wordmark is never typeset. Never recreate the Ezoic logo,
+      lockup, or wordmark with CSS/HTML text — always use the approved
+      raster/vector files from the asset catalog (lockup-dark.png /
+      lockup-light.png) via next/image. The one safe-to-recreate-in-code
+      asset is the standalone emblem mark (see brand-emblem.tsx), because
+      its path is the exact approved vector from /brand/emblem-white.svg.
+   8. No border-radius outside this system's one exception: fully pilled
+      buttons (999px). Cards, panels, inputs, and tables stay square-
+      edged and hairline-bordered — never rounded-md "SaaS card" corners.
+   ============================================================================ */
+
+@import "tailwindcss";
+@import "./fonts.css";
+
+:root {
+  /* ---- Exclusive 5-hex palette (brand constraint 1) ---- */
+  --brand-green: #70A92A;     /* Ezoic Green — the single accent */
+  --brand-ink: #252726;       /* Charcoal — primary text, dark-band surfaces */
+  --brand-graphite: #575757;  /* secondary text, metadata, accessible accent-text */
+  --brand-steel: #969696;     /* muted borders/captions; secondary text on dark */
+  --brand-paper: #E3E3E3;     /* page background, light panels, text-on-dark */
+
+  /* Ink-derived hairlines/rules/scrims — the system's only "shadow" language.
+     Standardized from --brand-ink (#252726 = rgb(37 39 38)) for internal
+     consistency; faithfully equivalent to the rgba(36,44,40,*) values still
+     present in brand-site/index.html from an earlier palette pass. */
+  --brand-hairline: rgb(37 39 38 / 0.13);
+  --brand-hairline-strong: rgb(37 39 38 / 0.18);
+  --brand-rule: rgb(37 39 38 / 0.92);
+  --brand-scrim: rgb(37 39 38 / 0.42);
+  --brand-shadow: rgb(37 39 38 / 0.5);
+
+  /* Paper-on-ink hairline, for dividers drawn on dark surfaces (footer, bands) */
+  --brand-hairline-on-ink: rgb(227 227 227 / 0.1);
+
+  --brand-container: 1320px;
+  --brand-gutter: clamp(1.25rem, 5vw, 4rem);
+  --brand-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --brand-radius-full: 999px;
+
+  /* Flat, square, hairline-edged system (brand constraint 8). Pill buttons
+     are the one exception — they opt into --brand-radius-full explicitly
+     rather than changing this base value. */
+  --radius: 0rem;
+}
+
+@theme inline {
+  /* ---- Surfaces ---- */
+  --color-background: var(--brand-paper);
+  --color-foreground: var(--brand-ink);
+
+  --color-card: var(--brand-paper);
+  --color-card-foreground: var(--brand-ink);
+
+  --color-popover: var(--brand-paper);
+  --color-popover-foreground: var(--brand-ink);
+
+  /* Primary — the one accent. Reserved for fills/marks/primary actions. */
+  --color-primary: var(--brand-green);
+  --color-primary-foreground: var(--brand-paper);
+
+  --color-secondary: var(--brand-steel);
+  --color-secondary-foreground: var(--brand-ink);
+
+  --color-muted: color-mix(in srgb, var(--brand-paper) 92%, var(--brand-ink) 8%);
+  --color-muted-foreground: var(--brand-graphite);
+
+  /* Deliberately neutral — brand constraint 6. Green does not belong on
+     every menu-item hover; it stays reserved for primary actions. */
+  --color-accent: color-mix(in srgb, var(--brand-paper) 88%, var(--brand-ink) 12%);
+  --color-accent-foreground: var(--brand-ink);
+
+  /* NOT a brand color — no approved destructive hue exists. Placeholder
+     only. Confirm with the brand owner before shipping destructive UI. */
+  --color-destructive: #9A3324;
+  --color-destructive-foreground: var(--brand-paper);
+
+  --color-border: var(--brand-hairline);
+  --color-input: var(--brand-hairline-strong);
+  --color-ring: var(--brand-green);
+
+  /* Sidebar mirrors the system's existing dark-band pattern 1:1
+     (footer, .dlcta) — ink surface, paper text, green as the one accent. */
+  --color-sidebar: var(--brand-ink);
+  --color-sidebar-foreground: var(--brand-paper);
+  --color-sidebar-primary: var(--brand-green);
+  --color-sidebar-primary-foreground: var(--brand-paper);
+  --color-sidebar-accent: var(--brand-hairline-on-ink);
+  --color-sidebar-accent-foreground: var(--brand-paper);
+  --color-sidebar-border: var(--brand-hairline-on-ink);
+  --color-sidebar-ring: var(--brand-green);
+
+  /* One highlighted series in green, everything else neutral — never
+     multiple saturated colors. A conservative derivation, not an
+     approved chart standard (see README "Known gaps"). */
+  --color-chart-1: var(--brand-green);
+  --color-chart-2: var(--brand-ink);
+  --color-chart-3: var(--brand-graphite);
+  --color-chart-4: var(--brand-steel);
+  --color-chart-5: color-mix(in srgb, var(--brand-steel) 50%, var(--brand-paper) 50%);
+
+  /* ---- Type — literal family names. Do not replace with next/font
+     variable refs here; see the gotcha documented in fonts.ts. ---- */
+  --font-sans: "Inter Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: "Inter Display", "Inter Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "Reddit Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* The brand's -5% / -2% rule (brand constraint 4) as real utilities:
+     tracking-heading / tracking-body. */
+  --tracking-heading: -0.05em;
+  --tracking-body: -0.02em;
+
+  /* Flat radius scale — --radius is 0 (see :root), so every shadcn-
+     generated rounded-sm/md/lg/xl utility resolves flat automatically,
+     with zero per-component overrides needed. */
+  --radius-sm: calc(var(--radius) * 0.75);
+  --radius-md: calc(var(--radius) * 0.875);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+
+  /* ---- Motion ---- */
+  --ease-brand: var(--brand-ease);
+  --shadow-float: 0 24px 60px -24px var(--brand-shadow);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light; /* brand constraint 5 — light, always */
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: var(--tracking-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "cv05";
+  }
+
+  ::selection {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    /* Matches brand-site/index.html exactly. Only static 600/700/900
+       faces are loaded (no variable font), so browsers render the
+       nearest available weight (700) — faithfully preserved, not
+       "corrected", since it's the live, working source value. */
+    font-weight: 760;
+    letter-spacing: var(--tracking-heading);
+    line-height: 1;
+  }
+
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
+    letter-spacing: normal;
+  }
+}
+
+@layer components {
+  .brand-wrap {
+    max-width: var(--brand-container);
+    margin-inline: auto;
+    padding-inline: var(--brand-gutter);
+  }
+
+  /* The dark-band surface (footer, full-bleed sections) — a LOCAL accent
+     within the light system, not a global dark theme (brand constraint 5). */
+  .brand-surface-ink {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+  }
+
+  .brand-hairline-t { border-top: 1px solid var(--brand-hairline); }
+  .brand-hairline-b { border-bottom: 1px solid var(--brand-hairline); }
+  .brand-rule-t { border-top: 1px solid var(--brand-rule); }
+
+  /* Large display type — weight 900, -5% tracking, tight leading.
+     Use for hero headlines and oversized type specimens. */
+  .brand-display {
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: var(--tracking-heading);
+    line-height: 0.9;
+  }
+
+  .brand-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-body);
+    color: var(--brand-graphite); /* not green — see brand constraint 6 */
+  }
+
+  .brand-kicker {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-body);
+    color: var(--brand-steel);
+  }
+
+  /* Primary CTA — full pill, the one button shape that breaks the
+     system's square/hairline radius rule (brand constraint 8). */
+  .brand-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5625rem;
+    height: 2.875rem;
+    padding-inline: 1.375rem;
+    border-radius: var(--brand-radius-full);
+    background: var(--brand-green);
+    color: var(--brand-paper);
+    font-weight: 700;
+    font-size: 0.906rem;
+    letter-spacing: var(--tracking-body);
+    transition: background 0.25s var(--brand-ease), color 0.25s var(--brand-ease), transform 0.25s var(--brand-ease);
+  }
+  .brand-pill:hover {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    transform: translateY(-1px);
+  }
+
+  /* Secondary action on dark surfaces */
+  .brand-ghost {
+    display: inline-flex;
+    align-items: center;
+    height: 2.875rem;
+    padding-inline: 1.25rem;
+    border-radius: var(--brand-radius-full);
+    border: 1px solid rgb(227 227 227 / 0.24);
+    color: var(--brand-paper);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .brand-ghost:hover {
+    border-color: rgb(227 227 227 / 0.5);
+    background: rgb(227 227 227 / 0.05);
+  }
+
+  /* Underlined text link with the gap-expand hover */
+  .brand-tlink {
+    font-weight: 500;
+    font-size: 0.906rem;
+    color: var(--brand-ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--brand-ink);
+    padding-bottom: 0.1875rem;
+    transition: gap 0.2s var(--brand-ease), border-color 0.2s;
+  }
+  .brand-tlink:hover {
+    gap: 0.75rem;
+    border-color: var(--brand-green);
+  }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}

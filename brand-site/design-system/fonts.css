@@ -1,0 +1,22 @@
+/* ============================================================================
+   Self-hosted brand fonts — Inter (28pt display / 18pt text optical sizes)
+   and Reddit Mono (variable, 200–900). No webfont-CDN dependency.
+
+   Before using this file in a real Next.js app: copy the .woff2 files from
+   brand-site/assets/fonts/ into that app's public/fonts/ directory, then
+   `@import "./fonts.css";` from styles.css (already wired).
+
+   Prefer next/font/local instead? Use fonts.ts in this folder — read its
+   top comment first, there's a real gotcha with referencing next/font
+   variables inside Tailwind v4's `@theme inline`.
+   ============================================================================ */
+
+@font-face { font-family: 'Inter Text'; src: url('/fonts/Inter_18pt-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter Text'; src: url('/fonts/Inter_18pt-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter Text'; src: url('/fonts/Inter_18pt-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter Text'; src: url('/fonts/Inter_18pt-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter Text'; src: url('/fonts/Inter_18pt-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter Display'; src: url('/fonts/Inter_28pt-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter Display'; src: url('/fonts/Inter_28pt-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter Display'; src: url('/fonts/Inter_28pt-Black.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Reddit Mono'; src: url('/fonts/RedditMono-VF.woff2') format('woff2'); font-weight: 200 900; font-style: normal; font-display: swap; }

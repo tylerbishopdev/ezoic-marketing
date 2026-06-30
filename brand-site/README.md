@@ -65,10 +65,16 @@ optical sizing — **28pt Display** for headlines, **18pt Text** for body — an
 ## Sections
 
 Six numbered sections — Logo · Color · Typography · Voice · Usage · Assets — in a ruled, type-led
-**brand-manual rhythm**: mono index numbers, hairline rules, two full-bleed near-black bands, a
-contiguous neutral tone strip (not swatch cards), and a large type specimen. No SaaS card grids.
+**brand-manual rhythm**: hairline rules, two full-bleed near-black bands, a contiguous neutral tone
+strip (not swatch cards), and a large type specimen. No SaaS card grids.
+
+- **Reddit Mono is reserved** for hex values, file paths, code, the clear-space `x`, index numerals,
+  and exact terms — never eyebrows, nav, captions, or decorative labels (those are Inter Text).
+- **Ghost-emblem watermarks** sit behind the hero (light `#E3E3E3`) and footer (dark `#575757`) as
+  subtle, on-palette background elements.
+
 Sticky scroll-spy nav, click-to-copy color values, quiet scroll-reveal (with a no-JS fallback so
-content is never hidden), and a mobile menu.
+content is never hidden), and a mobile menu round it out.
 
 ## Porting to production
 

@@ -50,7 +50,7 @@ body{
 a{color:inherit;text-decoration:none}
 img,svg{display:block;max-width:100%}
 button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
-.mono{font-family:var(--mono);font-variant-ligatures:none;font-feature-settings:"tnum"}
+.mono{font-feature-settings:"tnum";letter-spacing:0}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
 
 /* ---------- type primitives ---------- */
@@ -89,8 +89,8 @@ h1,h2,h3{font-family:var(--display);font-weight:760;letter-spacing:-.04em;line-h
 .pill{display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 22px;border-radius:999px;background:var(--green);color:#fff;font-weight:700;font-size:14.5px;letter-spacing:-.005em;transition:background .25s var(--ease),transform .25s var(--ease)}
 .pill:hover{background:var(--ink);color:#fff;transform:translateY(-1px)}
 .pill .a{transition:transform .25s var(--ease)}.pill:hover .a{transform:translateY(2px)}
-.tlink{font-weight:500;font-size:14.5px;color:var(--ink);display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid var(--ink);padding-bottom:3px;transition:gap .2s var(--ease),color .2s,border-color .2s}
-.tlink:hover{gap:12px;color:var(--ink);border-color:var(--green)}
+.tlink{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 22px;border-radius:999px;background:transparent;border:1.5px solid #969696;color:var(--ink);font-weight:600;font-size:14.5px;letter-spacing:-.005em;transition:border-color .2s var(--ease),background .2s var(--ease),transform .25s var(--ease)}
+.tlink:hover{border-color:var(--ink);background:#E3E3E3;transform:translateY(-1px)}
 .hero__wm{position:absolute;right:-2%;bottom:-12%;width:min(600px,50%);color:#E3E3E3;z-index:0;pointer-events:none}
 .hero__wm .em{width:100%}
 .ledger{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--hair);margin-top:clamp(32px,5vw,56px)}
@@ -104,7 +104,7 @@ h1,h2,h3{font-family:var(--display);font-weight:760;letter-spacing:-.04em;line-h
 .sec{border-top:1px solid var(--rule)}
 .sec__in{padding-block:clamp(64px,9vw,128px)}
 .sec__head{display:grid;grid-template-columns:minmax(140px,2fr) minmax(0,9fr);gap:clamp(24px,5vw,64px);align-items:start}
-.sec__no{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--green-text);letter-spacing:.04em;padding-top:8px}
+.sec__no{font-size:13px;font-weight:600;color:var(--green-text);letter-spacing:0;padding-top:8px}
 .sec__no span{display:block;font-family:var(--font);color:var(--silver);font-weight:500;margin-top:8px;max-width:18ch;line-height:1.5;letter-spacing:0}
 .sec h2{font-size:clamp(32px,5vw,64px)}
 .sec__stand{font-size:clamp(16px,1.5vw,20px);color:var(--slate);max-width:56ch;margin-top:22px;line-height:1.5}
@@ -138,7 +138,7 @@ h1,h2,h3{font-family:var(--display);font-weight:760;letter-spacing:-.04em;line-h
 .csbox{position:relative;padding:30px}
 .csbox::before{content:"";position:absolute;inset:0;border:1px dashed var(--green);opacity:.55}
 .csbox img{height:38px}
-.csbox span{position:absolute;font-family:var(--mono);font-size:10px;color:var(--green-text);background:var(--cloud);padding:0 5px}
+.csbox span{position:absolute;font-size:10px;font-style:italic;color:var(--green-text);background:var(--cloud);padding:0 5px}
 .csbox span.t{top:-7px;left:50%;transform:translateX(-50%)}
 .csbox span.l{left:-11px;top:50%;transform:translateY(-50%)}
 .rules{list-style:none}
@@ -183,7 +183,7 @@ h1,h2,h3{font-family:var(--display);font-weight:760;letter-spacing:-.04em;line-h
 .wt{display:flex;flex-direction:column;gap:10px}
 .wt span{font-family:var(--display);font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em;line-height:1.05}
 .codeblock{margin-top:clamp(32px,5vw,52px);background:var(--ink);color:var(--paper);padding:clamp(22px,3vw,34px);font-family:var(--mono);font-size:14px;line-height:2;overflow-x:auto}
-.codeblock .c1{color:#969696}.codeblock .c2{color:var(--lime)}.codeblock .c3{color:#E3E3E3}
+.codeblock .c1{color:#969696}.codeblock .c2{color:#fff;font-weight:600}.codeblock .c3{color:#E3E3E3}
 .scale{margin-top:clamp(32px,5vw,52px)}
 .scale .r{display:grid;grid-template-columns:minmax(120px,1.6fr) minmax(0,9fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--hair)}
 .scale .r .lab{font-size:11.5px;color:var(--silver)}
@@ -193,7 +193,7 @@ h1,h2,h3{font-family:var(--display);font-weight:760;letter-spacing:-.04em;line-h
 .principles{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(40px,6vw,64px);border-block:1px solid var(--hair)}
 .principle{padding:clamp(28px,3vw,40px) clamp(22px,2vw,32px) clamp(28px,3vw,40px) 0}
 .principle+.principle{border-left:1px solid var(--hair);padding-left:clamp(24px,3vw,40px)}
-.principle .n{font-family:var(--mono);font-size:12px;color:var(--green-text);font-weight:600;margin-bottom:16px}
+.principle .n{font-size:12px;color:var(--green-text);font-weight:600;margin-bottom:16px}
 .principle h3{font-family:var(--display);font-size:clamp(24px,2.6vw,32px);margin-bottom:12px}
 .principle p{font-size:14.5px;color:var(--slate);line-height:1.5}
 .terms{width:100%;border-collapse:collapse;margin-top:clamp(36px,5vw,56px)}
@@ -228,8 +228,8 @@ h1,h2,h3{font-family:var(--display);font-weight:760;letter-spacing:-.04em;line-h
 .dlcta h3{font-family:var(--display);font-size:clamp(24px,2.6vw,30px);color:var(--white);max-width:16ch;letter-spacing:-.03em}
 .dlcta p{color:#969696;font-size:14px;max-width:40ch;line-height:1.5}
 .dlcta .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px;position:relative;z-index:2}
-.dlcta .ghost{display:inline-flex;align-items:center;height:46px;padding:0 20px;border-radius:999px;border:1px solid rgba(255,255,255,.24);color:var(--paper);font-weight:500;font-size:14px;transition:border-color .2s,background .2s}
-.dlcta .ghost:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.dlcta .ghost{display:inline-flex;align-items:center;height:46px;padding:0 22px;border-radius:999px;border:1.5px solid #969696;color:var(--paper);font-weight:600;font-size:14px;transition:border-color .2s,background .2s}
+.dlcta .ghost:hover{border-color:#E3E3E3;background:rgba(255,255,255,.06)}
 
 /* ---------- footer ---------- */
 .foot{background:var(--ink);color:var(--paper);border-top:1px solid var(--rule);padding-block:clamp(56px,8vw,88px);position:relative;overflow:hidden}
@@ -248,7 +248,7 @@ h1,h2,h3{font-family:var(--display);font-weight:760;letter-spacing:-.04em;line-h
 .js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
-.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,18px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:999px;font-family:var(--mono);font-size:12.5px;box-shadow:0 24px 60px -24px rgba(34,36,35,.5);opacity:0;pointer-events:none;transition:.3s var(--ease);z-index:90;display:flex;align-items:center;gap:9px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,18px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:999px;font-size:13px;font-weight:500;box-shadow:0 24px 60px -24px rgba(34,36,35,.5);opacity:0;pointer-events:none;transition:.3s var(--ease);z-index:90;display:flex;align-items:center;gap:9px}
 .toast .sw{width:13px;height:13px;border-radius:3px}.toast.show{opacity:1;transform:translate(-50%,0)}
 
 /* ---------- mobile ---------- */
@@ -412,7 +412,7 @@ h1,h2,h3{font-family:var(--display);font-weight:760;letter-spacing:-.04em;line-h
       <div class="sec__no">03<span>Typography</span></div>
       <div>
         <h2>Inter sets the voice.<br>Reddit Mono states facts.</h2>
-        <p class="sec__stand">Inter carries display and body, with optical sizing — 28pt for headlines, 18pt for text. Reddit Mono is reserved for code, file paths, hex, and exact values. Mono is never decoration.</p>
+        <p class="sec__stand">Inter carries display and body, with optical sizing — 28pt for headlines, 18pt for text. Reddit Mono is reserved for the code block and exact technical values — never labels or decoration.</p>
       </div>
     </div>
 

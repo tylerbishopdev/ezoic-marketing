@@ -2,7 +2,7 @@
 
 This file is the voice operating manual. Every skill reads it before producing or reviewing copy. For hard facts (products, stats, credentials, boilerplate), cross-reference `ezoic-context.md`. For visual direction, cross-reference `ezoic-style-design-bible.md` and the live asset catalog (`/api/ezoic-brand/assets`).
 
-**Authoritative source:** `iheartezoic.com  [https://iheartezoic.com/llms.txt] available as api, mcp server, and llms.txt, as well as a living example in practice with all data present on the page of the site itself.`
+**Source:** Distilled from the live Ezoic brand guide at https://iheartezoic.com (llms.txt, REST API, and MCP server where available). Per `resolver.md` tie-breaking, THIS file wins for voice/positioning/proof interpretation; the live catalog wins for asset existence and URLs. Surface any disagreement — never silently reconcile.
 
 
 
@@ -16,13 +16,15 @@ The brand guide states the voice in three words. These are the non-negotiables.
 
 > *"say what you mean. no marketing fog. no hedging. if you wouldn't say it to a publisher over a beer, cut it."*
 
-**Beer test** — the litmus test for every sentence. Read a draft aloud. Would you say this to an actual publisher at a bar? If not — cut it. If it sounds like a tagline, rewrite it. If it hedges ("may," "could," "potentially"), cut the hedge.
+*(The guide quote says "publisher" — legacy shorthand; the working persona is any operator of a real web business.)*
+
+**Beer test** — the litmus test for every sentence. Read a draft aloud. Would you say this to the operator of a real web business — an app founder, a game studio, a publisher — at a bar? If not — cut it. If it sounds like a tagline, rewrite it. If it hedges ("may," "could," "potentially"), cut the hedge.
 
 ### 2. Confident.
 
 > *"ezoic has earned the authority. don't ask for permission. state the thing."*
 
-Ezoic has earned its position — 16+ years, 1 of 4 Google Premier, TTD, UID2, 6x identified revenue. Copy should reflect that authority. Declarative sentences. No "we think" or "we believe" unless followed by a specific claim. No disclaimers where none are required.
+Ezoic has earned its position — 16+ years, 1 of 4 Google Premier, TTD, UID2, 6x identified revenue growth (2024→2025; see `proof-points.md`). Copy should reflect that authority. Declarative sentences. No "we think" or "we believe" unless followed by a specific claim. No disclaimers where none are required.
 
 **Critical nuance — confidence is about truth, not volume.** This is *not* permission to be confidently wrong. "State the thing" means state the **true** thing, specifically. The confidence applies to things we actually know:
 
@@ -172,7 +174,7 @@ The five upmarket narratives from the 2026 positioning. Rotate across assets; do
 
 ### Trope rotation rule
 
-**A campaign using the same trope in more than two of its primary assets is burning it.** Rotate. The 250K campaign leaned on "the future web" deliberately because it WAS the positioning shift — for routine campaigns, pick different anchors.
+**The same trope in more than two of a campaign's primary assets is burning it.** Rotate. The 250K campaign leaned on "the future web" deliberately because it WAS the positioning shift — for routine campaigns, pick different anchors.
 
 ---
 
@@ -221,6 +223,19 @@ Voice stays fixed. Tone flexes along three axes.
 | Internal / sales enablement    | Full technical depth, acronyms fine, talk-track voice                                                                    |
 
 
+### Expertise-led / operated (register)
+
+For upmarket, web-app, game, SaaS, and enterprise-evaluator copy, pair the friction-killers (JS snippet, turnkey) with the expertise register: Ezoic operates the deployment — it doesn't hand over a template. This register pairs *with* product delivery; it never replaces it (the platform deploys automatically **and** is strategically scoped).
+
+Anchor phrases — verbatim-verified as of 2026-07-01; use these, don't invent variants:
+
+- **"Operated, not templated"** (live ezoic.com/apps)
+- **"An enterprise path, not a self-serve promise"** (live ezoic.com/apps)
+- **"Enterprise support, not a template"** (live ezoic.com/apps)
+- **"Custom integrations and expert support for logged-in apps & tools"** (live ezoic.com/web-apps)
+- **"strategically scoped to each customer"** (May 26, 2026 press release)
+- **"customers who want to strategically grow revenue vs. having ads managed"** (CEO quote, same release)
+
 ---
 
 ## Anti-patterns — rewrite triggers
@@ -228,33 +243,28 @@ Voice stays fixed. Tone flexes along three axes.
 ### Framing anti-patterns
 
 - **"Applying for permission" framing.** 250K+ customers should feel they're evaluating *us*. Never "we accept" or "you qualify for" in upmarket copy. Use "we work with," "the platform is built for," "customers on Ezoic."
-- **Generic "AI-powered" adjective spam.** If "AI-powered" appears twice in a page, it's said zero times. Name the mechanism once (ML optimizes ad layouts per-visitor across 15+ signals) and drop the adjective elsewhere.
+- **Generic "AI-powered" adjective spam.** If "AI-powered" appears twice in a page, it's said zero times. Name the mechanism once (ML optimizes ad layouts per-visitor across 15+ signals — see `proof-points.md`) and drop the adjective elsewhere.
 - **Vendor-customer framing.** "Our clients," "our accounts." Use "the publishers on our platform," "partners," "digital businesses we work with."
-- **Small-to-big funnel visuals.** Ezoic is not a ladder from small to enterprise. The model is *data signals → ML → outcomes* and a tiered service level (Incubator → Level 1-3 → Level 4 → VIP → Enterprise) — each tier is a complete service, not a step on a staircase.
+- **Small-to-big funnel visuals.** Ezoic is not a ladder from small to enterprise. The model is *data signals → ML → outcomes* and a tiered service level (Ezoic Incubator Program → Business (250K+ monthly users) → VIP & Enterprise (1M+ monthly users)) — each tier is a complete service, not a step on a staircase.
 - **Competitor-trashing.** Never name competitors to disparage them. Refocus, don't attack. See `positioning-pillars.md → Competitive positioning`.
 - **"Just for bloggers" or "small publishers."** The old story. Offensive in upmarket contexts. Reframe with the correct audience — web apps, games, SaaS, enterprise publishers.
 
 ### Copy anti-patterns — auto-delete
 
-- "Revolutionary," "game-changing," "best-in-class," "cutting-edge," "world-class," "next-generation," "disruptive"
-- "Unleash," "empower," "elevate," "supercharge," "transform" (as a verb about our platform), "delight"
-- "In today's fast-paced digital landscape…"
-- "Leverage" (unless quoting a finance document)
-- Any sentence that could appear on any other ad-tech company's website — rewrite until only Ezoic could have written it
-- **CPM dollar claims** without a cited source
+The binding auto-delete word list lives in `resolver.md` → rule 9 (banned words, including "delight," the "leverage unless quoting a finance document" qualifier, and the "any sentence that could appear on any other ad-tech company's website" test). CPM dollar claims without a cited source are `resolver.md` → rule 7. Run those rules verbatim — this file intentionally holds no copy of the list, so it can't drift.
 
 ### Voice anti-patterns
 
 - **Defensive tone.** Don't preempt criticism no one raised. Don't explain why we're "not just another…" Confidence is the counter.
 - **Over-explaining the pivot.** When positioning shifts, one sentence on "why" is enough. "We've been focused here, it's working, now we're making it official" is the template.
 - **Unearned intimacy.** "We know how hard running a publisher business can be…" Specifics earn the right to empathize. Generalities read as manipulative.
-- **Internal language bleeding external.** Internal strategy frames ("Exchange of Value Platform") do not appear externally verbatim. Always translate. See `ezoic-context.md § 15`.
+- **Internal language bleeding external.** Internal strategy frames ("Exchange of Value Platform") do not appear externally verbatim. Always translate. See `ezoic-context.md → The "Exchange of Value" Framework (External Translation)`.
 
 ---
 
 ## Capitalization & terminology
 
-Use these exactly. See `ezoic-context.md § 8` for the canonical product list.
+Use these exactly. See `ezoic-context.md → Platform Products Reference` for the canonical product list.
 
 
 | Term                                             | Correct                                     | Notes                                                                                                                      |
@@ -267,16 +277,14 @@ Use these exactly. See `ezoic-context.md § 8` for the canonical product list.
 | UID2 / Unified ID 2.0                            | UID2                                        | TTD's identity standard. Ezoic is an integrator.                                                                           |
 | Google One Tap                                   | Google One Tap                              | Integration, not an Ezoic product name                                                                                     |
 | The Trade Desk OpenPath                          | The Trade Desk OpenPath                     | Full name; "TTD OpenPath" acceptable internally, less so externally                                                        |
-|                                                  |                                             |                                                                                                                            |
 | Open.Video                                       | Open.Video                                  | Self-hosted video platform. Period is part of the name.                                                                    |
-|                                                  |                                             |                                                                                                                            |
 | Big Data Analytics                               | Big Data Analytics (BDA)                    | Ezoic's analytics product                                                                                                  |
 | Supply-Path Optimization                         | Supply-Path Optimization (SPO)              | Industry term; hyphenated                                                                                                  |
 | Brand Deal Hunters                               | Brand Deal Hunters                          | Ezoic's in-house direct-sales team                                                                                         |
 | AI Bid Flooring                                  | AI Bid Flooring                             | ML-managed auction floors                                                                                                  |
 | First-party data / identity / identified traffic | lowercase                                   | Industry terms, not product names                                                                                          |
 | JS snippet                                       | JS snippet (lowercase "snippet")            | Not "JavaScript tag" or "pixel"                                                                                            |
-| Levels (Levels 1–3, Level 4, VIP, Enterprise)    | Levels                                      | Capitalize as proper service-tier names                                                                                    |
+| Service tiers                                    | Business, VIP & Enterprise, Ezoic Incubator Program | Live tier names: Business (250K+ monthly users), VIP & Enterprise (1M+ monthly users), Ezoic Incubator Program. Capitalize as proper service-tier names. "Levels"/"Level 1–3"/"Level 4" nomenclature is retired — /levels and /pricing redirect to /services ("Ezoic Expert Services"). |
 
 
 ### Leadership references
@@ -293,22 +301,11 @@ Use these exactly. See `ezoic-context.md § 8` for the canonical product list.
 
 ## Brand visual DNA (for asset briefs and image strategy)
 
-**See [iheartezoic.com](http://iheartezoic.com) and above direction on it being a live example of style with all design styles disclosed on the site and available via api, llms.txt, and as an mcp server.**
+For visual rules (palette, type, layout, banned patterns), read `ezoic-style-design-bible.md` first. For asset existence and URLs, the live catalog wins: the `ezoic-brand` MCP server (`read_brand_guide` / `list_brand_assets` / `get_brand_asset`) where connected, or `https://iheartezoic.com/api/ezoic-brand/assets`. The live site https://iheartezoic.com is itself a working example of the style.
 
 ---
 
 ## The smell test
 
-Before shipping, read the draft and answer:
-
-1. **The beer test.** Would I say this to an actual publisher at a bar? If not — rewrite.
-2. Could any other ad-tech company have written this? If yes — rewrite.
-3. Is the customer (the digital business / independent web business, not just "publishers") the subject of most sentences? If no — rewrite.
-4. Are there more adjectives than numbers? If yes — rewrite.
-5. Does the first third contain at least one specific proof point from `proof-points.md`? If no — add one or defer consciously.
-6. Would a skeptical CTO or revenue lead reading this think "these people understand my business"? If no — cut the generic parts.
-7. Am I burning a trope by using it in an asset that doesn't earn it? If yes — pick a different anchor.
-8. Have I used ONLY "publishers" as the audience noun when the audience actually includes web apps, games, SaaS, or newsletters? If yes — expand the language (or use "independent web businesses").
-9. Is the category framing "ad network" or "plugin" anywhere? If yes — rewrite to **revenue infrastructure / operating layer / infrastructure layer / strategic technology partner**.
-10. Am I hedging? ("may," "could," "potentially," "helps to," "allows you to") Where? If a hedge isn't protecting a real legal/factual position, cut it. Ezoic has earned the authority — state the thing.
+Before shipping, run the 10-point smell test **verbatim from `resolver.md`** — the binding master, loaded on every invocation, including the pass/fail scoring key. It is intentionally not duplicated here, so it can't drift. (Item 1, the beer test, uses the working persona above: the operator of a real web business — an app founder, a game studio, a publisher — at a bar.)
 

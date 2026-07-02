@@ -50,7 +50,7 @@ Use when: press releases, investor materials, enterprise pitches, analyst conver
 ### Pillar 2: Technical Chops
 > AI/ML ad optimization. Enterprise-grade first-party identity infrastructure (ezID, UID2, Google One Tap). Supply-Path Optimization (SPO). Publisher-owned video (Open.Video). Rewarded ad engineering across business types. Big Data Analytics.
 
-Why this matters: we **build the tools enterprises pay agencies millions to construct** — delivered as a product. The technical surface area is the differentiator.
+Why this matters: we **build the tools enterprises pay agencies millions to construct** — delivered as a product, operated and strategically scoped to each customer. Operated, not templated. The technical surface area is the differentiator.
 
 Use when: product pages, technical content, sales enablement, comparison conversations, developer/engineer-audience content.
 
@@ -77,7 +77,7 @@ Element 3: HOW (the enabler that makes it practical)
 
 | Element | What it is | What it signals |
 |---|---|---|
-| **1. Scale (250K threshold + Incubator)** | 250K monthly users minimum for new publishers. Incubator (20/month) for smaller sites. | Publishers with valuable audiences need more help than ever. We're focused there. |
+| **1. Scale (250K threshold + Incubator)** | 250K monthly users minimum for new publishers. Incubator (up to 20 sites or apps/month) for smaller sites. | Publishers with valuable audiences need more help than ever. We're focused there. |
 | **2. Direction (the future web)** | Building for the future web — products, tools, apps, engaged users. Quality over volume. | Unprecedented opportunity, unprecedented complexity. Less expertise available, more needed. |
 | **3. Integration (JS snippet default)** | JS snippet is the default. No DNS changes required. | We're easier to implement than people think. The DNS myth is outdated. |
 
@@ -108,8 +108,8 @@ Rung 4: STRATEGIC FRAMING
         (For: LinkedIn thought leadership, exec content, keynotes)
 
 Rung 3: BUSINESS OUTCOME
-        "Identified traffic earns 110%+ more EPMV. Sites using ezID see 15%+ overall
-         lift across the network."
+        "U.S. identified traffic earns 110%+ more EPMV. Sites with identified
+         traffic see 15%+ EPMV lift vs. anonymous."
         (For: sales decks, landing pages, executive email, case studies)
 
 Rung 2: PRODUCT CAPABILITY
@@ -128,7 +128,7 @@ Rung 1: TACTICAL INSTRUCTION
 
 ## Canonical positioning statements
 
-Reference these when drafting. Adapt for channel but do not drift from the core claims. For verified boilerplate, see `ezoic-context.md § 16`.
+Reference these when drafting. Adapt for channel but do not drift from the core claims. For verified boilerplate, see `proof-points.md → Standard boilerplate`.
 
 ### The category one-liner
 > Ezoic is the **revenue infrastructure** for the modern web — helping web apps, online games, SaaS tools, newsletters, and high-traffic publishers turn audience quality into real, measurable revenue.
@@ -136,8 +136,10 @@ Reference these when drafting. Adapt for channel but do not drift from the core 
 ### The credential one-liner
 > Ezoic is an AI-driven technology platform and **one of only four Google Premier Certified Publishing Partners globally** — with direct integrations into The Trade Desk, UID2, Amazon, and the broader programmatic ecosystem.
 
+(The Amazon claim is backed by the "Amazon & Media.net partnerships" credential in `proof-points.md` — cite it from there, in that form.)
+
 ### The infrastructure story (LinkedIn / editorial)
-> The web has changed. Cookies are dead. AI Overviews strip search clicks. Walled gardens have captured the majority of digital ad spend. For serious digital businesses, traffic is no longer a strategy — revenue now compounds through engagement, identity, and first-party data. That's what Ezoic builds.
+> The web has changed. Cookies are dead. AI Overviews strip search clicks. Walled gardens have captured the majority of digital ad spend. For serious digital businesses, traffic is no longer a strategy — revenue now compounds through engagement, identity, and first-party data. That's what Ezoic builds — and operates with its customers: a dedicated account specialist, strategic management, and personalized revenue strategy sessions come standard at 250K+.
 
 ### The outcomes story (sales / win-back)
 > Sites on Ezoic with activated first-party identity see **15%+ higher EPMV** on average — and **110%+ improvement** on U.S. identified traffic. Platform-wide identified revenue grew **6x** from 2024 to 2025.
@@ -146,7 +148,7 @@ Reference these when drafting. Adapt for channel but do not drift from the core 
 > We've already built what you'd pay an agency team to build: AI ad optimization, enterprise identity infrastructure, supply-path optimization, direct TTD/OpenPath access, publisher-owned video, and a dedicated direct-sales team — delivered as a product. Enterprise customers get Ezoic engineering access, 24/7 support, and custom solutions on top.
 
 ### The Incubator story (growth-path)
-> We've been building custom solutions for larger digital businesses for years — this makes it official. But we're staying true to our roots: Ezoic Incubator accepts 20 digital businesses a month below the 250K threshold who want to grow with us.
+> We've been building custom solutions for larger digital businesses for years — this makes it official. But we're staying true to our roots: Ezoic Incubator accepts up to 20 sites or apps a month below the 250K threshold who want to grow with us.
 
 ---
 
@@ -158,8 +160,8 @@ The "afters" that matter most right now:
 - **6x** platform-wide identified revenue growth, 2024 → 2025
 - **15%+** EPMV lift for sites with identified traffic
 - **110%+** U.S. EPMV improvement for identified users
-- **4 of 4** Google Premier Certified Publishing Partners globally
-- **~80%** applicant rejection rate (premium, brand-safe network)
+- **1 of 4** — one of only four Google Premier Certified Publishing Partners globally (as of March 2025)
+- **~80%** of applicants rejected — selectivity as a quality signal
 
 Pattern: **"We've been focused here, it's working, now we're making it official."**
 
@@ -183,6 +185,10 @@ Ezoic does not name competitors negatively in external marketing. Ever. See `ezo
 When a competitor is brought up by a prospect, always **refocus, not attack**:
 - "We're focused on digital businesses at scale that need real infrastructure, not just ad brokerage."
 - "No pressure. If you're seeing results there, great. Just know what's here if it's ever worth comparing notes."
+
+**Differentiation notes (internal reference only — never quote or name competitors in external copy):**
+- The market's recurring service pitch is **"extension of your team"** — used verbatim by Raptive (enterprise page) and Freestar (verified as of July 2026). Don't repeat the phrase; **out-specify it**: named strategy teams, engineering access, deployments strategically scoped to each customer.
+- No competitor owns **"web apps & tools"** as a category. That whitespace is claimable — it reinforces the "only platform spanning web apps, games, SaaS, and publishers" claim with competitor-side facts.
 
 ---
 

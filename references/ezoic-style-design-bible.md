@@ -74,7 +74,7 @@ Use `/api/ezoic-brand/assets`, `/api/ezoic-brand/assets/grouped`, and `/api/ezoi
 
 Near-black and off-white carry the system. Mint is the single accent and should do real work. Lime and Frog support Mint; they do not replace it. Do not introduce new brand hues for surfaces, charts, or components.
 
-Signature surface: `Grain over Mint`, defined by `.grain-mint`, combines `linear-gradient(180deg, #A2D860 5%, #BBFFA6 50%, #3D5C17 100%)` with a subtle grain overlay. Use it for singular brand moments such as hero shapes, section anchors, and ad creative.
+Signature surface: `Grain over Mint`, defined by `.grain-mint`, combines `linear-gradient(180deg, #A2D860 5%, #BBFFA6 50%, #3D5C17 100%)` with a subtle grain overlay. Use only for singular brand moments such as hero shapes, section anchors, and ad creative — never as decorative edge strips or wallpaper.
 
 ## Typography And Red Hat Mono
 
@@ -82,6 +82,7 @@ Primary type is Inter. Red Hat Mono is the required Ezoic brand mono face for te
 
 - Display: Inter 28pt via `--font-inter-display`; `.font-display` uses tight `-0.05em` tracking.
 - Body/UI: Inter 18pt via `--font-inter`; body defaults to medium weight and tight tracking.
+- Weights: `@fontsource/inter` imports 300, 400, 500, 600, 700, and 900; public WOFF2 files cover Light through Bold at 18pt and SemiBold through Black at 28pt.
 - Section headings: large editorial scale, tight leading, standalone titles.
 - Mono: Red Hat Mono via `--font-mono` and `--font-red-hat-mono`; public file `/fonts/RedHatMono.woff2`.
 

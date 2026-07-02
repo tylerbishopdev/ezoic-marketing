@@ -1,0 +1,28 @@
+{
+  "name": "ezoic-internal-marketing",
+  "owner": {
+    "name": "Ezoic Marketing",
+    "email": "tbishop@ezoic.com"
+  },
+  "metadata": {
+    "description": "Ezoic's marketing plugins. Proprietary and source-available — © Ezoic Inc. No reuse or redistribution without permission."
+  },
+  "plugins": [
+    {
+      "name": "ezoic-marketing",
+      "source": "./",
+      "description": "Ezoic's marketing operating system for Claude Code — one consolidated skill (13 task playbooks) covering multi-channel content, sales materials, decks, landing pages, objections, campaigns, positioning, and brand review. Resolves the canonical Ezoic brand system live (ezoic-brand MCP / iheartezoic.com API) with bundled references as fallback, and enforces the brand contract across every output. Proprietary, source-available — © Ezoic Inc.",
+      "category": "marketing",
+      "tags": [
+        "ezoic",
+        "marketing",
+        "brand-voice",
+        "proprietary",
+        "publishers",
+        "web-apps",
+        "saas",
+        "online-games"
+      ]
+    }
+  ]
+}

@@ -100,7 +100,9 @@ Every routine in this skill consults this file when producing a channel-specific
 |---|---|
 | **Complexity Angle** ("The future web is more complex than ever…") | Strategic narrative moments, positioning shifts |
 | **Opportunity Focus** ("Publishers with real audiences are sitting on more opportunity than ever") | Aspirational openings, new-market framing |
-| **Results-Led** ("Some data worth sharing: Publishers at 250K+ are seeing ~15% higher EPMVs…") | Case-study drops, win-back-adjacent, proof moments |
+| **Results-Led** ("Some data worth sharing: sites with identified traffic are seeing 15%+ higher EPMVs than anonymous…") | Case-study drops, win-back-adjacent, proof moments |
+
+**Stat rule:** any stat used in these patterns must be copied from `proof-points.md` with its context string intact — never re-attribute a stat to a different cohort or drop its qualifier.
 
 **Anti-patterns:**
 - Starting with "I'm excited to announce…"
@@ -130,10 +132,10 @@ Every routine in this skill consults this file when producing a channel-specific
 - Short phrases over complete sentences where it works visually
 
 **Visual calibration (from `ezoic-style-design-bible.md`):**
-- Near-Black `#0B0C0B` background with `#BBFFA6` (Pale Mint primary accent) for the one thing the eye should land on, or `#A2D860` (Vibrant Lime) for large type on dark
+- Near-Black `#0B0C0B` background with `#BBFFA6` (Mint — the single accent) for the one thing the eye should land on. `#A2D860` (Lime) is reserved support only, paired with Mint — never a general large-type color
 - Inter weights — Bold for the headline stat, Medium for supporting copy
 - If the slide is a proof point, treat the number as hero typography (big, bold, green on dark)
-- Logo lockup in corner — circular badge + wordmark
+- Logo lockup in corner — horizontal lockup, circular badge left / wordmark right. Use the approved files `/brand/lockup-light.png` (on near-black) and `/brand/lockup-dark.png` (on off-white); never approximate the mark
 
 **Anti-patterns:**
 - "Who We Accept" / "Qualifying Publishers" framing — applies-for-permission vibe
@@ -210,7 +212,7 @@ A: One-paragraph answer. Lead with the answer, follow with minimal rationale. Li
 1. Hero headline — the product value prop in 5–8 words
 2. Subhead — one sentence of what it actually is
 3. CTA (Get Started / Check Eligibility / Learn More)
-4. Three-column solution overview — specific use cases or categories
+4. Solution overview — specific use cases or categories, laid out as an editorial bento (asymmetric, one dominant idea per view — never equal-card SaaS grids)
 5. Interactive demo or product visual
 6. Proof — customer logos, stats, case study quotes
 7. Feature detail sections
@@ -227,7 +229,7 @@ A: One-paragraph answer. Lead with the answer, follow with minimal rationale. Li
 - Formality: MEDIUM
 - Energy: informative, opinion-forward (for editorial); confident (for product)
 - EPMV / identified traffic assumed fluency for publisher-audience blogs
-- Product pages should lean on the bento-grid pattern — one claim per card, specific and supported
+- Product pages should lean on the editorial bento pattern — asymmetric, one dominant idea per view, never equal-card SaaS grids; one claim per card, specific and supported
 
 **Anti-patterns:**
 - Product pages that read like grant applications
@@ -314,7 +316,7 @@ See also: `product-catalog.md` for product-specific positioning.
 
 **Structure (consistent across ezoic.com product pages):**
 1. Hero — tagline-style headline + one-sentence subhead + primary CTA
-2. Three-card solution overview (with icons) — specific categories or use cases
+2. Solution overview — specific categories or use cases, laid out as an editorial bento (asymmetric, one dominant idea per view — never three equal cards with icons)
 3. Interactive demo or live product widget (where possible — the Audience Visualizer pattern)
 4. Feature detail sections (usually 2–3 per product)
 5. Proof — stats, customer quotes, logos
@@ -323,7 +325,7 @@ See also: `product-catalog.md` for product-specific positioning.
 **Voice calibration:**
 - Formality: MEDIUM
 - Energy: confident, proof-heavy, short sentences
-- Match the visual bento-grid vibe of the existing ezoic.com design — one claim per card, not paragraphs
+- Match the editorial bento vibe of the existing ezoic.com design — asymmetric, one dominant idea per view, never equal-card SaaS grids; one claim per card, not paragraphs
 
 ---
 

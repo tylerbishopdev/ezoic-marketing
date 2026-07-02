@@ -6,9 +6,11 @@ The concrete results, numbers, credentials, and quotable specifics Ezoic marketi
 
 **If a draft has no number from this file in its top third, something is wrong.**
 
+**As of 2026-07-01 — next review 2026-10-01.** This stamp covers every table in this file (headline stats, market context, credentials). Re-validate anything older than 6 months before external use.
+
 ---
 
-## Headline stats (current as of April 2026)
+## Headline stats
 
 | Stat                                      | Value               | Context                                                                   | Use in                                                  |
 | ----------------------------------------- | ------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------- |
@@ -21,21 +23,35 @@ The concrete results, numbers, credentials, and quotable specifics Ezoic marketi
 | **Data signals per user session**         | **15+**             | Data points ML uses per-visitor for ad layout optimization                | Product pages, sales deck, technical content            |
 | **Network EPMV growth in Q1 2026**        | **+23.6%**          | Network EPMV growth during Q1 2026                                        | Platform momentum, broad Ezoic pitch                    |
 | **Network EPMV growth YoY**               | **+29.2%**          | Network EPMV growth from 2025 to 2026                                     | Platform momentum, quarterly updates                    |
-| **Header-bidding revenue share**          | **38.5% → 49.7%**   | Share of total auction revenue YoY in April; shows stronger competition   | Demand quality, auction-competition narrative           |
+| **Header-bidding revenue share**          | **38.5% → 49.7%**   | Share of total auction revenue YoY in April — **measurement period unconfirmed; verify the years with the data owner before external use** | Demand quality, auction-competition narrative           |
 | **Average distinct bidders per domain**   | **+37.7%**          | More buyers competing on every impression                                 | Demand quality, auction-competition narrative           |
 | **Monetized user pageviews**              | **4.11B**           | Monetized user pageviews across the network in Q1 2026                    | Scale proof, network momentum                           |
 | **Rewarded impressions filled**           | **58.0M**           | Rewarded impressions filled over 1 year; adoption remains early           | Rewarded-ad launches, format leadership                 |
-| **Rewarded-ad CPM delta**                 | **6–15x display**   | Network-wide CPM on rewarded ads vs. standard display CPMs                | Games, SaaS, apps, rewarded-ad launches                 |
-| **Ezoic Video EPMV doubling cohort**      | **150+ sites**      | Ezoic sites that doubled EPMV within 30 days of adding Ezoic Video        | Video product launches, content-publisher pitch         |
+| **Rewarded-ad CPM delta**                 | **6–15x display**   | Network-wide CPM on rewarded ads vs. standard display CPMs — the canonical rewarded-CPM claim | Games, SaaS, apps, rewarded-ad launches                 |
+| **Customer display EPMV lift**            | **+27%**            | Average display EPMV increase across customers — May 26, 2026 press release | Expertise-pillar proof, press, enterprise pitch, refocus |
+| **Ad load time reduction**                | **1 full second**   | Ad load times cut "by a full second across the platform" — May 26, 2026 press release | Expertise + speed narrative, technical content          |
+
+Source for the +27% and 1-second stats: [Ezoic press release, May 26, 2026](https://natlawreview.com/press-releases/ezoic-fuels-ad-innovation-faster-ad-loading-customer-epmv-lifted-27) — which also carries the "strategically scoped to each customer" deployment framing (expertise-pillar language).
+
+### Live-site scale claims (as of 2026-07-01)
+
+Numbers currently published on ezoic.com — keep copy consistent with what prospects can cross-check:
+
+| Claim                                 | Value      | Where it appears           |
+| ------------------------------------- | ---------- | -------------------------- |
+| Premium sites & apps on the platform  | **5K+**    | /advertisers, /what-is-ezoic |
+| Monthly pageviews                     | **768M**   | /advertisers, /what-is-ezoic |
+| Raised (venture-backed)               | **$40M+**  | /advertisers               |
+
+> **CMO flag — unresolved discrepancy:** /partners still says Ezoic works with "tens of thousands of websites," which conflicts with the "5K+ premium sites & apps" positioning above. Do not mix the two in one asset; confirm which is canonical before external use.
 
 ### Market context stats (for thought-leadership framing)
 
 | Stat                                         | Value      | Source                                                                | Use in                                                   |
 | -------------------------------------------- | ---------- | --------------------------------------------------------------------- | -------------------------------------------------------- |
 | Organic search CTR decline                   | **40–50%** | From AI Overviews impact (DataSlayer/Seer Interactive via Ezoic Blog) | Thought leadership, industry context, problem-framing    |
-| Marketers saying first-party data is crucial | **93%**    | Industry research                                                     | Identity/ezID launches, post-cookie narrative            |
-| U.S. digital ad market (2023)                | **$225B+** | Industry data cited in Ezoic materials                                | Investor materials, category-framing                     |
-| Publishers with first-party solutions ready  | **~24%**   | Industry reference                                                    | Identity narrative, "ahead of 76% of the market" framing |
+| Marketers saying first-party data is crucial | **93%**    | Acquia CX Trends Report (2024) — verified via secondary citations 2026-07-01; pull the primary report before print/press use | Identity/ezID launches, post-cookie narrative            |
+| U.S. digital ad market (2025)                | **$294.6B** | IAB/PwC Internet Advertising Revenue Report, Full Year 2025 (April 2026) — +13.9% YoY | Investor materials, category-framing                     |
 
 ---
 
@@ -84,6 +100,8 @@ Why it matters: third-party brand-safety and quality signal. Useful in advertise
 > "Named to Inc. Magazine's Fastest-Growing Private Companies list in 2022."
 
 Why it matters: institutional growth credibility.
+
+**Caveat (as of 2026-07-01):** four years old — don't lead with it. Pair with current momentum stats (+23.6% Q1 2026 network EPMV, +27% customer display EPMV) or drop it from the asset.
 
 ### 16+ years in-market
 
@@ -136,13 +154,12 @@ Use the right proof for the right audience. See `audience-segments.md` for segme
 - 110%+ U.S. identified-user EPMV improvement
 - +23.6% Network EPMV growth in Q1 2026
 - +29.2% Network EPMV growth YoY from 2025 to 2026
-- Header-bidding revenue share grew from 38.5% to 49.7% of total auction revenue YoY in April
+- Header-bidding revenue share grew from 38.5% to 49.7% of total auction revenue YoY in April (measurement period unconfirmed — verify before external use)
 - +37.7% average distinct bidders per domain
 - 4.11B monetized user pageviews in Q1 2026
 - Google Premier CPP (1 of 4 globally)
 - TTD OpenPath direct access
 - Brand Deal Hunters (direct advertiser demand)
-- Open.Video — 150+ sites doubled EPMV within 30 days
 
 ### Web apps & SaaS
 
@@ -172,17 +189,18 @@ Use the right proof for the right audience. See `audience-segments.md` for segme
 - 4.11B monetized user pageviews in Q1 2026
 - Google Premier (1 of 4)
 - Direct Ezoic engineering access at Enterprise tier
+- +27% average customer display EPMV; ad load times cut by a full second platform-wide — deployments "strategically scoped to each customer" (May 26, 2026 PR)
 - 16+ years in-market
 
 ### Incubator applicant
 
-- 20 spots/month (scarcity)
+- Up to 20 sites or apps selected each month (scarcity)
 - Full platform access if accepted
-- Growth path to Level 1–3 at 250K
+- Growth path to the Business tier at 250K
 
 ### Grandfathered publisher
 
-- Active platform investment (ezID and Open.Video rolled out recently — not maintenance mode)
+- Active platform investment, not maintenance mode (Open.Video launched August 2025; ezID is a current-generation rollout — confirm its exact launch date internally before citing one)
 - Continued full platform access, new-feature parity
 - Re-entry policy protects grandfathered value
 
@@ -232,6 +250,13 @@ Reusable quotes. Swap in correct attribution when using.
 > "We've always believed in helping publishers grow. Incubator lets us stay true to that while focusing our core platform where we deliver the most value."
 > — _Ezoic executive, 250K campaign_
 
+### On expertise and speed
+
+> "Everything is faster now, and expertise and experience is allowing us to make that our advantage."
+> — _Tyler Bishop, CMO — Ezoic press release, May 26, 2026_
+
+Pair with the same PR's framing that deployments are "strategically scoped to each customer" — the expertise-pillar language for consultative positioning.
+
 ### On the future web
 
 > "Discovery still happens, but it's abstracted. Information is summarized and resolved upstream."
@@ -251,7 +276,7 @@ Reusable quotes. Swap in correct attribution when using.
 
 **Long (paragraph):**
 
-> Ezoic is an AI-driven technology company headquartered in Carlsbad, California, and one of only four Google Premier Certified Publishing Partners worldwide. Founded over 16 years ago, Ezoic has built the most comprehensive revenue infrastructure platform for digital businesses operating at scale — including web apps, online games, SaaS tools, newsletter operators, and high-traffic content publishers. The platform combines machine learning ad optimization, enterprise first-party identity (ezID, UID2, Google One Tap), rewarded ad formats, publisher-owned video monetization (Open.Video), supply-path optimization via The Trade Desk OpenPath, and industry-leading analytics (Big Data Analytics). Ezoic's platform delivered 6x growth in identified publisher revenue year-over-year and consistently drives 15%+ EPMV improvements for publishers who activate first-party identity.
+> Ezoic is an AI-driven technology company headquartered in Carlsbad, California, and one of only four Google Premier Certified Publishing Partners worldwide. Founded over 16 years ago, Ezoic builds full-stack revenue infrastructure for digital businesses operating at scale — including web apps, online games, SaaS tools, newsletter operators, and high-traffic content publishers — backed by a verifiable credential stack: Google Premier CPP, The Trade Desk OpenPath, and UID2 integration. The platform combines machine learning ad optimization, enterprise first-party identity (ezID, UID2, Google One Tap), rewarded ad formats, publisher-owned video monetization (Open.Video), supply-path optimization via The Trade Desk OpenPath, and industry-leading analytics (Big Data Analytics). Ezoic's platform delivered 6x growth in identified publisher revenue year-over-year and consistently drives 15%+ EPMV improvements for publishers who activate first-party identity.
 
 ---
 

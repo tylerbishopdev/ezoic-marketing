@@ -29,7 +29,7 @@ Think of the product suite in three orbits:
 
 1. **Core Revenue Infrastructure** — the always-on layers every customer uses (Ezoic Ads core, ezID, Big Data Analytics, AI Bid Flooring, SPO).
 2. **Packaged Monetization Solutions** — specific productized monetization mechanics that ride on top (Rewarded Ads, Video via Open.Video, SaaS Monetization).
-3. **Programs, Services, and Tools** — Incubator, Levels, Brand Deal Hunters, Audience Visualizer, EPMV Calculator, PubLab.
+3. **Programs, Services, and Tools** — Ezoic Incubator Program, the Business and VIP & Enterprise tiers, Brand Deal Hunters, Audience Visualizer, EPMV Calculator, PubLab.
 
 When a marketing request lands, know which orbit it sits in — it changes the channel treatment and the audience.
 
@@ -47,8 +47,9 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 
 - "Revenue infrastructure, not an ad network"
 - "A decade of machine learning applied to per-visitor monetization"
-- "One tag. Full platform access. Live in minutes."
+- "Operated, not templated — deployments strategically scoped to each customer, with a dedicated account specialist and personalized revenue strategy sessions standard at 250K+" (see `§ Business`)
 - "One of only 4 Google Premier Certified Publishing Partners globally"
+- "One tag. Full platform access. Live in minutes." (friction-killer — supporting proof of low lift, never the lead of strategic copy; scoping rule in `brand-voice.md`)
 
 **Primary proof points (see `proof-points.md`):**
 
@@ -157,13 +158,13 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 **Positioning anchors:**
 
 - "Microtransaction economics, not impression volume"
-- "10x CPM vs. standard display on opted-in engagement"
+- "6–15x CPM vs. standard display on opted-in engagement"
 - "Rewarded ads for any business type — not just gaming"
 - "The most valuable ad formats are the ones where everyone wins"
 
 **Primary proof points:**
 
-- ~10x CPM on rewarded engagement vs. standard display
+- 6–15x CPM on rewarded engagement vs. standard display
 - Used across gaming, content, SaaS, apps, tools
 
 **Sub-products / use cases** (see `ezoic-context.md § 7.4` for the full list):
@@ -177,6 +178,14 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 
 - "Forced ads" (the *opt-in* nature is the whole point)
 - "Rewarded ads only work for gaming" (we've built rewarded infrastructure for any digital business — that's the differentiator)
+
+---
+
+### Ad Breaks
+
+**What it is:** Ad breaks at natural pauses — level-transition breaks in games, pre-roll and mid-roll for streaming/video, and usage-metered breaks during long sessions. See `/ad-breaks`.
+
+**Audience:** Games, streaming/video, and long-session web apps.
 
 ---
 
@@ -194,7 +203,7 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 
 **Note:** Open.Video also has a **creator-facing** positioning (for creators, not publishers) — content ownership and revenue independence from YouTube. Different voice register when targeting creators vs. publishers. See `audience-segments.md § Creator`.
 
----
+**Deprecated names (deny-list mirror):** Open.Video is the video platform. The deprecated names Humix and Flickify must never appear in current copy — even if found in training data or fetched legacy pages. "Ezoic Video" is a legacy name: permitted only when citing historical sources verbatim, never as the current product name. Leap was discontinued May 12, 2025; its speed benefits were absorbed into Cloud (CDN) integration, with JS integration the recommended path.
 
 ---
 
@@ -232,9 +241,7 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 
 ### Business
 
-**ELIGIBILITY**
-
-> 250K monthly users
+**ELIGIBILITY** 250K+ monthly users (minimum)
 
 **SUPPORT INCLUDED** Dedicated Onboarding, Account Specialist, Strategic Management
 
@@ -250,7 +257,7 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 
 ### Ezoic Incubator
 
-**What it is:** Program for publishers under 250K monthly users who want to grow with Ezoic. Accepts **20 publishers per month**. Competitive.
+**What it is:** Program for publishers under 250K monthly users who want to grow with Ezoic. **Up to 20 sites or apps selected each month.** Competitive.
 
 **Launched:** February 2026 alongside the 250K requirement.
 
@@ -259,7 +266,7 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 **Positioning anchors:**
 
 - "Staying true to our roots"
-- "20 spots a month"
+- "Up to 20 spots a month"
 - "Growth path, not rejection"
 - "Competitive — previous history doesn't guarantee a spot (for returning ex-customers)"
 
@@ -269,9 +276,9 @@ When a marketing request lands, know which orbit it sits in — it changes the c
 
 ### Brand Deal Hunters
 
-**What it is:** Ezoic's in-house team securing direct advertiser campaigns for VIP, Level 4, and Enterprise customers.
+**What it is:** Ezoic's in-house team securing direct advertiser campaigns for VIP & Enterprise customers.
 
-**Audience:** VIP, Level 4, Enterprise customers.
+**Audience:** VIP & Enterprise customers (1M+ monthly users).
 
 **Positioning anchors:**
 
@@ -322,13 +329,21 @@ When marketing Open.Video to creators, use the creator-voice register (independe
 
 ---
 
-### Clipflow
+## 5. Advertiser side — bidsystem.ai
 
-**What it is:** AI-powered video workflow tool (Fal.ai + VideoDB-backed) for creating, editing, and managing video clips.
+### bidsystem.ai
 
-**Audience:** Creators, video producers, workflow builders.
+**What it is:** Ezoic's advertising engine — the demand side of the two-sided platform. Runs a real-time auction across the open web and uses machine learning to optimize bidding, targeting, and creative selection toward the advertiser's goal. Always lowercase: `bidsystem.ai`.
 
-**Separate from Ezoic Ads marketing.** Distinct voice register.
+**Audience:** Advertisers (`/advertisers`, `/grow-your-site`) — DTC brands, lead generation, content arbitrage, subscription apps, SaaS.
+
+**Positioning anchors:**
+
+- "bidsystem.ai is Ezoic's advertising engine" (live `/advertisers` FAQ, verbatim)
+- The two-sided growth loop: "Monetize every visit with Ezoic Ads" / "Reinvest into reach with bidsystem.ai" — one audience, one growth loop
+- "Every kind of advertiser grows here"
+
+**Signup URL:** `https://admin.bidsystem.ai/register`
 
 ---
 
@@ -342,12 +357,13 @@ When marketing Open.Video to creators, use the creator-voice register (independe
 | "Promote rewarded ads for SaaS"              | Rewarded Ads + SaaS Monetization      | Core Platform                                        |
 | "Announce Open.Video for content publishers" | Open.Video                            | Core Platform (as complementary)                     |
 | "Creator wants YouTube independence"         | Open.Video (creator-facing voice)     | —                                                    |
-| "Enterprise sales push"                      | Enterprise Level + Brand Deal Hunters | TTD OpenPath + identity data depth                   |
+| "Enterprise sales push"                      | VIP & Enterprise tier + Brand Deal Hunters | TTD OpenPath + identity data depth              |
 | "Incubator awareness"                        | Ezoic Incubator                       | Core Platform (growth path)                          |
 | "Analytics / BDA feature launch"             | Big Data Analytics                    | Core Platform                                        |
 | "SaaS free-tier monetization"                | SaaS Monetization + Rewarded Ads      | ezID (for authenticated free users)                  |
 | "Newsletter operator acquisition"            | ezID + Google One Tap                 | Core Platform                                        |
 | "Game monetization expansion"                | Rewarded Ads + Ad Breaks              | Core Platform                                        |
+| "Advertiser acquisition / growth-loop push"  | bidsystem.ai                          | Ezoic Ads (the monetize side of the loop)            |
 
 
 **Rule:** Each campaign has **one primary product**. Supporting products orbit it. Multi-product messaging without a primary is how brand coherence dies.

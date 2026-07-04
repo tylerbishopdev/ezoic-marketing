@@ -2,6 +2,21 @@
 
 All notable changes to the `ezoic-marketing` skill and its plugin packaging.
 
+## [2.1.0] — 2026-07-04
+
+Full realignment to the ratified visual system: the Ezoic Brand Style Guide, experimental v0.1 (Brand standards / Vol. 02 — 2026 / Light edition).
+
+### Changed
+- **`brand-site/index.html` rebuilt as the web edition of the guide** — the home page now mirrors the PDF sheet for sheet (Cover → Growth Engineering contents → Logo → Logo On Color → Logo Usage → Color → Font → Type In Use → The Pixel Wash → Voice → Applied Examples → back cover), with the guide's page chrome, headlines, rules, captions, and master files (core/reversed lockups, steel pairing masters, wash assets).
+- **Design system aligned to the written spec** (`brand-site/design-system/`): body tracking −3% (was −2%), heading/body line spacing 125%/150%, heading convention Title Case closed with a period, soft-rounded surface scale (16px panels / 24px bands / 999px pills) per the guide's pages, pixel-wash tokens and utilities (collage 14%, ink bands 8%/10%), cloud page surface with white raised-panel tints.
+- **`references/ezoic-style-design-bible.md` rewritten as the Vol. 02 light-edition bible** — palette (Green #70A92A single accent · Charcoal · Graphite · Steel · Cloud), four logo pairings, Inter/Reddit Mono spec, the Pixel Wash, sheet-based layout rhythm, updated component rules and banned patterns. The mint-led dark system (mint/lime/frog, near-black surfaces, grain-over-mint, Red Hat Mono) is fully retired.
+- **Visual contract updated** — `resolver.md` rules 13/16/20 and their `SKILL.md` summaries now carry the light-edition palette, the guide's type spec, and the pixel-wash rule (no sanctioned gradient). Pitch-deck visual calibration in `channel-playbook.md` and the capitalization note in `brand-voice.md` updated to match. Both READMEs realigned.
+- Conflict resolution documented everywhere it matters: the guide's written spec wins over draft asset sheets (ink `#252726`, not `#222423`; line spacing 125%/150%, not 105%/110%).
+
+### Added
+- Machine-readable surfaces regenerated from the new system, ready to lift into the canonical app and the `ezoic-brand` MCP server: `brand-site/llms.txt`, `brand-site/llms-full.txt`, `brand-site/api/ezoic-brand.json`.
+- `BRAND-REALIGNMENT-PROMPT.md` — the reusable master prompt that produced this realignment; re-run it when the guide PDF is revised.
+
 ## [2.0.0] — 2026-07-01
 
 Full overhaul: re-converted to a native Claude Code skill and re-verified against live sources.

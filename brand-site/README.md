@@ -1,79 +1,81 @@
 # Ezoic Brand Standards — Site (light edition)
 
-A reworked, **modern, light-only, premium** brand-standards page for Ezoic. Single self-contained
-file (`index.html`, CSS + JS inline) — open it in any browser, no build step.
+The web edition of the **Ezoic Brand Style Guide — experimental v0.1** (Brand standards /
+Vol. 02 — 2026 / Light edition). Single self-contained file (`index.html`, CSS + JS inline)
+— open it in any browser, no build step. The guide PDF is the ratified spec; this page
+mirrors it sheet for sheet.
 
 ```
 open brand-site/index.html        # macOS
 xdg-open brand-site/index.html    # Linux
 ```
 
-## What changed
+## Structure — the guide's running order
 
-This is a redesign of the brand-standards surface in a new direction:
+Each section is a "sheet" reproducing a page of the guide, with its page chrome (running
+head, emblem top right, hairline footer with a mono page number):
 
-|        | Previous canonical system   | This redesign                                    |
-| ------ | --------------------------- | ------------------------------------------------ |
-| Mode   | Dark-led (near-black field) | **Light only** — off-white & near-black carry it |
-| Accent | Mint `#BBFFA6`              | **Ezoic Green `#70A92A`** — one accent           |
-| Feel   | Editorial, high-contrast    | Editorial, high-contrast, **premium / trendy**   |
+| Sheet | Page | Headline |
+| --- | --- | --- |
+| Cover | 01 | — (the lockup over the cover wash) |
+| Contents | 02 | Growth Engineering. |
+| Logo | 03 | Primary + reversed lockups, with file paths |
+| Logo On Color | 04 | Four pairings, then leave it alone |
+| Logo Usage | 05 | Use The Master Files. |
+| Color | 06 | Neutrals Build. Green Points. |
+| Font | 07 | Inter |
+| Type In Use | 08 | One Family. Two Optical Sizes. |
+| The Pixel Wash | 09 | Decisive, Concise, Clear. |
+| Voice | 10 | Direct. Confident. Technical. |
+| Applied Examples | 11 | Applied Examples. |
+| Back cover | 12 | Reversed lockup + tagline + machine-readable access |
 
-The editorial DNA is kept — restrained, high-contrast, one decisive accent, generous negative
-space, mono only for technical values. The system just moves to light surfaces and the classic
-Ezoic green from the attached asset set.
+## The system
 
-## Palette — exclusive
+**Palette — five declared values.** Ezoic Green `#70A92A` (the single accent — the mark,
+primary actions, signature moments) · Charcoal `#252726` · Graphite `#575757` · Steel
+`#969696` · Cloud `#E3E3E3`. Surfaces are cloud or ink; white `#FFFFFF` and alpha
+derivatives of the five appear only as quiet surface tints (raised panels, washes). An
+automated color audit of the file confirms nothing else appears. Green measures 2.8:1 on
+light surfaces, so it is never small text on cloud/white.
 
-The page uses **only** these six values. Exclusivity is enforced by an automated color audit that
-scans every hex/rgba in the file — no other color appears.
+**Type.** Inter, one family, two optical sizes — self-hosted (28pt Display for headings,
+18pt Text for body), plus Reddit Mono (variable) for code, file paths, hex, and exact
+values only. Headings: −5% letter spacing, 125% line spacing, Title Case, closed with a
+period. Body: −3% letter spacing, 150% line spacing, sentence case. Nothing is set in all
+caps (`text-transform: uppercase` count: 0). Oversized specimen headlines mirroring the
+guide's own pages sit tighter than the 125% heading standard (`.disp`).
 
-| Name        | Hex       | Role                                                 |
-| ----------- | --------- | ---------------------------------------------------- |
-| Ezoic Green | `#70A92A` | The single accent — fills, the mark, primary actions |
-| Charcoal    | `#252726` | Primary text + dark surfaces                         |
-| Graphite    | `#575757` | Secondary text, metadata, hex values                 |
-| Steel       | `#969696` | Muted: borders, on-dark secondary, the muted mark    |
-| Cloud       | `#E3E3E3` | Hairlines, panels, fills                             |
-| White       | `#FFFFFF` | Base surface                                         |
+**The Pixel Wash.** The system's one texture — neutrals only, one wash per surface, always
+under the content: editorial collage at 14% (hero surfaces), Wash 01 at 8% and Wash 02 at
+10% (ink bands). The wash assets live in `assets/overlays/` and
+`assets/brand/truth-assets/`.
 
-Green `#70A92A` measures 2.8:1 on white, so — like any real system — it is reserved for fills, the
-mark, and dark/large contexts and is never used as small text on white.
+**Logo integrity.** The wordmark is never typeset — every lockup is an approved file:
+`lockup-dark.png` (core, on light), `lockup-light.png` (reversed, on ink), and the steel
+pairing masters in `assets/brand/truth-assets/UPDATE/`. The emblem renders as inline SVG
+using the exact approved vector path from `/brand/emblem-white.svg`, recolored only within
+the palette finishes (green / ink / steel / green-on-ink).
 
-## Assets
+## Machine-readable surfaces
 
-- The emblem is rendered as **inline SVG** (vector path from `/brand/emblem-white.svg`), recolored
-  via `currentColor`, so it stays crisp at any size in any brand color.
-- Wordmark / lockup / alt-logo / ezID specimens use the approved PNGs in `assets/brand/`, mirrored
-  from the canonical catalog at `iheartezoic.com`.
-- Live download links point at the real endpoints
-  (`/api/ezoic-brand/assets/download?root=all`). No fake or stand-in marks.
+Reference copies generated from the same system, ready to lift into the canonical
+Next.js app and the `ezoic-brand` MCP server:
 
-Typography is **self-hosted from the brand's own font files** (no webfont-CDN dependency): Inter with
-optical sizing — **28pt Display** for headlines, **18pt Text** for body — and **Reddit Mono**
-(variable, 200–900) for technical/mono, replacing Red Hat Mono per the attached direction.
+- `llms.txt` — compact index (mirrors `iheartezoic.com/llms.txt`)
+- `llms-full.txt` — the full guide as markdown (mirrors `/llms-full.txt`)
+- `api/ezoic-brand.json` — the structured guide payload (mirrors `/api/ezoic-brand`)
 
-## Logo integrity & accessibility
+## Conflict note
 
-- **The wordmark is never typeset.** Per the brand surface-pairing rule, the header uses the real
-  `lockup-dark.png` (lowercase `ezoic`) on the light surface and the footer uses `lockup-light.png`
-  on near-black. No font-composed stand-ins.
-- **The emblem only appears in palette colors** — green `#70A92A`, charcoal `#252726`, steel
-  `#969696`, or reversed (white on charcoal).
-- **All text meets WCAG AA**, verified by measured ratios (secondary text 7.2:1, on-dark 5.3–12:1,
-  button text on green 5.5:1). Green and steel are kept off small-text-on-white, where they'd fail.
-
-## Sections
-
-Six numbered sections — Logo · Color · Typography · Voice · Usage · Assets — in a ruled, type-led
-**brand-manual rhythm**: mono index numbers, hairline rules, two full-bleed near-black bands, a
-contiguous neutral tone strip (not swatch cards), and a large type specimen. No SaaS card grids.
-Sticky scroll-spy nav, click-to-copy color values, quiet scroll-reveal (with a no-JS fallback so
-content is never hidden), and a mobile menu.
+Draft asset sheets under `assets/brand/truth-assets/` carry superseded values (ink
+`#222423`; heading/body line spacing 105%/110%). The guide PDF's written spec — ink
+`#252726`, line spacing 125%/150% — is the contract everywhere in this repo.
 
 ## Porting to production
 
-The canonical site (`iheartezoic.com`) is a separate Next.js + Tailwind app. This page is a
-self-contained reference for that redesign — lift the tokens (`:root` block), the inline emblem
-symbol, and the section structure into components there. The skill's markdown design bible
-(`references/ezoic-style-design-bible.md`) still describes the previous dark/mint system; reconcile
-it separately if this light direction is adopted as canonical.
+The canonical site (`iheartezoic.com`) is a separate Next.js + Tailwind app. Lift
+`design-system/` (tokens, theme CSS, fonts) and this page's sheet structure into
+components there, and serve the three machine-readable files from the app's public
+routes. `references/ezoic-style-design-bible.md` is the matching rules layer for the
+marketing skill.

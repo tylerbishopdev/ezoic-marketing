@@ -1,6 +1,6 @@
 {
   "name": "ezoic-marketing",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Ezoic's marketing operating system as a single consolidated skill — campaign strategy, launches, copywriting, landing pages, email, social, long-form, pitch decks, sales enablement, brand review, battlecards, objection responses, lifecycle and advertiser marketing, and visual briefs. Dispatches through 13 task playbooks, resolves every brand fact via a 3-tier source resolver (ezoic-brand MCP server → live brand API at iheartezoic.com → bundled references), and enforces a binding brand-enforcement contract on every output. Proprietary — Ezoic internal + partner use only.",
   "author": {
     "name": "Ezoic Marketing",

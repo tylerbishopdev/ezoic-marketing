@@ -132,16 +132,16 @@ Every routine in this skill consults this file when producing a channel-specific
 - Short phrases over complete sentences where it works visually
 
 **Visual calibration (from `ezoic-style-design-bible.md`):**
-- Near-Black `#0B0C0B` background with `#BBFFA6` (Mint — the single accent) for the one thing the eye should land on. `#A2D860` (Lime) is reserved support only, paired with Mint — never a general large-type color
-- Inter weights — Bold for the headline stat, Medium for supporting copy
-- If the slide is a proof point, treat the number as hero typography (big, bold, green on dark)
-- Logo lockup in corner — horizontal lockup, circular badge left / wordmark right. Use the approved files `/brand/lockup-light.png` (on near-black) and `/brand/lockup-dark.png` (on off-white); never approximate the mark
+- Cloud `#E3E3E3` surfaces with Charcoal `#252726` type; Ezoic Green `#70A92A` (the single accent) for the one thing the eye should land on. An ink `#252726` band is a local accent slide, not a theme — light, always
+- Inter weights — Display Black/Bold for the headline stat, Text Regular for supporting copy; headings Title Case closed with a period, nothing in all caps
+- If the slide is a proof point, treat the number as hero typography (big, black-weight, ink on cloud — or the green-led proof slot when it's the signature moment)
+- Logo lockup in corner — horizontal lockup, emblem left / wordmark right. Use the approved files `/brand/lockup-dark.png` (on cloud) and `/brand/lockup-light.png` (on ink); never approximate the mark
 
 **Anti-patterns:**
 - "Who We Accept" / "Qualifying Publishers" framing — applies-for-permission vibe
 - Bullet points that are full sentences
 - Stock AI-hype graphics (neural nets, circuits glowing) — use actual product visuals, real dashboards, or simple data diagrams
-- Generic corporate templates (light background, centered text, gradients) — violate brand direction
+- Generic corporate templates (stock themes, centered filler text, gradients) — violate brand direction; no brand gradient exists in the light system
 
 ---
 

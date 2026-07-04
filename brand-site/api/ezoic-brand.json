@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "name": "Ezoic Brand Guidelines",
+    "edition": "Brand standards / Vol. 02 — 2026 / Light edition",
+    "version": "0.1-experimental",
+    "canonical": "https://iheartezoic.com",
+    "surfaces": {
+      "site": "https://iheartezoic.com",
+      "api": "https://iheartezoic.com/api/ezoic-brand",
+      "styleSection": "https://iheartezoic.com/api/ezoic-brand/sections/style",
+      "assets": "https://iheartezoic.com/api/ezoic-brand/assets",
+      "assetsGrouped": "https://iheartezoic.com/api/ezoic-brand/assets/grouped",
+      "download": "https://iheartezoic.com/api/ezoic-brand/assets/download?root=all",
+      "mcp": "https://iheartezoic.com/api/mcp",
+      "llms": "https://iheartezoic.com/llms.txt",
+      "llmsFull": "https://iheartezoic.com/llms-full.txt"
+    },
+    "note": "Reference payload generated from the v0.1 guide — lift into the canonical Next.js app's /api/ezoic-brand route. Copyright Ezoic 2026 — experimental draft, not ratified."
+  },
+  "sections": {
+    "intro": {
+      "title": "Growth Engineering.",
+      "body": "Ezoic's identity is light, editorial, and type-led. This guide is the source of truth for how the brand looks. Every mark in it is a master file — place the files as supplied; never re-draw, re-color, or re-type them.",
+      "positioning": "Revenue infrastructure for the modern web — the operating layer for independent web businesses."
+    },
+    "logo": {
+      "primaryLockup": { "description": "Emblem left, wordmark right.", "file": "/brand/lockup-dark.png", "surface": "light" },
+      "reversedLockup": { "description": "Reversed — ink surfaces only.", "file": "/brand/lockup-light.png", "surface": "ink" },
+      "wordmarkRule": "The wordmark is never typeset. It is a file, placed."
+    },
+    "variants": {
+      "title": "Four pairings, then leave it alone.",
+      "pairings": [
+        { "name": "Core on cloud", "note": "default" },
+        { "name": "Steel on cloud", "note": "quiet" },
+        { "name": "Reversed on ink", "note": "" },
+        { "name": "Steel on ink", "note": "quiet reverse" }
+      ],
+      "emblemFinishes": [
+        { "name": "Green", "value": "#70A92A" },
+        { "name": "Ink", "value": "#252726" },
+        { "name": "Steel", "value": "#969696" },
+        { "name": "On ink", "value": "green holds" }
+      ],
+      "usage": {
+        "do": [
+          "Place the supplied files as-is — the mark is never re-typeset, re-drawn, or approximated.",
+          "Keep clear space equal to the emblem height — labelled x — on every side.",
+          "Sit the mark on quiet surfaces, at full opacity, in one of the four approved pairings."
+        ],
+        "dont": [
+          "Never recolor outside the palette, stretch, rotate, or add shadows.",
+          "Never place the mark on busy imagery without an approved veil, or shrink it below legibility."
+        ]
+      }
+    },
+    "color": {
+      "title": "Neutrals Build. Green Points.",
+      "palette": [
+        { "name": "Ezoic Green", "value": "#70A92A", "role": "The single accent — the mark, primary actions, signature moments. It earns every appearance." },
+        { "name": "Charcoal", "value": "#252726", "role": "Primary text; ink surfaces." },
+        { "name": "Graphite", "value": "#575757", "role": "Secondary text, metadata, captions." },
+        { "name": "Steel", "value": "#969696", "role": "Muted: quiet pairings, borders, page numbers, secondary text on ink." },
+        { "name": "Cloud", "value": "#E3E3E3", "role": "The page surface." }
+      ],
+      "discipline": "Surfaces are cloud or ink. Don't introduce new brand hues for surfaces, charts, or components — neutrals build the page; green makes the point. The previous mint-led dark system is retired. Light, always.",
+      "tints": "White #FFFFFF and alpha/color-mix derivatives of the five declared values are permitted only as quiet surface tints (raised panels, washes) — never as new hues.",
+      "contrast": "Green measures 2.8:1 on light surfaces — never small text on cloud/white.",
+      "gradients": "No sanctioned brand gradient exists."
+    },
+    "type": {
+      "family": "Inter — one family, two optical sizes (Display 28pt, Text 18pt), self-hosted.",
+      "headings": { "letterSpacing": "-5%", "lineSpacing": "125%", "case": "Title Case, closed with a period.", "weights": [900, 700, 600] },
+      "body": { "letterSpacing": "-3%", "lineSpacing": "150%", "case": "sentence case", "weights": [400] },
+      "mono": { "family": "Reddit Mono", "file": "/fonts/RedditMono-VF.woff2", "usage": "Code, file paths, hex & exact values only. Never decoration.", "weight": "Medium (variable 200–900)" },
+      "rules": [
+        "Nothing is set in all caps. Hierarchy comes from scale and spacing — not caps, not bold runs.",
+        "The wordmark is never typeset. It is a file, placed."
+      ]
+    },
+    "elements": {
+      "pixelWash": {
+        "title": "The Pixel Wash — Decisive, Concise, Clear.",
+        "rule": "Neutrals only, one wash per surface, always under the content. A wash never carries color, never crowds the mark, and never substitutes for hierarchy.",
+        "washes": [
+          { "name": "Editorial collage", "surface": "hero surfaces", "opacity": 0.14 },
+          { "name": "Wash 01", "surface": "ink bands", "opacity": 0.08 },
+          { "name": "Wash 02", "surface": "ink bands", "opacity": 0.10 }
+        ]
+      },
+      "surfaces": {
+        "radius": { "panel": "16px", "band": "24px", "pill": "999px" },
+        "container": "1320px",
+        "gutter": "clamp(20px, 5vw, 64px)",
+        "hairlineOnLight": "rgb(37 39 38 / 0.13)",
+        "hairlineOnInk": "rgb(255 255 255 / 0.12)"
+      },
+      "motion": "Quiet entrance motion (opacity + slight vertical rise); minimal hover (color change, line extension, arrow reveal, button state)."
+    },
+    "voice": {
+      "title": "Direct. Confident. Technical.",
+      "principles": [
+        { "name": "Direct", "body": "Say what you mean. Cut the fog. If a claim is weak, sharpen it or drop it." },
+        { "name": "Confident", "body": "State verified things plainly. Confidence is about truth, not volume." },
+        { "name": "Technical", "body": "Ezoic is revenue infrastructure for the modern web — never a generic vendor, ad network, or plugin." }
+      ],
+      "terminology": [
+        { "term": "Ezoic", "setAs": "Ezoic", "note": "Never EZOIC or lowercase ezoic outside logo and domain contexts." },
+        { "term": "ezID", "setAs": "ezID", "note": "Lowercase ez, capital ID — the identity sub-brand." },
+        { "term": "EPMV", "setAs": "EPMV", "note": "All caps. Expand to “Earnings Per Thousand Visitors” on first use." },
+        { "term": "JS snippet", "setAs": "JS snippet", "note": "Preferred wording for the lightweight integration." },
+        { "term": "Open.Video", "setAs": "Open.Video", "note": "The period is part of the name." }
+      ]
+    },
+    "case-study": {
+      "structure": ["situation", "operating change", "source-ready proof slot", "quote slot", "next action"],
+      "rules": [
+        "One dominant idea per section.",
+        "Green-led proof slot for sourced metrics — the value area stays empty until a cited value is available.",
+        "Mono only for technical values, file paths, commands, or copy boxes.",
+        "No generic SaaS card grids as the default structure."
+      ]
+    },
+    "style": {
+      "bannedPatterns": [
+        "Fake logos, fake lockups, or unapproved logo stand-ins presented as real.",
+        "A typeset wordmark.",
+        "Asset meaning inferred from filenames alone.",
+        "Unsourced metrics, proof points, product claims, partner claims, customer names, or quotes.",
+        "Decorative monospace or mono-heavy layouts.",
+        "All-caps label systems, headings, or eyebrows.",
+        "Any color outside the five declared values (plus documented white/alpha surface tints) — including the retired mint/lime/frog set.",
+        "Dark-led layouts or a global dark theme — ink is a local accent; light, always.",
+        "Gradients — no sanctioned brand gradient exists.",
+        "More than one wash per surface, a wash over the mark, or a wash above its approved opacity.",
+        "Grid-pattern filler, gradient blur blobs, generic SaaS card grids, heavy cards, dashboard-like brand layouts.",
+        "Heavy bold everywhere; invented iconography; default chart palettes.",
+        "Negative competitor-trashing."
+      ],
+      "conflictNote": "Draft asset sheets carry superseded values (ink #222423; line spacing 105%/110%). The guide's written spec — ink #252726; 125%/150% — is the contract."
+    },
+    "access": {
+      "assetRoots": ["brand", "design-elements", "photo-backs", "fonts"],
+      "integrity": [
+        "Use the live asset catalog before placing logos, marks, design elements, photo backdrops, or font files.",
+        "Use filenames as locators, not as proof of what an asset depicts or means.",
+        "Leave claim slots empty or clearly open when a metric, customer, partner, quote, product fact, or outcome is not available.",
+        "Do not invent metrics, customers, outcomes, screenshots, quotes, partners, product capabilities, or asset meanings."
+      ]
+    },
+    "footer": {
+      "tagline": "Revenue infrastructure for the modern web.",
+      "copyright": "Copyright Ezoic 2026 — experimental draft, not ratified."
+    }
+  }
+}

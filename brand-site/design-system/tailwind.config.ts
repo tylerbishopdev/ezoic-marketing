@@ -58,11 +58,17 @@ const config: Config = {
       },
       letterSpacing: {
         heading: "-0.05em",
-        body: "-0.02em",
+        body: "-0.03em",
+      },
+      lineHeight: {
+        heading: "1.25",
+        body: "1.5",
       },
       borderRadius: {
         none: "0",
-        DEFAULT: "0",
+        DEFAULT: "16px",
+        panel: "16px",
+        band: "24px",
         full: "999px",
       },
       boxShadow: {

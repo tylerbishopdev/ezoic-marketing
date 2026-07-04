@@ -1,0 +1,30 @@
+# Ezoic Brand Guidelines
+
+> Ezoic's brand system — Vol. 02 / 2026, Light edition (experimental v0.1). Light, editorial, type-led: neutrals build the page, Ezoic Green #70A92A makes the point. Every mark is a master file — place the files as supplied; never re-draw, re-color, or re-type them. The wordmark is never typeset.
+
+Key rules:
+
+- Palette (5 declared values): Ezoic Green #70A92A (single accent — the mark, primary actions, signature moments) · Charcoal #252726 · Graphite #575757 · Steel #969696 · Cloud #E3E3E3. Surfaces are cloud or ink. No new brand hues. The previous mint-led dark system is retired — light, always.
+- Logo: primary lockup = emblem left, wordmark right (/brand/lockup-dark.png). Reversed on ink only (/brand/lockup-light.png). Four pairings, then leave it alone: Core on cloud · Steel on cloud · Reversed on ink · Steel on ink. Clear space = emblem height on every side.
+- Type: Inter — headings (Display 28pt) −5% letter spacing / 125% line spacing, Title Case closed with a period; body (Text 18pt) −3% / 150%, sentence case. Nothing in all caps. Reddit Mono for code, file paths, hex, and exact values only.
+- The Pixel Wash: neutrals only, one wash per surface, always under the content — editorial collage 14% (hero), ink bands 8% / 10%. Never carries color, never crowds the mark.
+- Voice: Direct. Confident. Technical. Terminology: Ezoic · ezID · EPMV · JS snippet · Open.Video (the period is part of the name).
+
+## Guide
+
+- [Full guide (markdown)](https://iheartezoic.com/llms-full.txt): every section of the brand system in one document
+- [Brand standards site](https://iheartezoic.com): the guide's web edition, sheet for sheet
+
+## API
+
+- [Structured guide JSON](https://iheartezoic.com/api/ezoic-brand): sections, palette, typography, washes, logo rules, voice
+- [Style section](https://iheartezoic.com/api/ezoic-brand/sections/style): the visual contract only
+- [Asset catalog](https://iheartezoic.com/api/ezoic-brand/assets): live records — paths, URLs, MIME types, dimensions
+- [Grouped assets](https://iheartezoic.com/api/ezoic-brand/assets/grouped): counts by root (brand, design-elements, photo-backs, fonts)
+- [Asset download](https://iheartezoic.com/api/ezoic-brand/assets/download?root=all): ZIP of approved files
+- [MCP endpoint](https://iheartezoic.com/api/mcp): the ezoic-brand MCP server (read_brand_guide, search_brand_standards, list_brand_assets, get_brand_asset)
+
+## Integrity
+
+- Use the live asset catalog before placing any logo, mark, backdrop, or font; filenames are locators, not meanings.
+- Do not invent metrics, customers, quotes, partners, or capabilities; leave claim slots open until a cited value exists.

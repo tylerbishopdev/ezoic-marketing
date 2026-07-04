@@ -27,6 +27,8 @@ git clone git@github.com:tylerbishopdev/ezoic-marketing.git ~/.claude/skills/ezo
 
 ## Source of truth
 
+The visual system is the **Ezoic Brand Style Guide — experimental v0.1** (Brand standards / Vol. 02 — 2026 / Light edition): light, editorial, type-led — Ezoic Green `#70A92A` as the single accent over Charcoal/Graphite/Steel/Cloud neutrals, Inter (−5%/125% headings · −3%/150% body), Reddit Mono for exact values, and the Pixel Wash as the one texture. Its web edition lives at `brand-site/index.html`; `references/ezoic-style-design-bible.md` is the matching rules layer.
+
 Tie-breaking follows `references/resolver.md → Tie-breaking`: the live brand system at **[iheartezoic.com](https://iheartezoic.com)** (`ezoic-brand` MCP server · REST API · `llms.txt`) is canonical for **asset existence and URLs** — always check the live asset catalog before placing a logo, mark, photo backdrop, or font. The bundled `references/` **win for voice, positioning, and proof interpretation** — they are the brand team's operational layer over the raw guide. Capitalization and terminology must agree across tiers; if they diverge, stop and flag.
 
 Logo, wordmark, and lockup specimens must use approved asset catalog files. The wordmark is never typeset; no font-composed stand-ins — enforced by visual-contract rules 18–19 in `references/resolver.md` and the design bible's logo section.

@@ -1,0 +1,150 @@
+# Ezoic Brand Guidelines — Full Guide
+
+Brand standards / Vol. 02 — 2026 / Light edition · experimental v0.1
+Canonical surface: https://iheartezoic.com · This document is the complete machine-readable edition of the guide.
+
+## Intro — Growth Engineering.
+
+Ezoic's identity is light, editorial, and type-led. This guide is the source of truth for how the brand looks. Every mark in it is a master file — place the files as supplied; never re-draw, re-color, or re-type them.
+
+Positioning: Ezoic is revenue infrastructure for the modern web — the operating layer for independent web businesses. Tagline: "Revenue infrastructure for the modern web."
+
+## Logo
+
+- Primary lockup — emblem left, wordmark right. File: /brand/lockup-dark.png (light surfaces).
+- Reversed — ink surfaces only. File: /brand/lockup-light.png.
+- The wordmark is never typeset. It is a file, placed.
+
+## Logo On Color
+
+Four pairings, then leave it alone:
+
+1. Core on cloud — default.
+2. Steel on cloud — quiet.
+3. Reversed on ink.
+4. Steel on ink — quiet reverse.
+
+## Logo Usage — Use The Master Files.
+
+Do:
+- Place the supplied files as-is — the mark is never re-typeset, re-drawn, or approximated.
+- Keep clear space equal to the emblem height — labelled x — on every side.
+- Sit the mark on quiet surfaces, at full opacity, in one of the four approved pairings.
+
+Don't:
+- Never recolor outside the palette, stretch, rotate, or add shadows.
+- Never place the mark on busy imagery without an approved veil, or shrink it below legibility.
+
+Emblem finishes: Green #70A92A · Ink #252726 · Steel #969696 · On ink, the green holds.
+
+## Color — Neutrals Build. Green Points.
+
+| Name | Hex | Role |
+| --- | --- | --- |
+| Ezoic Green | #70A92A | The single accent — the mark, primary actions, signature moments. It earns every appearance |
+| Charcoal | #252726 | Primary text; ink surfaces |
+| Graphite | #575757 | Secondary text, metadata, captions |
+| Steel | #969696 | Muted: quiet pairings, borders, page numbers, secondary text on ink |
+| Cloud | #E3E3E3 | The page surface |
+
+Discipline: surfaces are cloud or ink. Don't introduce new brand hues for surfaces, charts, or components — neutrals build the page; green makes the point. The previous mint-led dark system is retired. Light, always.
+
+Notes: white #FFFFFF and alpha/color-mix derivatives of the five declared values are permitted only as quiet surface tints (raised panels, washes) — never as new hues. Green measures 2.8:1 on light surfaces and is never small text on cloud/white. No brand gradient exists.
+
+## Font — Inter
+
+- Headings — letter spacing −5% · line spacing 125%.
+- Body — letter spacing −3% · line spacing 150%.
+- Reddit Mono — code, file paths, hex & exact values.
+
+## Type In Use — One Family. Two Optical Sizes.
+
+Scale: Display 900 Black · Display 700 Bold · Display 600 SemiBold · Text 400 Regular · Mono Medium.
+
+- Headings — Inter Display, −5% letter spacing, 125% line spacing. Title Case, closed with a period.
+- Body — Inter Text, −3% letter spacing, 150% line spacing, sentence case.
+- Nothing is set in all caps. Hierarchy comes from scale and spacing — not caps, not bold runs.
+- Reddit Mono is reserved for code, file paths, hex, and exact values. Never decoration.
+- The wordmark is never typeset. It is a file, placed.
+
+Font files (self-hosted, /fonts): Inter Display 28pt (600/700/900), Inter Text 18pt (300–700), RedditMono-VF (variable 200–900).
+
+## The Pixel Wash — Decisive, Concise, Clear.
+
+The system's one texture. Neutrals only, one wash per surface, always under the content:
+
+- Editorial collage — hero surfaces · 14%.
+- Wash 01 — ink bands · 8%.
+- Wash 02 — ink bands · 10%.
+
+A wash never carries color, never crowds the mark, and never substitutes for hierarchy. Photography inside a wash is light-washed and sits quiet under the system.
+
+## Voice — Direct. Confident. Technical.
+
+1. Direct — say what you mean. Cut the fog. If a claim is weak, sharpen it or drop it.
+2. Confident — state verified things plainly. Confidence is about truth, not volume.
+3. Technical — Ezoic is revenue infrastructure for the modern web — never a generic vendor, ad network, or plugin.
+
+Terminology:
+
+| Term | Set as | Note |
+| --- | --- | --- |
+| Ezoic | Ezoic | Never EZOIC or lowercase ezoic outside logo and domain contexts |
+| ezID | ezID | Lowercase ez, capital ID — the identity sub-brand |
+| EPMV | EPMV | All caps. Expand to "Earnings Per Thousand Visitors" on first use |
+| JS snippet | JS snippet | Preferred wording for the lightweight integration |
+| Open.Video | Open.Video | The period is part of the name |
+
+## Applied Examples
+
+- Emblem over imagery — the mark holds the frame.
+- Campaign frame — one green band, one mark.
+- People, light-washed — imagery sits quiet under the system.
+
+## Layout And Surfaces
+
+- Max content width 1320px; gutter clamp(20px, 5vw, 64px).
+- Sheet rhythm: running head top-left, emblem top-right, hairline footer with mono page number.
+- Rounded surfaces: 16px panels/tiles/swatches, 24px large bands, 999px pills.
+- Hairlines: ink at low opacity (rgb(37 39 38 / 0.13)) on light; white at low opacity on ink.
+- Motion: quiet entrance (opacity + slight rise); minimal hover (color change, line extension, arrow reveal).
+
+## Banned Patterns
+
+- Fake logos, fake lockups, or unapproved logo stand-ins presented as real.
+- A typeset wordmark.
+- Asset meaning inferred from filenames alone.
+- Unsourced metrics, proof points, product claims, partner claims, customer names, or quotes.
+- Decorative monospace or mono-heavy layouts.
+- All-caps label systems, headings, or eyebrows.
+- Any color outside the five declared values (plus documented white/alpha surface tints) — including the retired mint/lime/frog set.
+- Dark-led layouts or a global dark theme — ink is a local accent; light, always.
+- Gradients — no sanctioned brand gradient exists.
+- More than one wash per surface, a wash over the mark, or a wash above its approved opacity.
+- Grid-pattern filler, gradient blur blobs, generic SaaS card grids, heavy cards, dashboard-like brand layouts.
+- Heavy bold everywhere; invented iconography; default chart palettes.
+- Negative competitor-trashing.
+
+## Access
+
+- Site: https://iheartezoic.com
+- Structured JSON: https://iheartezoic.com/api/ezoic-brand
+- Style section: https://iheartezoic.com/api/ezoic-brand/sections/style
+- Assets: https://iheartezoic.com/api/ezoic-brand/assets (roots: brand, design-elements, photo-backs, fonts)
+- Grouped: https://iheartezoic.com/api/ezoic-brand/assets/grouped
+- Download: https://iheartezoic.com/api/ezoic-brand/assets/download?root=all
+- MCP: https://iheartezoic.com/api/mcp
+- Index: https://iheartezoic.com/llms.txt
+
+## Content Integrity / Source Notes
+
+- Use the live asset catalog before placing logos, marks, design elements, photo backdrops, or font files.
+- Use filenames as locators, not as proof of what an asset depicts or means.
+- Leave claim slots empty or clearly open when a metric, customer name, partner name, quote, product fact, or outcome is not available.
+- Do not invent metrics, customers, outcomes, screenshots, quotes, partners, product capabilities, or asset meanings.
+
+Not specified in the current source set: logo min sizes, CMYK/Pantone, co-branding, iconography/illustration systems, print layout, motion/broadcast system, an approved destructive color, dark mode, or chart palette.
+
+Conflict note: draft asset sheets carry superseded values (ink #222423; line spacing 105%/110%). The guide's written spec — ink #252726; 125%/150% — is the contract.
+
+Copyright Ezoic 2026 — experimental draft, not ratified.

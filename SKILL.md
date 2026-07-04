@@ -4,7 +4,7 @@ description: "Use for ANY Ezoic marketing task, internal or external — campaig
 license: Proprietary — Ezoic internal & partner use only
 metadata:
   author: Tyler Bishop (CMO, Ezoic)
-  version: '2.0-claude'
+  version: '2.1.0'
   source: Original Claude Code `ezoic-marketing` plugin — re-converted to a native Claude Code skill 2026-07-01 after an interim external-runtime port (v1.1)
   scope: Ezoic external + internal marketing
 ---
@@ -151,7 +151,7 @@ Classify the user's request into one of the 13 task types below. Each entry list
 ### 12. Visual brief / art direction / design spec
 **Trigger:** "visual brief," "art direction," "design spec," "what should this look like."
 **Read:** `ezoic-style-design-bible.md`, `channel-playbook.md` (for the target channel), and **the live asset catalog** via Tier 1 or Tier 2.
-**Produce:** Specs anchored to `#0B0C0B` near-black, `#F5F9F1` off-white, `#BBFFA6` mint accent (Lime `#A2D860` + Frog `#3D5C17` support, never replace Mint; full 10-token palette, Inter spec, and grain-mint gradient spec in visual-contract rules 13–20), hierarchy via scale and spacing not caps/bold, Red Hat Mono only for code/exact values, real assets named from the live catalog with public paths — **no fake logos, no approximated marks, no grid-pattern filler, no gradient blobs, no fake dashboards, no generic SaaS card grids.**
+**Produce:** Specs anchored to the light edition — Cloud `#E3E3E3` surfaces, Charcoal `#252726` ink, **Ezoic Green `#70A92A` as the single accent** (Graphite `#575757` + Steel `#969696` neutrals; full palette, Inter spec, and pixel-wash spec in visual-contract rules 13–20), hierarchy via scale and spacing not caps/bold, Reddit Mono only for code/exact values, real assets named from the live catalog with public paths — **no fake logos, no approximated marks, no gradients, no grid-pattern filler, no gradient blobs, no fake dashboards, no generic SaaS card grids.**
 
 ### 13. Advertiser marketing (bidsystem.ai)
 **Trigger:** "advertiser," "bidsystem.ai," "user acquisition," "grow your site," "advertiser campaign," "demand side," "media buying on the open web."
@@ -179,14 +179,14 @@ Every output must pass these. Summary only — read `resolver.md` for the bindin
 12. Refocus, never attack. No negative competitor-trashing.
 
 **Visual contract (rules 13–20, for any visual deliverable):**
-13. `#0B0C0B` near-black + `#F5F9F1` off-white carry the system. **`#BBFFA6` mint is the single accent.** Lime `#A2D860` + Frog `#3D5C17` support Mint, never replace it. Full canonical palette also includes Muted `#484848`, Muted-Inverse `#979797`, Surface 1 `#121312`, Surface 2 `#181918`, Destructive `#E5484D` — roles in `resolver.md` rule 13; no new brand hues.
+13. Neutrals build; green points. **Ezoic Green `#70A92A` is the single accent** — the mark, primary actions, signature moments; never small text on light surfaces. Neutrals: Charcoal `#252726` · Graphite `#575757` · Steel `#969696` · Cloud `#E3E3E3`. Surfaces are cloud or ink; no new brand hues — roles in `resolver.md` rule 13. The previous mint-led dark system is retired; light, always.
 14. No grid-pattern filler, gradient blur blobs, fake dashboards, generic SaaS card grids, or heavy cards.
 15. No all-caps headings or eyebrows. Hierarchy via scale, spacing, and surface.
-16. Inter is the required primary family (six imported weights: 300/400/500/600/700/900; 18pt body, 28pt display, -0.05em display tracking). Red Hat Mono only for code, file paths, hex, exact values, copy/paste blocks.
+16. Inter is the required family — Display 28pt headings (−5% letter spacing, 125% line spacing, Title Case closed with a period; weights 900/700/600) and Text 18pt body (−3% letter spacing, 150% line spacing, sentence case). Reddit Mono only for code, file paths, hex, exact values, copy/paste blocks.
 17. Photo backdrops only when a real approved asset exists in the live catalog.
 18. No fake logos, lockups, or approximated marks. Use approved files from the asset catalog.
 19. The wordmark is never typeset — never font-compose "Ezoic" as display/title text when the lockup is present or belongs on the artifact; never render EZOIC (audit every `text-transform: uppercase`). Full text in `resolver.md` rule 19.
-20. Grain over Mint (`linear-gradient(180deg, #A2D860 5%, #BBFFA6 50%, #3D5C17 100%)` + grain overlay) is the only sanctioned gradient — singular brand moments only (hero shapes, section anchors, ad creative), never decorative edge strips, wallpaper, or repeated fills.
+20. The Pixel Wash is the system's one texture — neutrals only, one wash per surface, always under the content (collage 14% on hero surfaces; ink-band washes 8% / 10%); it never carries color, never crowds the mark, never substitutes for hierarchy. No brand gradient exists — the retired grain-over-mint gradient is gone with the dark system.
 
 ---
 

@@ -55,7 +55,7 @@ Two important phrases here:
 2. **Partner, not vendor.** Ezoic succeeds when its customers succeed. Strategic infrastructure, never "just a tool."
 3. **Data-led before adjective-led.** Numbers first. Adjectives support, don't replace.
 4. **Challenger energy.** For the open web. Against walled-garden rent. Ezoic is the independent infrastructure for anyone building for the real modern web.
-5. **Capitalization is normal.** Standard sentence case / title case for external copy. The lowercase body copy on the Voice page of the brand guide is a specific *typesetting* choice for that design surface — not a directive for external marketing. Do not write external copy in all-lowercase; it reads as affected. Exceptions: product/term-specific capitalization (see § Capitalization & terminology below — e.g., `ezID` is always lowercase-e / capital-ID because that's the product name).
+5. **Capitalization is normal.** Per the light-edition guide: headings are Title Case, closed with a period; body is sentence case; nothing is set in all caps. Do not write external copy in all-lowercase; it reads as affected. Exceptions: product/term-specific capitalization (see § Capitalization & terminology below — e.g., `ezID` is always lowercase-e / capital-ID because that's the product name).
 
 ---
 

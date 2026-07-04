@@ -26,10 +26,10 @@
       spacing -5% (-.05em), line spacing 125%. Body — letter spacing
       -3% (-.03em), line spacing 150%. Oversized display specimens that
       mirror the guide's own pages may sit tighter (see .brand-display).
-   5. Light, always. Surfaces are cloud or ink. There is no approved
-      dark theme — ink surfaces (back cover, full-bleed bands) are local
-      accents within the light system, not a global dark mode. Do not
-      add a `.dark` variant without an explicit brand decision.
+   5. Light, always. Surfaces are cloud or ink. Dark mode is ELIMINATED
+      — a decision, not a pending question. Ink surfaces (back cover,
+      full-bleed bands) are local accents within the light system, not
+      a global dark mode. Never add a `.dark` variant.
    6. Green is the single accent — the mark, primary actions, signature
       moments. It earns every appearance. It is NOT used as small text
       on light backgrounds (2.8:1 contrast — fails WCAG AA) and it is

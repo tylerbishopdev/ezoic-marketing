@@ -15,6 +15,8 @@ Full realignment to the ratified visual system: the Ezoic Brand Style Guide, exp
 
 ### Added
 - Machine-readable surfaces regenerated from the new system, ready to lift into the canonical app and the `ezoic-brand` MCP server: `brand-site/llms.txt`, `brand-site/llms-full.txt`, `brand-site/api/ezoic-brand.json`.
+- **Dark mode explicitly eliminated** (the guide's "Light, always" made binding beyond doubt): stated in the site's Color discipline, the bible, resolver rule 13, the SKILL summary, tokens, theme CSS, and all three machine surfaces — moved out of "known gaps"; ink surfaces are local accents, never a theme, and no `.dark` variant may be built.
+- **Asset manifest for the v0.1 masters** in `api/ezoic-brand.json → sections.access` (repo paths + live paths, wash opacities, roles) with a status note: the repo files are the authoritative masters until the live catalog is refreshed. Mint-era finishes (`emblem-mint` / `mark-mint` / `mark-lime` / `mark-frog`) and the superseded draft sheets are cataloged as retired/reference-only.
 - `BRAND-REALIGNMENT-PROMPT.md` — the reusable master prompt that produced this realignment; re-run it when the guide PDF is revised.
 
 ## [2.0.0] — 2026-07-01

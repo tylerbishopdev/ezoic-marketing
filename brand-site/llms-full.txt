@@ -49,6 +49,8 @@ Emblem finishes: Green #70A92A · Ink #252726 · Steel #969696 · On ink, the gr
 
 Discipline: surfaces are cloud or ink. Don't introduce new brand hues for surfaces, charts, or components — neutrals build the page; green makes the point. The previous mint-led dark system is retired. Light, always.
 
+Dark mode is eliminated. There is no dark mode or dark theme — this is a decision, not a pending question. Ink surfaces (reversed-logo panels, full-bleed bands, the back cover) are local accents inside the light system, never a global theme. Do not build a .dark variant.
+
 Notes: white #FFFFFF and alpha/color-mix derivatives of the five declared values are permitted only as quiet surface tints (raised panels, washes) — never as new hues. Green measures 2.8:1 on light surfaces and is never small text on cloud/white. No brand gradient exists.
 
 ## Font — Inter
@@ -125,6 +127,20 @@ Terminology:
 - Heavy bold everywhere; invented iconography; default chart palettes.
 - Negative competitor-trashing.
 
+## Assets
+
+The v0.1 master files ship in the brand repo under brand-site/assets/:
+
+- Core lockup — brand/lockup-dark.png (light surfaces) · Reversed — brand/lockup-light.png (ink only).
+- Steel pairing masters — brand/truth-assets/UPDATE/Frame 120889.png (steel on cloud) · Frame 120891.png (steel on ink).
+- Emblem — emblem-white.svg (vector master; palette finishes only) · emblem-green.png · mark-muted.png (steel).
+- Wordmarks (files, never typeset) — wordmark-dark.png · wordmark-light.png. ezID sub-brand — ezid-dark.png · ezid-light.png.
+- Pixel washes — overlays/overlay-hero.png (collage · 14%) · overlay-01.png (8%) · overlay-02.png (10%) · truth-assets/Frame 120903.png (cover wash).
+- Applied examples — truth-assets/Frame 120905.png (emblem over ink wash) · Frame 120906.png (campaign frame).
+- Fonts — assets/fonts/ (Inter Display 28pt, Inter Text 18pt, RedditMono-VF).
+
+The live catalog at iheartezoic.com may still serve the previous set until the canonical app is refreshed from this system — until then, the repo files are the authoritative masters. Retired, do not place: emblem-mint.png, mark-mint.png, mark-lime.png, mark-frog.png (mint-era finishes); draft sheets Frame 120899.png / Frame 120894.png carry superseded values and are reference-only.
+
 ## Access
 
 - Site: https://iheartezoic.com
@@ -143,7 +159,7 @@ Terminology:
 - Leave claim slots empty or clearly open when a metric, customer name, partner name, quote, product fact, or outcome is not available.
 - Do not invent metrics, customers, outcomes, screenshots, quotes, partners, product capabilities, or asset meanings.
 
-Not specified in the current source set: logo min sizes, CMYK/Pantone, co-branding, iconography/illustration systems, print layout, motion/broadcast system, an approved destructive color, dark mode, or chart palette.
+Not specified in the current source set: logo min sizes, CMYK/Pantone, co-branding, iconography/illustration systems, print layout, motion/broadcast system, an approved destructive color, or a chart palette. (Dark mode is not an open question — it is eliminated.)
 
 Conflict note: draft asset sheets carry superseded values (ink #222423; line spacing 105%/110%). The guide's written spec — ink #252726; 125%/150% — is the contract.
 

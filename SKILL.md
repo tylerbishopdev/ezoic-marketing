@@ -179,7 +179,7 @@ Every output must pass these. Summary only — read `resolver.md` for the bindin
 12. Refocus, never attack. No negative competitor-trashing.
 
 **Visual contract (rules 13–20, for any visual deliverable):**
-13. Neutrals build; green points. **Ezoic Green `#70A92A` is the single accent** — the mark, primary actions, signature moments; never small text on light surfaces. Neutrals: Charcoal `#252726` · Graphite `#575757` · Steel `#969696` · Cloud `#E3E3E3`. Surfaces are cloud or ink; no new brand hues — roles in `resolver.md` rule 13. The previous mint-led dark system is retired; light, always.
+13. Neutrals build; green points. **Ezoic Green `#70A92A` is the single accent** — the mark, primary actions, signature moments; never small text on light surfaces. Neutrals: Charcoal `#252726` · Graphite `#575757` · Steel `#969696` · Cloud `#E3E3E3`. Surfaces are cloud or ink; no new brand hues — roles in `resolver.md` rule 13. The previous mint-led dark system is retired and dark mode is eliminated; light, always.
 14. No grid-pattern filler, gradient blur blobs, fake dashboards, generic SaaS card grids, or heavy cards.
 15. No all-caps headings or eyebrows. Hierarchy via scale, spacing, and surface.
 16. Inter is the required family — Display 28pt headings (−5% letter spacing, 125% line spacing, Title Case closed with a period; weights 900/700/600) and Text 18pt body (−3% letter spacing, 150% line spacing, sentence case). Reddit Mono only for code, file paths, hex, exact values, copy/paste blocks.

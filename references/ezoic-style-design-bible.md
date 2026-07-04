@@ -62,6 +62,8 @@ Supported public asset roots:
 
 Use `/api/ezoic-brand/assets`, `/api/ezoic-brand/assets/grouped`, and `/api/ezoic-brand/assets/download?root=...` for current records, grouped counts, dimensions, MIME types, direct URLs, and ZIP downloads.
 
+Asset status: the v0.1 master files ship in this repo under `brand-site/assets/` (core + reversed lockups, steel pairing masters, emblem finishes, pixel-wash assets, fonts — full manifest in `brand-site/api/ezoic-brand.json → sections.access.masters`). The live catalog may still serve the previous set until the canonical app is refreshed from this system; until then, the repo files are the authoritative masters. Mint-era finishes (`emblem-mint.png`, `mark-mint.png`, `mark-lime.png`, `mark-frog.png`) are retired — never place them.
+
 ## Color System
 
 Neutrals build. Green points.
@@ -75,6 +77,8 @@ Neutrals build. Green points.
 | Cloud | `#E3E3E3` | The page surface |
 
 Discipline: surfaces are cloud or ink. Don't introduce new brand hues for surfaces, charts, or components. White `#FFFFFF` and alpha/`color-mix` derivatives of the five declared values are permitted only as quiet surface tints (raised panels, washes) — never as new hues. Green measures 2.8:1 on light surfaces, so it is never small text on cloud or white.
+
+Dark mode is eliminated. There is no dark mode or dark theme — a decision, not a pending question (the guide's "Light, always" is binding). Ink surfaces (reversed-logo panels, full-bleed bands, the back cover) are local accents inside the light system, never a global theme. Do not build a `.dark` variant.
 
 There is no sanctioned brand gradient. The retired mint-led system's "grain over mint" gradient is gone with it.
 
@@ -197,7 +201,7 @@ Not specified in the current source set:
 - Print layout system.
 - Broadcast/video motion system.
 - Full accessibility certification.
-- An approved destructive/error color, dark mode, or chart palette (see the design-system "Known gaps").
+- An approved destructive/error color or chart palette (see the design-system "Known gaps"). Dark mode is not an open question — it is eliminated.
 - Customer-specific proof, metrics, quotes, and attribution for the example case study.
 - External claim sources for product, partner, customer, and metric statements.
 - Any asset meaning not explicitly mapped by guide text or asset metadata.

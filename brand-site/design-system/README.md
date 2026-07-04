@@ -54,9 +54,9 @@ the distillation rather than trusting this folder blindly.
 4. **Type spec**: headings — letter spacing `-5%` (`-.05em`), line spacing 125%.
    Body — letter spacing `-3%` (`-.03em`), line spacing 150%. Oversized display
    specimens mirroring the guide's own pages may sit tighter (`.brand-display`).
-5. **Light, always.** Surfaces are cloud or ink. There is no approved dark theme.
+5. **Light, always. Dark mode is eliminated** — a decision, not a pending question.
    Ink surfaces (back cover, full-bleed bands) are local accents inside the light
-   system — use the `.brand-surface-ink` utility, not a `.dark` class.
+   system — use the `.brand-surface-ink` utility; never add a `.dark` class.
 6. **Green is the single accent.** The mark, primary actions, signature moments —
    it earns every appearance. Never small text on light surfaces (2.8:1 — fails
    WCAG AA) and never wired to generic hover/menu-accent states — that's why
@@ -116,8 +116,8 @@ for the 24px band radius.
 ## Known gaps — ask the brand owner, don't invent answers
 
 - No approved destructive/error color.
-- No approved dark mode.
 - No approved chart/dataviz palette (the one here is a safe derivation, not a standard).
+- Dark mode is **not** a gap — it is eliminated (constraint 5). Don't reopen it.
 - Draft asset sheets under `brand-site/assets/brand/truth-assets/` carry superseded
   values (ink `#222423`; heading/body line spacing 105%/110%). The guide PDF's written
   spec (`#252726`; 125%/150%) is the contract — don't re-derive tokens from the sheets.

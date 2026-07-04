@@ -5,6 +5,7 @@
 Key rules:
 
 - Palette (5 declared values): Ezoic Green #70A92A (single accent — the mark, primary actions, signature moments) · Charcoal #252726 · Graphite #575757 · Steel #969696 · Cloud #E3E3E3. Surfaces are cloud or ink. No new brand hues. The previous mint-led dark system is retired — light, always.
+- Dark mode is eliminated. There is no dark mode or dark theme — ink surfaces are local accents inside the light system, never a global theme. Do not build a .dark variant.
 - Logo: primary lockup = emblem left, wordmark right (/brand/lockup-dark.png). Reversed on ink only (/brand/lockup-light.png). Four pairings, then leave it alone: Core on cloud · Steel on cloud · Reversed on ink · Steel on ink. Clear space = emblem height on every side.
 - Type: Inter — headings (Display 28pt) −5% letter spacing / 125% line spacing, Title Case closed with a period; body (Text 18pt) −3% / 150%, sentence case. Nothing in all caps. Reddit Mono for code, file paths, hex, and exact values only.
 - The Pixel Wash: neutrals only, one wash per surface, always under the content — editorial collage 14% (hero), ink bands 8% / 10%. Never carries color, never crowds the mark.
@@ -23,6 +24,11 @@ Key rules:
 - [Grouped assets](https://iheartezoic.com/api/ezoic-brand/assets/grouped): counts by root (brand, design-elements, photo-backs, fonts)
 - [Asset download](https://iheartezoic.com/api/ezoic-brand/assets/download?root=all): ZIP of approved files
 - [MCP endpoint](https://iheartezoic.com/api/mcp): the ezoic-brand MCP server (read_brand_guide, search_brand_standards, list_brand_assets, get_brand_asset)
+
+## Assets
+
+- The v0.1 master files ship in the brand repo under brand-site/assets/ (core + reversed lockups, steel pairing masters, emblem finishes, pixel-wash assets, fonts). The live catalog may still serve the previous set until the canonical app is refreshed — until then, the repo files are the authoritative masters.
+- Mint-era finishes (emblem-mint, mark-mint, mark-lime, mark-frog) are retired — do not place them.
 
 ## Integrity
 

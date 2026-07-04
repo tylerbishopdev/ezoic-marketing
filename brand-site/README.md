@@ -37,7 +37,8 @@ primary actions, signature moments) · Charcoal `#252726` · Graphite `#575757` 
 `#969696` · Cloud `#E3E3E3`. Surfaces are cloud or ink; white `#FFFFFF` and alpha
 derivatives of the five appear only as quiet surface tints (raised panels, washes). An
 automated color audit of the file confirms nothing else appears. Green measures 2.8:1 on
-light surfaces, so it is never small text on cloud/white.
+light surfaces, so it is never small text on cloud/white. Dark mode is eliminated — ink
+panels are local accents, never a theme.
 
 **Type.** Inter, one family, two optical sizes — self-hosted (28pt Display for headings,
 18pt Text for body), plus Reddit Mono (variable) for code, file paths, hex, and exact
@@ -66,11 +67,17 @@ Next.js app and the `ezoic-brand` MCP server:
 - `llms-full.txt` — the full guide as markdown (mirrors `/llms-full.txt`)
 - `api/ezoic-brand.json` — the structured guide payload (mirrors `/api/ezoic-brand`)
 
-## Conflict note
+## Conflict notes
 
-Draft asset sheets under `assets/brand/truth-assets/` carry superseded values (ink
-`#222423`; heading/body line spacing 105%/110%). The guide PDF's written spec — ink
-`#252726`, line spacing 125%/150% — is the contract everywhere in this repo.
+- Draft asset sheets under `assets/brand/truth-assets/` carry superseded values (ink
+  `#222423`; heading/body line spacing 105%/110%). The guide PDF's written spec — ink
+  `#252726`, line spacing 125%/150% — is the contract everywhere in this repo.
+- The v0.1 master files ship in this repo under `assets/` — the live catalog at
+  iheartezoic.com may still serve the previous set until the canonical app is refreshed
+  (full manifest: `api/ezoic-brand.json → sections.access.masters`). Until then, the
+  repo files are the authoritative masters.
+- Mint-era finishes still mirrored in `assets/brand/` (`emblem-mint.png`,
+  `mark-mint.png`, `mark-lime.png`, `mark-frog.png`) are retired — never place them.
 
 ## Porting to production
 

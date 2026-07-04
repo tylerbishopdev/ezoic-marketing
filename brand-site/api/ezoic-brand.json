@@ -64,6 +64,7 @@
         { "name": "Cloud", "value": "#E3E3E3", "role": "The page surface." }
       ],
       "discipline": "Surfaces are cloud or ink. Don't introduce new brand hues for surfaces, charts, or components — neutrals build the page; green makes the point. The previous mint-led dark system is retired. Light, always.",
+      "darkMode": "Eliminated. There is no dark mode or dark theme — this is a decision, not a pending question. Ink surfaces (reversed-logo panels, full-bleed bands, the back cover) are local accents inside the light system, never a global theme. Do not build a .dark variant.",
       "tints": "White #FFFFFF and alpha/color-mix derivatives of the five declared values are permitted only as quiet surface tints (raised panels, washes) — never as new hues.",
       "contrast": "Green measures 2.8:1 on light surfaces — never small text on cloud/white.",
       "gradients": "No sanctioned brand gradient exists."
@@ -141,6 +142,35 @@
     },
     "access": {
       "assetRoots": ["brand", "design-elements", "photo-backs", "fonts"],
+      "assetStatus": "The v0.1 master files ship in this repo under brand-site/assets/ — the live catalog at iheartezoic.com may still serve the previous set until the canonical app is refreshed from this payload. Until then, the repo files are the authoritative masters; verify against the live catalog before placing from it.",
+      "masters": [
+        { "repoPath": "brand-site/assets/brand/lockup-dark.png", "livePath": "/brand/lockup-dark.png", "role": "Core lockup — emblem left, wordmark right (light surfaces)." },
+        { "repoPath": "brand-site/assets/brand/lockup-light.png", "livePath": "/brand/lockup-light.png", "role": "Reversed lockup — ink surfaces only." },
+        { "repoPath": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120889.png", "livePath": null, "role": "Steel-on-cloud pairing master (quiet). Live path pending the canonical-app refresh." },
+        { "repoPath": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120891.png", "livePath": null, "role": "Steel-on-ink pairing master (quiet reverse). Live path pending the canonical-app refresh." },
+        { "repoPath": "brand-site/assets/brand/emblem-white.svg", "livePath": "/brand/emblem-white.svg", "role": "Emblem vector master — recolor only within the palette finishes (green / ink / steel / green-on-ink)." },
+        { "repoPath": "brand-site/assets/brand/emblem-green.png", "livePath": "/brand/emblem-green.png", "role": "Emblem — green finish." },
+        { "repoPath": "brand-site/assets/brand/mark-muted.png", "livePath": "/brand/mark-muted.png", "role": "Emblem — steel finish." },
+        { "repoPath": "brand-site/assets/brand/wordmark-dark.png", "livePath": "/brand/wordmark-dark.png", "role": "Wordmark file (ink). The wordmark is never typeset." },
+        { "repoPath": "brand-site/assets/brand/wordmark-light.png", "livePath": "/brand/wordmark-light.png", "role": "Wordmark file (light). The wordmark is never typeset." },
+        { "repoPath": "brand-site/assets/brand/ezid-dark.png", "livePath": "/brand/ezid-dark.png", "role": "ezID sub-brand lockup (light surfaces) — only where that product is represented." },
+        { "repoPath": "brand-site/assets/brand/ezid-light.png", "livePath": "/brand/ezid-light.png", "role": "ezID sub-brand lockup (ink surfaces) — only where that product is represented." },
+        { "repoPath": "brand-site/assets/overlays/overlay-hero.png", "livePath": null, "role": "Pixel wash — editorial collage, hero surfaces · 14%." },
+        { "repoPath": "brand-site/assets/overlays/overlay-01.png", "livePath": null, "role": "Pixel wash — Wash 01, ink bands · 8%." },
+        { "repoPath": "brand-site/assets/overlays/overlay-02.png", "livePath": null, "role": "Pixel wash — Wash 02, ink bands · 10%." },
+        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120903.png", "livePath": null, "role": "Cover wash — light ghost-emblem pixel wash." },
+        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120905.png", "livePath": null, "role": "Applied example — emblem over ink pixel wash." },
+        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120906.png", "livePath": null, "role": "Applied example — campaign frame, one green band, one mark." },
+        { "repoPath": "brand-site/assets/fonts/", "livePath": "/fonts/", "role": "Self-hosted brand fonts — Inter Display 28pt (600/700/900), Inter Text 18pt (300–700), RedditMono-VF (variable 200–900)." }
+      ],
+      "retired": [
+        { "repoPath": "brand-site/assets/brand/emblem-mint.png", "reason": "Mint-era finish — retired with the dark system. Do not place; kept only as a catalog mirror until the live catalog is refreshed." },
+        { "repoPath": "brand-site/assets/brand/mark-mint.png", "reason": "Mint-era finish — retired. Do not place." },
+        { "repoPath": "brand-site/assets/brand/mark-lime.png", "reason": "Lime-era finish — retired. Do not place." },
+        { "repoPath": "brand-site/assets/brand/mark-frog.png", "reason": "Frog-era finish — retired. Do not place." },
+        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120899.png", "reason": "Draft palette sheet — carries the superseded ink #222423. Reference only; the written spec (#252726) wins." },
+        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120894.png", "reason": "Draft brand sheet — carries superseded line-spacing values (105%/110%). Reference only; the written spec (125%/150%) wins." }
+      ],
       "integrity": [
         "Use the live asset catalog before placing logos, marks, design elements, photo backdrops, or font files.",
         "Use filenames as locators, not as proof of what an asset depicts or means.",

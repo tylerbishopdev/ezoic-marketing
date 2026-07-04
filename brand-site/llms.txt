@@ -36,5 +36,5 @@
 
 ## Assets
 
-- The v0.1 masters ship in the brand repo under brand-site/assets/ with a full manifest (status, role, dimensions) in the API payload's access.catalog. The live catalog may still serve the previous set until the canonical app is refreshed — until then, the repo files are the authoritative masters.
+- The v0.1 masters ship in the brand repo under brand-site/assets/ with a full manifest (status, role, dimensions) in the API payload's access.catalog. The live catalog still serves the previous system's set (RedHatMono, mint-era marks, prior design-elements/photo-backs — pending re-audit); the repo files are the authoritative masters until the canonical app is refreshed.
 - Retired — never place: emblem-mint.png, mark-mint.png, mark-lime.png, mark-frog.png (mint-era finishes). Draft sheets (Frame 120894 / 120899) carry superseded values and are reference-only: ink is #252726 (not #222423), line spacing 125%/150% (not 105%/110%).

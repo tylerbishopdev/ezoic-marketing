@@ -299,7 +299,15 @@
     },
     "access": {
       "assetRoots": ["brand", "design-elements", "photo-backs", "fonts"],
-      "assetStatus": "The v0.1 master files ship in this repo under brand-site/assets/ — the live catalog at iheartezoic.com may still serve the previous set until the canonical app is refreshed from this payload. Until then, the repo files are the authoritative masters; verify against the live catalog before placing from it.",
+      "assetStatus": "The v0.1 master files ship in this repo under brand-site/assets/ — the live catalog at iheartezoic.com still serves the PREVIOUS system's set. Until the canonical app is refreshed from this payload, the repo files are the authoritative masters; verify against the live catalog before placing from it.",
+      "liveCatalogSnapshot": {
+        "checkedAt": "2026-07-04",
+        "records": 77,
+        "byRoot": { "brand": 16, "design-elements": 27, "photo-backs": 25, "fonts": 9 },
+        "finding": "Confirmed previous-system content: /fonts still serves RedHatMono.woff2 (retired — Reddit Mono replaces it), /brand still lists the mint-era finishes, and the design-elements / photo-backs roots carry the prior dark-veil/mint-overlay treatments. One live brand file is not mirrored in this repo: /brand/imagery-grid.png.",
+        "rule": "Treat every live design-element and photo-backdrop as PENDING RE-AUDIT for v0.1 — do not place them in new work until each is re-approved against the light edition (light-washed, neutrals-only). RedHatMono.woff2 and the mint-era marks are retired outright.",
+        "missingFromAllSources": "The guide PDF references export files not present in this repo or the live catalog (e.g. UPDATE/coreLogo.png, UPDATE/Frame 120913.png, and the applied-example collages on the guide's In The Wild page). These ship from the brand owner's v0.1 export pack — catalog them here when supplied."
+      },
       "statusKey": {
         "master": "A v0.1 master — place as supplied.",
         "current": "Approved and current — place as supplied where its role fits.",

@@ -177,7 +177,7 @@ All playbooks inherit: cloud or ink surfaces · one dominant idea per section ·
 
 Status key: master = v0.1 master, place as supplied · current = approved, place where its role fits · draft = reference only, never ship · duplicate = use the master path · retired = never place.
 
-The v0.1 masters ship in the brand repo under brand-site/assets/; the live catalog at iheartezoic.com may still serve the previous set until the canonical app is refreshed — until then, the repo files are the authoritative masters.
+The v0.1 masters ship in the brand repo under brand-site/assets/; the live catalog at iheartezoic.com still serves the previous system's set (checked 2026-07-04: 77 records — /fonts still carries the retired RedHatMono.woff2, /brand still lists the mint-era finishes, and the design-elements / photo-backs roots hold prior-system treatments pending re-audit for v0.1). Until the canonical app is refreshed, the repo files are the authoritative masters. Export files the guide references but no source yet carries (UPDATE/coreLogo.png, UPDATE/Frame 120913.png, the In The Wild collages) ship from the brand owner's v0.1 export pack.
 
 | File | Status | Role | Size |
 | --- | --- | --- | --- |

@@ -1,36 +1,40 @@
 # Ezoic Brand Guidelines
 
-> Ezoic's brand system — Vol. 02 / 2026, Light edition (experimental v0.1). Light, editorial, type-led: neutrals build the page, Ezoic Green #70A92A makes the point. Every mark is a master file — place the files as supplied; never re-draw, re-color, or re-type them. The wordmark is never typeset.
+> The machine-readable entry point to Ezoic's brand system — Vol. 02 / 2026, Light edition (experimental v0.1). Built for one use case: creating Ezoic marketing and collateral with perfect brand style via the Brand API or the ezoic-brand MCP server. Light, editorial, type-led: neutrals build the page, Ezoic Green #70A92A makes the point. Every mark is a master file — never re-drawn, re-colored, or re-typed. The wordmark is never typeset.
 
-Key rules:
+## Create on-brand materials — the workflow
 
-- Palette (5 declared values): Ezoic Green #70A92A (single accent — the mark, primary actions, signature moments) · Charcoal #252726 · Graphite #575757 · Steel #969696 · Cloud #E3E3E3. Surfaces are cloud or ink. No new brand hues. The previous mint-led dark system is retired — light, always.
-- Dark mode is eliminated. There is no dark mode or dark theme — ink surfaces are local accents inside the light system, never a global theme. Do not build a .dark variant.
-- Logo: primary lockup = emblem left, wordmark right (/brand/lockup-dark.png). Reversed on ink only (/brand/lockup-light.png). Four pairings, then leave it alone: Core on cloud · Steel on cloud · Reversed on ink · Steel on ink. Clear space = emblem height on every side.
-- Type: Inter — headings (Display 28pt) −5% letter spacing / 125% line spacing, Title Case closed with a period; body (Text 18pt) −3% / 150%, sentence case. Nothing in all caps. Reddit Mono for code, file paths, hex, and exact values only.
-- The Pixel Wash: neutrals only, one wash per surface, always under the content — editorial collage 14% (hero), ink bands 8% / 10%. Never carries color, never crowds the mark.
+1. Load the standards: GET /api/ezoic-brand (or MCP read_brand_guide, section='style' for the contract, 'tokens' for values, 'playbooks' for material recipes). Cache for the session.
+2. Resolve real assets: GET /api/ezoic-brand/assets (or MCP list_brand_assets → get_brand_asset). Never infer meaning from filenames; place only catalog files with status master or current.
+3. Pick the playbook for the material (landing page, deck slide, social image, one-pager, case study, email, ad) and compose from the tokens and component recipes.
+4. Place master files for every logo occurrence — one of the four pairings, clear space = emblem height.
+5. Verify with the pre-ship checklist (color audit, caps audit, mono audit, logo audit, wash audit, integrity audit) before shipping.
+
+## Hard rules
+
+- Palette (5 declared values): Ezoic Green #70A92A (single accent — the mark, primary actions, signature moments) · Charcoal #252726 · Graphite #575757 · Steel #969696 · Cloud #E3E3E3. Surfaces are cloud or ink. White/alpha derivatives only as quiet surface tints. No gradients. The mint-led dark system is retired — light, always.
+- Dark mode is eliminated. Ink surfaces are local accents inside the light system, never a global theme. No .dark variant.
+- Logo: four pairings, then leave it alone — Core on cloud (default) · Steel on cloud (quiet) · Reversed on ink · Steel on ink (quiet reverse). Clear space = emblem height on every side.
+- Type: Inter — headings (Display) −5% / 125%, Title Case closed with a period; body (Text) −3% / 150%, sentence case. Nothing in all caps. Reddit Mono only for code, file paths, hex, exact values.
+- The Pixel Wash: the one texture — neutrals only, one wash per surface, under the content: collage 14% (hero), ink bands 8% / 10%.
 - Voice: Direct. Confident. Technical. Terminology: Ezoic · ezID · EPMV · JS snippet · Open.Video (the period is part of the name).
+- Integrity: no invented metrics, customers, quotes, or partners — claim slots stay open until a cited value exists.
 
 ## Guide
 
-- [Full guide (markdown)](https://iheartezoic.com/llms-full.txt): every section of the brand system in one document
+- [Full guide (markdown)](https://iheartezoic.com/llms-full.txt): the complete system in one fetch — standards, tokens, component recipes, per-material playbooks, full asset catalog, checklist
 - [Brand standards site](https://iheartezoic.com): the guide's web edition, sheet for sheet
 
 ## API
 
-- [Structured guide JSON](https://iheartezoic.com/api/ezoic-brand): sections, palette, typography, washes, logo rules, voice
-- [Style section](https://iheartezoic.com/api/ezoic-brand/sections/style): the visual contract only
-- [Asset catalog](https://iheartezoic.com/api/ezoic-brand/assets): live records — paths, URLs, MIME types, dimensions
+- [Structured guide JSON](https://iheartezoic.com/api/ezoic-brand): sections + usage workflow + tokens + components + playbooks + checklist + asset catalog
+- [Style section](https://iheartezoic.com/api/ezoic-brand/sections/style): the visual contract and banned patterns only
+- [Asset catalog](https://iheartezoic.com/api/ezoic-brand/assets): live records — paths, URLs, MIME types, bytes, dimensions, status (master / current / draft / retired)
 - [Grouped assets](https://iheartezoic.com/api/ezoic-brand/assets/grouped): counts by root (brand, design-elements, photo-backs, fonts)
 - [Asset download](https://iheartezoic.com/api/ezoic-brand/assets/download?root=all): ZIP of approved files
-- [MCP endpoint](https://iheartezoic.com/api/mcp): the ezoic-brand MCP server (read_brand_guide, search_brand_standards, list_brand_assets, get_brand_asset)
+- [MCP endpoint](https://iheartezoic.com/api/mcp): ezoic-brand server — read_brand_guide(section?, format?) · search_brand_standards(query, limit?) · list_brand_assets(root?, query?) · get_brand_asset(publicPath)
 
 ## Assets
 
-- The v0.1 master files ship in the brand repo under brand-site/assets/ (core + reversed lockups, steel pairing masters, emblem finishes, pixel-wash assets, fonts). The live catalog may still serve the previous set until the canonical app is refreshed — until then, the repo files are the authoritative masters.
-- Mint-era finishes (emblem-mint, mark-mint, mark-lime, mark-frog) are retired — do not place them.
-
-## Integrity
-
-- Use the live asset catalog before placing any logo, mark, backdrop, or font; filenames are locators, not meanings.
-- Do not invent metrics, customers, quotes, partners, or capabilities; leave claim slots open until a cited value exists.
+- The v0.1 masters ship in the brand repo under brand-site/assets/ with a full manifest (status, role, dimensions) in the API payload's access.catalog. The live catalog may still serve the previous set until the canonical app is refreshed — until then, the repo files are the authoritative masters.
+- Retired — never place: emblem-mint.png, mark-mint.png, mark-lime.png, mark-frog.png (mint-era finishes). Draft sheets (Frame 120894 / 120899) carry superseded values and are reference-only: ink is #252726 (not #222423), line spacing 125%/150% (not 105%/110%).

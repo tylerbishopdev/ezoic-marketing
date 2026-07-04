@@ -4,6 +4,7 @@
     "edition": "Brand standards / Vol. 02 — 2026 / Light edition",
     "version": "0.1-experimental",
     "canonical": "https://iheartezoic.com",
+    "purpose": "A creation surface, not just documentation: everything an agent or developer needs to produce brand-perfect Ezoic marketing and collateral — the standards as usable tokens and recipes, a complete asset catalog, per-material playbooks, and a pre-ship checklist.",
     "surfaces": {
       "site": "https://iheartezoic.com",
       "api": "https://iheartezoic.com/api/ezoic-brand",
@@ -15,7 +16,46 @@
       "llms": "https://iheartezoic.com/llms.txt",
       "llmsFull": "https://iheartezoic.com/llms-full.txt"
     },
-    "note": "Reference payload generated from the v0.1 guide — lift into the canonical Next.js app's /api/ezoic-brand route. Copyright Ezoic 2026 — experimental draft, not ratified."
+    "sectionIndex": ["intro", "logo", "variants", "color", "type", "elements", "voice", "tokens", "components", "playbooks", "case-study", "style", "checklist", "access", "footer"],
+    "note": "Reference payload generated from the v0.1 guide — lift into the canonical Next.js app's /api/ezoic-brand route and the ezoic-brand MCP server. Copyright Ezoic 2026 — experimental draft, not ratified."
+  },
+  "usage": {
+    "goal": "Create Ezoic marketing or collateral with perfect brand style, using this API or the ezoic-brand MCP server.",
+    "workflow": [
+      "1 · Load the standards. API: GET /api/ezoic-brand (this payload) or /api/ezoic-brand/sections/style. MCP: read_brand_guide(section='style') — cache for the session.",
+      "2 · Resolve real assets. API: GET /api/ezoic-brand/assets?root=brand|design-elements|photo-backs|fonts. MCP: list_brand_assets(root) then get_brand_asset(publicPath). Never infer what a file shows from its name; never place a file that is not in the catalog (status master or current).",
+      "3 · Pick the playbook for the material type (sections.playbooks) and compose with sections.tokens + sections.components. Surfaces are cloud or ink; one wash max; green appears only where it earns it.",
+      "4 · Place master files for every logo/wordmark occurrence — the wordmark is never typeset. Use one of the four pairings in sections.variants, with clear space = emblem height.",
+      "5 · Verify before shipping: run every item in sections.checklist. Leave metric/quote/customer slots open unless a cited value exists."
+    ],
+    "api": {
+      "GET /api/ezoic-brand": "This full payload.",
+      "GET /api/ezoic-brand/sections/{id}": "One section by ID (see meta.sectionIndex).",
+      "GET /api/ezoic-brand/search?q=": "Keyword search across standards.",
+      "GET /api/ezoic-brand/assets?root=": "Live asset records — path, URL, MIME, bytes, dimensions. Roots: brand, design-elements, photo-backs, fonts, all.",
+      "GET /api/ezoic-brand/assets/grouped": "Counts and records grouped by root.",
+      "GET /api/ezoic-brand/assets/download?root=": "ZIP of approved files."
+    },
+    "mcp": {
+      "endpoint": "https://iheartezoic.com/api/mcp",
+      "tools": {
+        "read_brand_guide": "args: section? (one of meta.sectionIndex), format? — full guide or one section. Start here; section='style' for the visual contract, 'tokens' for values, 'playbooks' for material recipes.",
+        "search_brand_standards": "args: query, limit? — keyword search across palette, type, logo, washes, components, voice.",
+        "list_brand_assets": "args: root?, query? — the live catalog. Call before placing ANY logo, mark, backdrop, or font.",
+        "get_brand_asset": "args: publicPath — one asset's metadata plus its direct https://iheartezoic.com URL."
+      },
+      "pattern": "read_brand_guide(style) → list_brand_assets(brand) → compose from tokens/components/playbooks → get_brand_asset for each file you place → checklist."
+    },
+    "hardRules": [
+      "The wordmark is never typeset. It is a file, placed.",
+      "Only the four logo pairings. Clear space = emblem height on every side.",
+      "Five declared colors; surfaces are cloud or ink; white/alpha only as quiet surface tints; no gradients.",
+      "Dark mode is eliminated — ink is a local accent, never a theme.",
+      "Nothing in all caps. Headings Title Case closed with a period; body sentence case.",
+      "Reddit Mono only for code, file paths, hex, exact values.",
+      "One wash per surface, neutrals only, under the content, at approved opacity.",
+      "No invented metrics, customers, quotes, partners, or capabilities — claim slots stay open until cited."
+    ]
   },
   "sections": {
     "intro": {
@@ -26,15 +66,17 @@
     "logo": {
       "primaryLockup": { "description": "Emblem left, wordmark right.", "file": "/brand/lockup-dark.png", "surface": "light" },
       "reversedLockup": { "description": "Reversed — ink surfaces only.", "file": "/brand/lockup-light.png", "surface": "ink" },
-      "wordmarkRule": "The wordmark is never typeset. It is a file, placed."
+      "wordmarkRule": "The wordmark is never typeset. It is a file, placed.",
+      "clearSpace": "The emblem height, labelled x, on every side.",
+      "minPlacement": "Never shrink below legibility; never on busy imagery without an approved veil."
     },
     "variants": {
       "title": "Four pairings, then leave it alone.",
       "pairings": [
-        { "name": "Core on cloud", "note": "default" },
-        { "name": "Steel on cloud", "note": "quiet" },
-        { "name": "Reversed on ink", "note": "" },
-        { "name": "Steel on ink", "note": "quiet reverse" }
+        { "name": "Core on cloud", "note": "default", "file": "/brand/lockup-dark.png", "surface": "#E3E3E3 or white panel" },
+        { "name": "Steel on cloud", "note": "quiet", "file": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120889.png", "surface": "#E3E3E3 or white panel" },
+        { "name": "Reversed on ink", "note": "", "file": "/brand/lockup-light.png", "surface": "#252726" },
+        { "name": "Steel on ink", "note": "quiet reverse", "file": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120891.png", "surface": "#252726" }
       ],
       "emblemFinishes": [
         { "name": "Green", "value": "#70A92A" },
@@ -66,14 +108,22 @@
       "discipline": "Surfaces are cloud or ink. Don't introduce new brand hues for surfaces, charts, or components — neutrals build the page; green makes the point. The previous mint-led dark system is retired. Light, always.",
       "darkMode": "Eliminated. There is no dark mode or dark theme — this is a decision, not a pending question. Ink surfaces (reversed-logo panels, full-bleed bands, the back cover) are local accents inside the light system, never a global theme. Do not build a .dark variant.",
       "tints": "White #FFFFFF and alpha/color-mix derivatives of the five declared values are permitted only as quiet surface tints (raised panels, washes) — never as new hues.",
-      "contrast": "Green measures 2.8:1 on light surfaces — never small text on cloud/white.",
-      "gradients": "No sanctioned brand gradient exists."
+      "contrast": "Green measures 2.8:1 on light surfaces — never small text on cloud/white. Body text is Charcoal on Cloud (11.5:1) or Cloud on Charcoal; secondary text Graphite on Cloud (5.9:1).",
+      "gradients": "No sanctioned brand gradient exists.",
+      "accentBudget": "In any single composition, green appears in one or two places: the mark, and at most one primary action or one signature proof moment. If green is everywhere, it points at nothing."
     },
     "type": {
-      "family": "Inter — one family, two optical sizes (Display 28pt, Text 18pt), self-hosted.",
-      "headings": { "letterSpacing": "-5%", "lineSpacing": "125%", "case": "Title Case, closed with a period.", "weights": [900, 700, 600] },
-      "body": { "letterSpacing": "-3%", "lineSpacing": "150%", "case": "sentence case", "weights": [400] },
-      "mono": { "family": "Reddit Mono", "file": "/fonts/RedditMono-VF.woff2", "usage": "Code, file paths, hex & exact values only. Never decoration.", "weight": "Medium (variable 200–900)" },
+      "family": "Inter — one family, two optical sizes (Display 28pt for headings, Text 18pt for body), self-hosted.",
+      "headings": { "letterSpacing": "-5% (-0.05em)", "lineSpacing": "125%", "case": "Title Case, closed with a period.", "weights": [900, 700, 600], "face": "Inter Display" },
+      "body": { "letterSpacing": "-3% (-0.03em)", "lineSpacing": "150%", "case": "sentence case", "weights": [400], "face": "Inter Text" },
+      "mono": { "family": "Reddit Mono", "file": "/fonts/RedditMono-VF.woff2", "usage": "Code, file paths, hex & exact values only. Never decoration, never a heading or label face.", "weight": "Medium (variable 200–900)" },
+      "scale": [
+        { "role": "Display headline", "face": "Inter Display", "weight": 900, "note": "Section/sheet headlines. Oversized specimens mirroring the guide's pages may sit tighter than 125%." },
+        { "role": "Title", "face": "Inter Display", "weight": 700, "note": "Sub-headlines, slide titles." },
+        { "role": "Heading", "face": "Inter Display", "weight": 600, "note": "Row and card headings." },
+        { "role": "Body", "face": "Inter Text", "weight": 400, "note": "Reading text, UI copy." },
+        { "role": "Exact values", "face": "Reddit Mono", "weight": 500, "note": "EPMV · ezID · JS snippet · #70A92A · file paths · page numbers." }
+      ],
       "rules": [
         "Nothing is set in all caps. Hierarchy comes from scale and spacing — not caps, not bold runs.",
         "The wordmark is never typeset. It is a file, placed."
@@ -82,21 +132,22 @@
     "elements": {
       "pixelWash": {
         "title": "The Pixel Wash — Decisive, Concise, Clear.",
-        "rule": "Neutrals only, one wash per surface, always under the content. A wash never carries color, never crowds the mark, and never substitutes for hierarchy.",
+        "rule": "The system's one texture. Neutrals only, one wash per surface, always under the content. A wash never carries color, never crowds the mark, and never substitutes for hierarchy.",
         "washes": [
-          { "name": "Editorial collage", "surface": "hero surfaces", "opacity": 0.14 },
-          { "name": "Wash 01", "surface": "ink bands", "opacity": 0.08 },
-          { "name": "Wash 02", "surface": "ink bands", "opacity": 0.10 }
+          { "name": "Editorial collage", "surface": "hero surfaces", "opacity": 0.14, "asset": "brand-site/assets/overlays/overlay-hero.png" },
+          { "name": "Wash 01", "surface": "ink bands", "opacity": 0.08, "asset": "brand-site/assets/overlays/overlay-01.png" },
+          { "name": "Wash 02", "surface": "ink bands", "opacity": 0.10, "asset": "brand-site/assets/overlays/overlay-02.png" },
+          { "name": "Cover wash", "surface": "cover/full-bleed light sheets", "opacity": "pre-baked in asset", "asset": "brand-site/assets/brand/truth-assets/Frame 120903.png" }
         ]
       },
       "surfaces": {
-        "radius": { "panel": "16px", "band": "24px", "pill": "999px" },
-        "container": "1320px",
-        "gutter": "clamp(20px, 5vw, 64px)",
+        "radius": { "panel": "16px — panels, tiles, swatches", "band": "24px — large bands, full-width panels", "pill": "999px — buttons and tags" },
+        "container": "1320px max width; gutter clamp(20px, 5vw, 64px)",
         "hairlineOnLight": "rgb(37 39 38 / 0.13)",
-        "hairlineOnInk": "rgb(255 255 255 / 0.12)"
+        "hairlineOnInk": "rgb(255 255 255 / 0.12)",
+        "sheetChrome": "Running head top-left (13px, weight 600), emblem top-right, hairline footer with section label left and mono page number right."
       },
-      "motion": "Quiet entrance motion (opacity + slight vertical rise); minimal hover (color change, line extension, arrow reveal, button state)."
+      "motion": "Quiet entrance motion (opacity + slight vertical rise, ~0.7s, cubic-bezier(0.22,0.61,0.36,1)); minimal hover (color change, line extension, arrow reveal, button state). Nothing bounces, nothing spins."
     },
     "voice": {
       "title": "Direct. Confident. Technical.",
@@ -111,7 +162,98 @@
         { "term": "EPMV", "setAs": "EPMV", "note": "All caps. Expand to “Earnings Per Thousand Visitors” on first use." },
         { "term": "JS snippet", "setAs": "JS snippet", "note": "Preferred wording for the lightweight integration." },
         { "term": "Open.Video", "setAs": "Open.Video", "note": "The period is part of the name." }
+      ],
+      "copyGuardrails": [
+        "Data-led, not adjective-led — adjectives support numbers, never replace them.",
+        "The customer is the subject of most sentences — not the platform.",
+        "Category framing: revenue infrastructure / operating layer — never ad network, plugin, or tool.",
+        "Avoid hype vocabulary (revolutionary, game-changing, best-in-class, cutting-edge, next-generation, unleash, supercharge, elevate) and any sentence that could appear on any other ad-tech site.",
+        "Refocus, never attack — no negative competitor-trashing."
       ]
+    },
+    "tokens": {
+      "note": "Copy-paste values. The full theme layer (Tailwind v4 + shadcn) ships in the repo at brand-site/design-system/.",
+      "css": {
+        "--green": "#70A92A",
+        "--ink": "#252726",
+        "--graphite": "#575757",
+        "--steel": "#969696",
+        "--cloud": "#E3E3E3",
+        "--panel": "#FFFFFF",
+        "--hair": "rgb(37 39 38 / 0.13)",
+        "--hair-ink": "rgb(255 255 255 / 0.12)",
+        "--tracking-heading": "-0.05em",
+        "--tracking-body": "-0.03em",
+        "--leading-heading": "1.25",
+        "--leading-body": "1.5",
+        "--r-panel": "16px",
+        "--r-band": "24px",
+        "--r-pill": "999px",
+        "--maxw": "1320px",
+        "--gut": "clamp(20px, 5vw, 64px)",
+        "--ease": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+        "--wash-collage": "0.14",
+        "--wash-01": "0.08",
+        "--wash-02": "0.10"
+      },
+      "fontStacks": {
+        "display": "'Inter Display','Inter Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif",
+        "text": "'Inter Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif",
+        "mono": "'Reddit Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+      },
+      "chart": "One highlighted series in green; structure and remaining series in charcoal/graphite/steel. Never multiple saturated colors; never a default library palette."
+    },
+    "components": {
+      "primaryAction": "Green pill — border-radius 999px, background #70A92A, white text, weight 600–700, letter-spacing -0.03em; hover shifts background to #252726. One per composition.",
+      "secondaryActionOnInk": "Ghost pill — 999px radius, 1px rgb(255 255 255 / 0.12) border, cloud text; hover raises border to ~0.35 alpha.",
+      "textLink": "Ink text with 1px ink underline; hover extends gap or recolors the underline to green. Low chrome.",
+      "tag": "Small pill, hairline border, sentence case, graphite text on a white/near-white tint — the guide's own 'experimental · v0.1' tag is the model.",
+      "panel": "White #FFFFFF raised panel, 16px radius, hairline border rgb(37 39 38 / 0.13). Large bands take 24px radius. Never stock rounded-md SaaS chrome, never heavy drop shadows.",
+      "inkBand": "Local #252726 band, 24px radius when inset; reversed or steel-on-ink lockup only; optional single wash at 8–10% under content.",
+      "ruledRow": "Content rows divided by hairlines (no boxes): label left (11–13px, graphite/steel), content right. The guide's TOC, terminology table, and type scale are the models.",
+      "sheetChrome": "For document-like collateral: running head top-left, emblem top-right (green, ~30px), hairline footer with the document label left and a mono page number right.",
+      "proofSlot": "A green-led signature moment (band or oversized numeral) whose value area STAYS EMPTY until a cited value exists. Label the slot; never fill it with an invented number.",
+      "clearSpaceDiagram": "Lockup inside a dashed green boundary with mono 'x' labels — clear space equals emblem height on every side.",
+      "emblemInCode": "The one safe-to-recreate asset: the standalone emblem as inline SVG using the exact vector path from /brand/emblem-white.svg, recolored only to #70A92A, #252726, #969696, or green-on-ink."
+    },
+    "playbooks": {
+      "note": "Structural recipes per material type. All inherit: cloud or ink surfaces, one dominant idea per section, master files for every mark, mono only for exact values, claim slots open until cited, checklist before shipping.",
+      "landingPage": {
+        "structure": "Hero (one headline, Title Case with period; optional collage wash at 14%; one green pill) → ruled proof/feature rows → single ink band as the one dark accent → quiet footer with reversed lockup.",
+        "type": "Display 900 for the hero, 600 for row headings, Text 400 body at 150%.",
+        "accent": "Green: the mark, one pill, at most one proof moment.",
+        "avoid": "SaaS card grids, more than one wash, gradients, dashboard screenshots as decoration."
+      },
+      "deckSlide": {
+        "structure": "Slide title 5–7 words (Display 700, Title Case, period) → 1–2 sentence core claim → 2–3 numeric proof points in a ruled row → lockup small in a corner (core on cloud / reversed on ink slides).",
+        "type": "Headline stat as hero typography — Display 900, ink on cloud; green only when the stat is the signature moment.",
+        "surfaces": "Cloud slides by default; at most one ink accent slide per section of the deck.",
+        "avoid": "Funnels drawn small-to-big, full-sentence bullets, stock AI-hype graphics, all-caps labels."
+      },
+      "socialImage": {
+        "structure": "One idea, oversized Display type on cloud, or the campaign frame (one green band + one mark over light-washed photography — Frame 120906 is the model).",
+        "logo": "One mark only — emblem or lockup, never both fighting; respect clear space at small sizes.",
+        "avoid": "More than one message, more than one green moment, text below legible size."
+      },
+      "onePager": {
+        "structure": "Sheet chrome (running head + emblem + mono footer) → headline → ruled rows for the argument → proof slot → one CTA line.",
+        "type": "Same scale as the guide's Type In Use page; body 150% for scanability.",
+        "avoid": "Two-column density, boxed callouts, decorative mono."
+      },
+      "caseStudy": {
+        "structure": "Situation → operating change → proof slot (green-led, cited values only) → quote slot (open until sourced) → next action.",
+        "imagery": "Light-washed photography under the system, or a quiet editorial surface with an open media slot when no approved image exists.",
+        "avoid": "Invented metrics/quotes/customer names; heavy cards; dashboard cosplay."
+      },
+      "email": {
+        "structure": "Wordmark file small at top (never typeset) → one headline → short body at 150% → one green pill CTA → quiet footer.",
+        "surfaces": "White/cloud only — no ink bands in email; keep washes out of email (client rendering).",
+        "avoid": "Multiple CTAs, image-heavy layouts, all-caps subject-style headers in the body."
+      },
+      "adCreative": {
+        "structure": "The campaign frame: one green band, one mark, light-washed people photography; or type-only on cloud with the emblem holding the frame (Frame 120905 model for dark placements).",
+        "avoid": "Gradients, more than one band, competitor references, unsourced claims."
+      }
     },
     "case-study": {
       "structure": ["situation", "operating change", "source-ready proof slot", "quote slot", "next action"],
@@ -140,36 +282,78 @@
       ],
       "conflictNote": "Draft asset sheets carry superseded values (ink #222423; line spacing 105%/110%). The guide's written spec — ink #252726; 125%/150% — is the contract."
     },
+    "checklist": {
+      "title": "Pre-ship verification — run every item before any material ships.",
+      "items": [
+        "Color audit: no hex/rgb outside #70A92A, #252726, #575757, #969696, #E3E3E3, plus white/alpha tints of these. No gradients.",
+        "Green budget: green appears only as the mark, one primary action, and/or one signature moment — and never as small text on light surfaces.",
+        "Caps audit: zero all-caps runs (no text-transform: uppercase; no typed ALL-CAPS headings). Headings are Title Case and close with a period; body is sentence case.",
+        "Type spec: headings −5% / 125% Inter Display; body −3% / 150% Inter Text.",
+        "Mono audit: Reddit Mono appears only on code, file paths, hex, page numbers, exact values.",
+        "Logo audit: every mark/wordmark occurrence is an approved file in one of the four pairings, at full opacity, with clear space ≥ emblem height; nothing recolored, stretched, rotated, or shadowed.",
+        "Wash audit: at most one wash per surface, neutrals only, under the content, at approved opacity (14% collage / 8% / 10% ink bands), never over the mark.",
+        "Surface audit: cloud or ink only; ink is a local accent, not a theme; dark mode does not exist.",
+        "Integrity audit: every metric/quote/customer/partner is cited or its slot is visibly open; no filename-inferred meanings; no retired assets placed.",
+        "Terminology audit: Ezoic · ezID · EPMV · JS snippet · Open.Video set exactly; category framing is revenue infrastructure / operating layer."
+      ]
+    },
     "access": {
       "assetRoots": ["brand", "design-elements", "photo-backs", "fonts"],
       "assetStatus": "The v0.1 master files ship in this repo under brand-site/assets/ — the live catalog at iheartezoic.com may still serve the previous set until the canonical app is refreshed from this payload. Until then, the repo files are the authoritative masters; verify against the live catalog before placing from it.",
-      "masters": [
-        { "repoPath": "brand-site/assets/brand/lockup-dark.png", "livePath": "/brand/lockup-dark.png", "role": "Core lockup — emblem left, wordmark right (light surfaces)." },
-        { "repoPath": "brand-site/assets/brand/lockup-light.png", "livePath": "/brand/lockup-light.png", "role": "Reversed lockup — ink surfaces only." },
-        { "repoPath": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120889.png", "livePath": null, "role": "Steel-on-cloud pairing master (quiet). Live path pending the canonical-app refresh." },
-        { "repoPath": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120891.png", "livePath": null, "role": "Steel-on-ink pairing master (quiet reverse). Live path pending the canonical-app refresh." },
-        { "repoPath": "brand-site/assets/brand/emblem-white.svg", "livePath": "/brand/emblem-white.svg", "role": "Emblem vector master — recolor only within the palette finishes (green / ink / steel / green-on-ink)." },
-        { "repoPath": "brand-site/assets/brand/emblem-green.png", "livePath": "/brand/emblem-green.png", "role": "Emblem — green finish." },
-        { "repoPath": "brand-site/assets/brand/mark-muted.png", "livePath": "/brand/mark-muted.png", "role": "Emblem — steel finish." },
-        { "repoPath": "brand-site/assets/brand/wordmark-dark.png", "livePath": "/brand/wordmark-dark.png", "role": "Wordmark file (ink). The wordmark is never typeset." },
-        { "repoPath": "brand-site/assets/brand/wordmark-light.png", "livePath": "/brand/wordmark-light.png", "role": "Wordmark file (light). The wordmark is never typeset." },
-        { "repoPath": "brand-site/assets/brand/ezid-dark.png", "livePath": "/brand/ezid-dark.png", "role": "ezID sub-brand lockup (light surfaces) — only where that product is represented." },
-        { "repoPath": "brand-site/assets/brand/ezid-light.png", "livePath": "/brand/ezid-light.png", "role": "ezID sub-brand lockup (ink surfaces) — only where that product is represented." },
-        { "repoPath": "brand-site/assets/overlays/overlay-hero.png", "livePath": null, "role": "Pixel wash — editorial collage, hero surfaces · 14%." },
-        { "repoPath": "brand-site/assets/overlays/overlay-01.png", "livePath": null, "role": "Pixel wash — Wash 01, ink bands · 8%." },
-        { "repoPath": "brand-site/assets/overlays/overlay-02.png", "livePath": null, "role": "Pixel wash — Wash 02, ink bands · 10%." },
-        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120903.png", "livePath": null, "role": "Cover wash — light ghost-emblem pixel wash." },
-        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120905.png", "livePath": null, "role": "Applied example — emblem over ink pixel wash." },
-        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120906.png", "livePath": null, "role": "Applied example — campaign frame, one green band, one mark." },
-        { "repoPath": "brand-site/assets/fonts/", "livePath": "/fonts/", "role": "Self-hosted brand fonts — Inter Display 28pt (600/700/900), Inter Text 18pt (300–700), RedditMono-VF (variable 200–900)." }
-      ],
-      "retired": [
-        { "repoPath": "brand-site/assets/brand/emblem-mint.png", "reason": "Mint-era finish — retired with the dark system. Do not place; kept only as a catalog mirror until the live catalog is refreshed." },
-        { "repoPath": "brand-site/assets/brand/mark-mint.png", "reason": "Mint-era finish — retired. Do not place." },
-        { "repoPath": "brand-site/assets/brand/mark-lime.png", "reason": "Lime-era finish — retired. Do not place." },
-        { "repoPath": "brand-site/assets/brand/mark-frog.png", "reason": "Frog-era finish — retired. Do not place." },
-        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120899.png", "reason": "Draft palette sheet — carries the superseded ink #222423. Reference only; the written spec (#252726) wins." },
-        { "repoPath": "brand-site/assets/brand/truth-assets/Frame 120894.png", "reason": "Draft brand sheet — carries superseded line-spacing values (105%/110%). Reference only; the written spec (125%/150%) wins." }
+      "statusKey": {
+        "master": "A v0.1 master — place as supplied.",
+        "current": "Approved and current — place as supplied where its role fits.",
+        "draft": "Draft/reference material — do not place in shipped work.",
+        "duplicate": "Byte-identical or superseded duplicate of a master — use the master path.",
+        "retired": "Retired system — never place."
+      },
+      "catalog": [
+        { "path": "brand-site/assets/brand/lockup-dark.png", "livePath": "/brand/lockup-dark.png", "status": "master", "role": "Core lockup — emblem left, wordmark right (light surfaces).", "mime": "image/png", "bytes": 52912, "dim": [763, 167] },
+        { "path": "brand-site/assets/brand/lockup-light.png", "livePath": "/brand/lockup-light.png", "status": "master", "role": "Reversed lockup — ink surfaces only.", "mime": "image/png", "bytes": 50791, "dim": [763, 167] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120889.png", "livePath": null, "status": "master", "role": "Steel-on-cloud pairing (quiet). Live path pending the canonical-app refresh.", "mime": "image/png", "bytes": 80867, "dim": [1227, 261] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120891.png", "livePath": null, "status": "master", "role": "Steel-on-ink pairing (quiet reverse). Live path pending the canonical-app refresh.", "mime": "image/png", "bytes": 76029, "dim": [1227, 261] },
+        { "path": "brand-site/assets/brand/emblem-white.svg", "livePath": "/brand/emblem-white.svg", "status": "master", "role": "Emblem vector master — the one safe-to-recreate-in-code asset; recolor only within the palette finishes.", "mime": "image/svg+xml", "bytes": 1133, "dim": null },
+        { "path": "brand-site/assets/brand/emblem-green.png", "livePath": "/brand/emblem-green.png", "status": "current", "role": "Emblem — green finish.", "mime": "image/png", "bytes": 4404, "dim": [128, 127] },
+        { "path": "brand-site/assets/brand/mark-muted.png", "livePath": "/brand/mark-muted.png", "status": "current", "role": "Emblem — steel finish.", "mime": "image/png", "bytes": 3175, "dim": [110, 110] },
+        { "path": "brand-site/assets/brand/wordmark-dark.png", "livePath": "/brand/wordmark-dark.png", "status": "current", "role": "Wordmark file, ink. The wordmark is never typeset.", "mime": "image/png", "bytes": 49598, "dim": [811, 185] },
+        { "path": "brand-site/assets/brand/wordmark-light.png", "livePath": "/brand/wordmark-light.png", "status": "current", "role": "Wordmark file, light. The wordmark is never typeset.", "mime": "image/png", "bytes": 50034, "dim": [811, 185] },
+        { "path": "brand-site/assets/brand/ezid-dark.png", "livePath": "/brand/ezid-dark.png", "status": "current", "role": "ezID sub-brand lockup (light surfaces) — only where that product is represented.", "mime": "image/png", "bytes": 18029, "dim": [489, 338] },
+        { "path": "brand-site/assets/brand/ezid-light.png", "livePath": "/brand/ezid-light.png", "status": "current", "role": "ezID sub-brand lockup (ink surfaces) — only where that product is represented.", "mime": "image/png", "bytes": 17957, "dim": [489, 338] },
+        { "path": "brand-site/assets/brand/logo-alt-dark.png", "livePath": "/brand/logo-alt-dark.png", "status": "current", "role": "Alternate compact lockup (ink) — verify fit with get_brand_asset before placing.", "mime": "image/png", "bytes": 7393, "dim": [447, 102] },
+        { "path": "brand-site/assets/brand/logo-alt-light.png", "livePath": "/brand/logo-alt-light.png", "status": "current", "role": "Alternate compact lockup (light) — verify fit with get_brand_asset before placing.", "mime": "image/png", "bytes": 7382, "dim": [426, 97] },
+        { "path": "brand-site/assets/brand/UPDATE/Frame 120911.png", "livePath": null, "status": "master", "role": "Editorial collage — PNG master of the hero-surface wash (14%).", "mime": "image/png", "bytes": 632244, "dim": [2544, 1344] },
+        { "path": "brand-site/assets/overlays/overlay-hero.png", "livePath": null, "status": "current", "role": "Editorial collage — compressed render for hero washes at 14%. NOTE: JPEG data despite the .png extension — serve as image/jpeg or re-encode.", "mime": "image/jpeg", "bytes": 60236, "dim": null },
+        { "path": "brand-site/assets/overlays/overlay-01.png", "livePath": null, "status": "current", "role": "Wash 01 — ink bands at 8%. NOTE: JPEG data despite the .png extension.", "mime": "image/jpeg", "bytes": 23662, "dim": null },
+        { "path": "brand-site/assets/overlays/overlay-02.png", "livePath": null, "status": "current", "role": "Wash 02 — ink bands at 10%. NOTE: JPEG data despite the .png extension.", "mime": "image/jpeg", "bytes": 18897, "dim": null },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120903.png", "livePath": null, "status": "master", "role": "Cover wash — light ghost-emblem pixel wash (pre-baked opacity).", "mime": "image/png", "bytes": 1142189, "dim": [6380, 3664] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120904.png", "livePath": null, "status": "current", "role": "Alternate light ghost-emblem wash (softer). Large file — compress before web use.", "mime": "image/png", "bytes": 14336658, "dim": [6376, 3664] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120905.png", "livePath": null, "status": "master", "role": "Applied example — green emblem over ink pixel wash (the mark holds the frame).", "mime": "image/png", "bytes": 134010, "dim": [688, 560] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120906.png", "livePath": null, "status": "master", "role": "Applied example — campaign frame: one green band, one mark, light-washed people.", "mime": "image/png", "bytes": 3648413, "dim": [6376, 3665] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Union.png", "livePath": null, "status": "current", "role": "Emblem glyph cutout (Union series) — check the file's finish before placing; recolor is not permitted.", "mime": "image/png", "bytes": 15464, "dim": [485, 485] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Union-1.png", "livePath": null, "status": "current", "role": "Emblem glyph cutout (Union series) — check finish before placing.", "mime": "image/png", "bytes": 16867, "dim": [485, 485] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Union-2.png", "livePath": null, "status": "current", "role": "Emblem glyph cutout (Union series) — check finish before placing.", "mime": "image/png", "bytes": 15159, "dim": [485, 485] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Union-3.png", "livePath": null, "status": "current", "role": "Emblem glyph cutout (Union series, large — green verified).", "mime": "image/png", "bytes": 29311, "dim": [852, 852] },
+        { "path": "brand-site/assets/fonts/Inter_28pt-Black.woff2", "livePath": "/fonts/Inter_28pt-Black.woff2", "status": "master", "role": "Inter Display 900 — display headlines.", "mime": "font/woff2", "bytes": 23900, "dim": null },
+        { "path": "brand-site/assets/fonts/Inter_28pt-Bold.woff2", "livePath": "/fonts/Inter_28pt-Bold.woff2", "status": "master", "role": "Inter Display 700 — titles.", "mime": "font/woff2", "bytes": 24356, "dim": null },
+        { "path": "brand-site/assets/fonts/Inter_28pt-SemiBold.woff2", "livePath": "/fonts/Inter_28pt-SemiBold.woff2", "status": "master", "role": "Inter Display 600 — headings.", "mime": "font/woff2", "bytes": 24452, "dim": null },
+        { "path": "brand-site/assets/fonts/Inter_18pt-Regular.woff2", "livePath": "/fonts/Inter_18pt-Regular.woff2", "status": "master", "role": "Inter Text 400 — body.", "mime": "font/woff2", "bytes": 23664, "dim": null },
+        { "path": "brand-site/assets/fonts/Inter_18pt-Light.woff2", "livePath": "/fonts/Inter_18pt-Light.woff2", "status": "current", "role": "Inter Text 300 — quiet metadata.", "mime": "font/woff2", "bytes": 23916, "dim": null },
+        { "path": "brand-site/assets/fonts/Inter_18pt-Medium.woff2", "livePath": "/fonts/Inter_18pt-Medium.woff2", "status": "current", "role": "Inter Text 500 — UI emphasis.", "mime": "font/woff2", "bytes": 24272, "dim": null },
+        { "path": "brand-site/assets/fonts/Inter_18pt-SemiBold.woff2", "livePath": "/fonts/Inter_18pt-SemiBold.woff2", "status": "current", "role": "Inter Text 600 — strong UI.", "mime": "font/woff2", "bytes": 24452, "dim": null },
+        { "path": "brand-site/assets/fonts/Inter_18pt-Bold.woff2", "livePath": "/fonts/Inter_18pt-Bold.woff2", "status": "current", "role": "Inter Text 700 — emphasis only.", "mime": "font/woff2", "bytes": 24356, "dim": null },
+        { "path": "brand-site/assets/fonts/RedditMono-VF.woff2", "livePath": "/fonts/RedditMono-VF.woff2", "status": "master", "role": "Reddit Mono variable (200–900) — exact values only.", "mime": "font/woff2", "bytes": 79740, "dim": null },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120889.png", "livePath": null, "status": "duplicate", "role": "Earlier export of the steel-on-cloud master — use truth-assets/UPDATE/Frame 120889.png.", "mime": "image/png", "bytes": 80965, "dim": [1227, 261] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120891.png", "livePath": null, "status": "duplicate", "role": "Byte-identical to the steel-on-ink master — use truth-assets/UPDATE/Frame 120891.png.", "mime": "image/png", "bytes": 76029, "dim": [1227, 261] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120892.png", "livePath": null, "status": "duplicate", "role": "Byte-identical to Frame 120891 (steel on ink).", "mime": "image/png", "bytes": 76029, "dim": [1227, 261] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120893.png", "livePath": null, "status": "draft", "role": "Cloud-emblem + steel-wordmark variant — NOT one of the four approved pairings. Reference only.", "mime": "image/png", "bytes": 75179, "dim": [1227, 261] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120857.png", "livePath": null, "status": "draft", "role": "Green-emblem + cloud-wordmark variant — NOT one of the four approved pairings. Reference only.", "mime": "image/png", "bytes": 90242, "dim": [1226, 260] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120894.png", "livePath": null, "status": "draft", "role": "Draft brand sheet — carries superseded line-spacing values (105%/110%). Reference only; the written spec (125%/150%) wins.", "mime": "image/png", "bytes": 1289517, "dim": [8665, 5878] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120894.png", "livePath": null, "status": "duplicate", "role": "Byte-identical to UPDATE/Frame 120894.png (draft brand sheet).", "mime": "image/png", "bytes": 1289517, "dim": [8665, 5878] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120899.png", "livePath": null, "status": "draft", "role": "Draft palette sheet — carries the superseded ink #222423. Reference only; the written spec (#252726) wins.", "mime": "image/png", "bytes": 175650, "dim": [2556, 3076] },
+        { "path": "brand-site/assets/brand/emblem-mint.png", "livePath": "/brand/emblem-mint.png", "status": "retired", "role": "Mint-era finish — retired with the dark system. Never place; kept only as a catalog mirror until the live catalog is refreshed.", "mime": "image/png", "bytes": 4051, "dim": [128, 127] },
+        { "path": "brand-site/assets/brand/mark-mint.png", "livePath": "/brand/mark-mint.png", "status": "retired", "role": "Mint-era finish — retired. Never place.", "mime": "image/png", "bytes": 3535, "dim": [111, 110] },
+        { "path": "brand-site/assets/brand/mark-lime.png", "livePath": "/brand/mark-lime.png", "status": "retired", "role": "Lime-era finish — retired. Never place.", "mime": "image/png", "bytes": 3458, "dim": [110, 110] },
+        { "path": "brand-site/assets/brand/mark-frog.png", "livePath": "/brand/mark-frog.png", "status": "retired", "role": "Frog-era finish — retired. Never place.", "mime": "image/png", "bytes": 3809, "dim": [111, 110] }
       ],
       "integrity": [
         "Use the live asset catalog before placing logos, marks, design elements, photo backdrops, or font files.",

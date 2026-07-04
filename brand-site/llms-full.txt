@@ -1,7 +1,26 @@
 # Ezoic Brand Guidelines — Full Guide
 
 Brand standards / Vol. 02 — 2026 / Light edition · experimental v0.1
-Canonical surface: https://iheartezoic.com · This document is the complete machine-readable edition of the guide.
+Canonical surface: https://iheartezoic.com · This document is the complete machine-readable edition of the guide, optimized for one use case: creating Ezoic marketing and collateral with perfect brand style. One fetch gives you the standards, the tokens, the component recipes, the per-material playbooks, the full asset catalog, and the pre-ship checklist.
+
+## How To Use This Guide (API + MCP)
+
+Endpoints:
+
+- GET https://iheartezoic.com/api/ezoic-brand — full structured JSON (sections: intro, logo, variants, color, type, elements, voice, tokens, components, playbooks, case-study, style, checklist, access, footer)
+- GET https://iheartezoic.com/api/ezoic-brand/sections/{id} — one section
+- GET https://iheartezoic.com/api/ezoic-brand/search?q= — keyword search
+- GET https://iheartezoic.com/api/ezoic-brand/assets?root=brand|design-elements|photo-backs|fonts|all — live asset records (path, URL, MIME, bytes, dimensions, status)
+- GET https://iheartezoic.com/api/ezoic-brand/assets/grouped · /assets/download?root=... — grouped counts · ZIP
+- MCP server at https://iheartezoic.com/api/mcp — tools: read_brand_guide(section?, format?) · search_brand_standards(query, limit?) · list_brand_assets(root?, query?) · get_brand_asset(publicPath)
+
+The creation workflow:
+
+1. Load the standards — read_brand_guide(section='style') or GET /api/ezoic-brand. Cache for the session.
+2. Resolve real assets — list_brand_assets(root='brand') / GET /assets. Never infer what a file shows from its name; place only files with status master or current.
+3. Pick the playbook for the material type (below) and compose from the tokens and component recipes.
+4. Place master files for every logo/wordmark occurrence — one of the four pairings, clear space = emblem height. The wordmark is never typeset.
+5. Run the pre-ship checklist (bottom of this document). Leave metric/quote/customer slots open unless a cited value exists.
 
 ## Intro — Growth Engineering.
 
@@ -14,15 +33,16 @@ Positioning: Ezoic is revenue infrastructure for the modern web — the operatin
 - Primary lockup — emblem left, wordmark right. File: /brand/lockup-dark.png (light surfaces).
 - Reversed — ink surfaces only. File: /brand/lockup-light.png.
 - The wordmark is never typeset. It is a file, placed.
+- Clear space: the emblem height, labelled x, on every side. Never shrink below legibility; never on busy imagery without an approved veil.
 
 ## Logo On Color
 
 Four pairings, then leave it alone:
 
-1. Core on cloud — default.
-2. Steel on cloud — quiet.
-3. Reversed on ink.
-4. Steel on ink — quiet reverse.
+1. Core on cloud — default (/brand/lockup-dark.png on #E3E3E3 or a white panel).
+2. Steel on cloud — quiet (steel-on-cloud master; see catalog).
+3. Reversed on ink (/brand/lockup-light.png on #252726).
+4. Steel on ink — quiet reverse (steel-on-ink master; see catalog).
 
 ## Logo Usage — Use The Master Files.
 
@@ -35,7 +55,7 @@ Don't:
 - Never recolor outside the palette, stretch, rotate, or add shadows.
 - Never place the mark on busy imagery without an approved veil, or shrink it below legibility.
 
-Emblem finishes: Green #70A92A · Ink #252726 · Steel #969696 · On ink, the green holds.
+Emblem finishes: Green #70A92A · Ink #252726 · Steel #969696 · On ink, the green holds. The one safe-to-recreate-in-code asset is the standalone emblem as inline SVG using the exact vector path from /brand/emblem-white.svg, recolored only within these finishes.
 
 ## Color — Neutrals Build. Green Points.
 
@@ -51,35 +71,34 @@ Discipline: surfaces are cloud or ink. Don't introduce new brand hues for surfac
 
 Dark mode is eliminated. There is no dark mode or dark theme — this is a decision, not a pending question. Ink surfaces (reversed-logo panels, full-bleed bands, the back cover) are local accents inside the light system, never a global theme. Do not build a .dark variant.
 
-Notes: white #FFFFFF and alpha/color-mix derivatives of the five declared values are permitted only as quiet surface tints (raised panels, washes) — never as new hues. Green measures 2.8:1 on light surfaces and is never small text on cloud/white. No brand gradient exists.
+Accent budget: in any single composition, green appears in one or two places — the mark, and at most one primary action or one signature proof moment. If green is everywhere, it points at nothing.
+
+Notes: white #FFFFFF and alpha/color-mix derivatives of the five declared values are permitted only as quiet surface tints (raised panels, washes) — never as new hues. Green measures 2.8:1 on light surfaces and is never small text on cloud/white; body text is Charcoal on Cloud (11.5:1), secondary Graphite on Cloud (5.9:1). No brand gradient exists.
 
 ## Font — Inter
 
-- Headings — letter spacing −5% · line spacing 125%.
-- Body — letter spacing −3% · line spacing 150%.
-- Reddit Mono — code, file paths, hex & exact values.
+- Headings — Inter Display (28pt optical): letter spacing −5% · line spacing 125% · Title Case, closed with a period · weights 900 / 700 / 600.
+- Body — Inter Text (18pt optical): letter spacing −3% · line spacing 150% · sentence case · weight 400.
+- Reddit Mono — code, file paths, hex & exact values. Never decoration. Medium weight in use (variable 200–900).
 
 ## Type In Use — One Family. Two Optical Sizes.
 
-Scale: Display 900 Black · Display 700 Bold · Display 600 SemiBold · Text 400 Regular · Mono Medium.
+Scale: Display 900 Black (headlines) · Display 700 Bold (titles) · Display 600 SemiBold (headings) · Text 400 Regular (body) · Mono Medium (exact values: EPMV · ezID · JS snippet · #70A92A).
 
-- Headings — Inter Display, −5% letter spacing, 125% line spacing. Title Case, closed with a period.
-- Body — Inter Text, −3% letter spacing, 150% line spacing, sentence case.
 - Nothing is set in all caps. Hierarchy comes from scale and spacing — not caps, not bold runs.
-- Reddit Mono is reserved for code, file paths, hex, and exact values. Never decoration.
 - The wordmark is never typeset. It is a file, placed.
-
-Font files (self-hosted, /fonts): Inter Display 28pt (600/700/900), Inter Text 18pt (300–700), RedditMono-VF (variable 200–900).
+- Oversized display specimens mirroring the guide's own pages may sit tighter than the 125% heading standard; 125% remains the standard in running layouts.
 
 ## The Pixel Wash — Decisive, Concise, Clear.
 
 The system's one texture. Neutrals only, one wash per surface, always under the content:
 
-- Editorial collage — hero surfaces · 14%.
-- Wash 01 — ink bands · 8%.
-- Wash 02 — ink bands · 10%.
+- Editorial collage — hero surfaces · 14% (overlay-hero; PNG master Frame 120911).
+- Wash 01 — ink bands · 8% (overlay-01).
+- Wash 02 — ink bands · 10% (overlay-02).
+- Cover wash — light ghost-emblem washes for full-bleed light sheets (Frame 120903; alternate Frame 120904).
 
-A wash never carries color, never crowds the mark, and never substitutes for hierarchy. Photography inside a wash is light-washed and sits quiet under the system.
+A wash never carries color, never crowds the mark, and never substitutes for hierarchy. Photography inside a wash is light-washed and sits quiet under the system; when no approved image exists, use a quiet editorial surface with an open media slot.
 
 ## Voice — Direct. Confident. Technical.
 
@@ -97,60 +116,108 @@ Terminology:
 | JS snippet | JS snippet | Preferred wording for the lightweight integration |
 | Open.Video | Open.Video | The period is part of the name |
 
+Copy guardrails: data-led, not adjective-led — adjectives support numbers, never replace them. The customer is the subject of most sentences. Category framing is revenue infrastructure / operating layer — never ad network, plugin, or tool. Avoid hype vocabulary (revolutionary, game-changing, best-in-class, cutting-edge, next-generation, unleash, supercharge, elevate) and any sentence that could appear on any other ad-tech site. Refocus, never attack.
+
+## Design Tokens (copy-paste)
+
+```css
+--green: #70A92A;    --ink: #252726;      --graphite: #575757;
+--steel: #969696;    --cloud: #E3E3E3;    --panel: #FFFFFF;
+--hair: rgb(37 39 38 / 0.13);   --hair-ink: rgb(255 255 255 / 0.12);
+--tracking-heading: -0.05em;    --tracking-body: -0.03em;
+--leading-heading: 1.25;        --leading-body: 1.5;
+--r-panel: 16px;  --r-band: 24px;  --r-pill: 999px;
+--maxw: 1320px;   --gut: clamp(20px, 5vw, 64px);
+--ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+--wash-collage: 0.14;  --wash-01: 0.08;  --wash-02: 0.10;
+```
+
+Font stacks: display 'Inter Display','Inter Text',sans-serif · text 'Inter Text',sans-serif · mono 'Reddit Mono',monospace. Files self-hosted at /fonts (see catalog). Charts: one highlighted series in green; everything else charcoal/graphite/steel — never a default library palette. The full Tailwind v4 + shadcn theme layer ships in the repo at brand-site/design-system/.
+
+## Component Recipes
+
+- Primary action: green pill — 999px radius, #70A92A fill, white text, weight 600–700; hover shifts to ink. One per composition.
+- Secondary action on ink: ghost pill — 1px rgb(255 255 255 / 0.12) border, cloud text.
+- Text link: ink text, 1px ink underline; hover extends or recolors the underline to green.
+- Tag: small hairline pill, sentence case, graphite text ("experimental · v0.1" is the model).
+- Panel: white raised panel, 16px radius, hairline border. Bands: 24px radius. Never stock rounded-md SaaS chrome, never heavy drop shadows.
+- Ink band: local #252726 band; reversed or steel-on-ink lockup only; optional single wash at 8–10% under content.
+- Ruled rows: hairline-divided rows (no boxes) — label left in small graphite/steel, content right. The guide's TOC, terminology table, and type scale are the models.
+- Sheet chrome (document collateral): running head top-left (13px, 600), emblem top-right (green, ~30px), hairline footer — label left, mono page number right.
+- Proof slot: a green-led signature moment (band or oversized numeral) whose value area stays empty until a cited value exists.
+- Clear-space diagram: lockup inside a dashed green boundary with mono x labels.
+- Motion: quiet entrance (opacity + slight rise, ~0.7s, the brand ease); minimal hover. Nothing bounces, nothing spins.
+
+## Playbooks — Per Material Type
+
+All playbooks inherit: cloud or ink surfaces · one dominant idea per section · master files for every mark · mono only for exact values · claim slots open until cited · checklist before shipping.
+
+- Landing page: hero (one Title-Case-with-period headline, optional collage wash at 14%, one green pill) → ruled proof/feature rows → a single ink band as the one dark accent → quiet footer with the reversed lockup. Avoid: SaaS card grids, multiple washes, gradients.
+- Deck slide: title 5–7 words (Display 700) → 1–2 sentence claim → 2–3 numeric proof points in a ruled row → lockup small in a corner. Headline stat as hero typography (Display 900, ink on cloud; green only for the signature stat). Cloud slides by default; at most one ink accent slide per deck section. Avoid: small-to-big funnels, full-sentence bullets, stock AI-hype graphics, all-caps labels.
+- Social image: one idea — oversized Display type on cloud, or the campaign frame (one green band + one mark over light-washed photography). One mark only; respect clear space at small sizes.
+- One-pager: sheet chrome → headline → ruled rows for the argument → proof slot → one CTA line. Avoid two-column density, boxed callouts, decorative mono.
+- Case study: situation → operating change → green-led proof slot (cited values only) → quote slot (open until sourced) → next action. Light-washed photography or a quiet surface with an open media slot.
+- Email: wordmark file small at top (never typeset) → one headline → short body at 150% → one green pill CTA → quiet footer. White/cloud only; no ink bands or washes in email.
+- Ad creative: the campaign frame — one green band, one mark, light-washed people; or type-only on cloud with the emblem holding the frame. No gradients, no unsourced claims.
+
 ## Applied Examples
 
-- Emblem over imagery — the mark holds the frame.
-- Campaign frame — one green band, one mark.
-- People, light-washed — imagery sits quiet under the system.
+- Emblem over imagery — the mark holds the frame (Frame 120905).
+- Campaign frame — one green band, one mark (Frame 120906).
+- People, light-washed — imagery sits quiet under the system (editorial collage).
 
 ## Layout And Surfaces
 
 - Max content width 1320px; gutter clamp(20px, 5vw, 64px).
 - Sheet rhythm: running head top-left, emblem top-right, hairline footer with mono page number.
 - Rounded surfaces: 16px panels/tiles/swatches, 24px large bands, 999px pills.
-- Hairlines: ink at low opacity (rgb(37 39 38 / 0.13)) on light; white at low opacity on ink.
-- Motion: quiet entrance (opacity + slight rise); minimal hover (color change, line extension, arrow reveal).
+- Hairlines: rgb(37 39 38 / 0.13) on light; rgb(255 255 255 / 0.12) on ink.
 
-## Banned Patterns
+## Asset Catalog
 
-- Fake logos, fake lockups, or unapproved logo stand-ins presented as real.
-- A typeset wordmark.
-- Asset meaning inferred from filenames alone.
-- Unsourced metrics, proof points, product claims, partner claims, customer names, or quotes.
-- Decorative monospace or mono-heavy layouts.
-- All-caps label systems, headings, or eyebrows.
-- Any color outside the five declared values (plus documented white/alpha surface tints) — including the retired mint/lime/frog set.
-- Dark-led layouts or a global dark theme — ink is a local accent; light, always.
-- Gradients — no sanctioned brand gradient exists.
-- More than one wash per surface, a wash over the mark, or a wash above its approved opacity.
-- Grid-pattern filler, gradient blur blobs, generic SaaS card grids, heavy cards, dashboard-like brand layouts.
-- Heavy bold everywhere; invented iconography; default chart palettes.
-- Negative competitor-trashing.
+Status key: master = v0.1 master, place as supplied · current = approved, place where its role fits · draft = reference only, never ship · duplicate = use the master path · retired = never place.
 
-## Assets
+The v0.1 masters ship in the brand repo under brand-site/assets/; the live catalog at iheartezoic.com may still serve the previous set until the canonical app is refreshed — until then, the repo files are the authoritative masters.
 
-The v0.1 master files ship in the brand repo under brand-site/assets/:
+| File | Status | Role | Size |
+| --- | --- | --- | --- |
+| brand/lockup-dark.png | master | Core lockup — emblem left, wordmark right (light surfaces) | 763×167 |
+| brand/lockup-light.png | master | Reversed lockup — ink surfaces only | 763×167 |
+| brand/truth-assets/UPDATE/Frame 120889.png | master | Steel-on-cloud pairing (quiet) | 1227×261 |
+| brand/truth-assets/UPDATE/Frame 120891.png | master | Steel-on-ink pairing (quiet reverse) | 1227×261 |
+| brand/emblem-white.svg | master | Emblem vector master — safe to recreate inline, palette finishes only | vector |
+| brand/emblem-green.png | current | Emblem — green finish | 128×127 |
+| brand/mark-muted.png | current | Emblem — steel finish | 110×110 |
+| brand/wordmark-dark.png · wordmark-light.png | current | Wordmark files — never typeset | 811×185 |
+| brand/ezid-dark.png · ezid-light.png | current | ezID sub-brand lockups — only where that product is represented | 489×338 |
+| brand/logo-alt-dark.png · logo-alt-light.png | current | Alternate compact lockups — verify before placing | ~447×102 |
+| brand/UPDATE/Frame 120911.png | master | Editorial collage — PNG master of the hero wash (14%) | 2544×1344 |
+| overlays/overlay-hero.png · overlay-01.png · overlay-02.png | current | Wash renders (14% / 8% / 10%). Note: JPEG data despite .png extension | — |
+| brand/truth-assets/Frame 120903.png | master | Cover wash — light ghost-emblem | 6380×3664 |
+| brand/truth-assets/Frame 120904.png | current | Alternate light ghost-emblem wash (large file — compress for web) | 6376×3664 |
+| brand/truth-assets/Frame 120905.png | master | Applied example — emblem over ink wash | 688×560 |
+| brand/truth-assets/Frame 120906.png | master | Applied example — campaign frame | 6376×3665 |
+| brand/truth-assets/UPDATE/Union*.png | current | Emblem glyph cutouts — check each file's finish before placing | 485–852 |
+| fonts/Inter_28pt-{Black,Bold,SemiBold}.woff2 | master | Inter Display 900/700/600 | — |
+| fonts/Inter_18pt-{Light…Bold}.woff2 | master/current | Inter Text 300–700 (body is 400) | — |
+| fonts/RedditMono-VF.woff2 | master | Reddit Mono variable — exact values only | — |
+| brand/truth-assets/Frame 120889/120891/120892/120894.png | duplicate | Earlier/byte-identical exports — use the UPDATE/ masters | — |
+| brand/truth-assets/Frame 120893.png · Frame 120857.png | draft | Lockup variants NOT among the four approved pairings — reference only | 1227×261 |
+| brand/truth-assets/Frame 120894.png (UPDATE) · Frame 120899.png | draft | Draft brand/palette sheets — superseded values (105%/110%; #222423). The written spec wins | — |
+| brand/emblem-mint.png · mark-mint.png · mark-lime.png · mark-frog.png | retired | Mint-era finishes — never place | — |
 
-- Core lockup — brand/lockup-dark.png (light surfaces) · Reversed — brand/lockup-light.png (ink only).
-- Steel pairing masters — brand/truth-assets/UPDATE/Frame 120889.png (steel on cloud) · Frame 120891.png (steel on ink).
-- Emblem — emblem-white.svg (vector master; palette finishes only) · emblem-green.png · mark-muted.png (steel).
-- Wordmarks (files, never typeset) — wordmark-dark.png · wordmark-light.png. ezID sub-brand — ezid-dark.png · ezid-light.png.
-- Pixel washes — overlays/overlay-hero.png (collage · 14%) · overlay-01.png (8%) · overlay-02.png (10%) · truth-assets/Frame 120903.png (cover wash).
-- Applied examples — truth-assets/Frame 120905.png (emblem over ink wash) · Frame 120906.png (campaign frame).
-- Fonts — assets/fonts/ (Inter Display 28pt, Inter Text 18pt, RedditMono-VF).
+## Pre-Ship Checklist
 
-The live catalog at iheartezoic.com may still serve the previous set until the canonical app is refreshed from this system — until then, the repo files are the authoritative masters. Retired, do not place: emblem-mint.png, mark-mint.png, mark-lime.png, mark-frog.png (mint-era finishes); draft sheets Frame 120899.png / Frame 120894.png carry superseded values and are reference-only.
-
-## Access
-
-- Site: https://iheartezoic.com
-- Structured JSON: https://iheartezoic.com/api/ezoic-brand
-- Style section: https://iheartezoic.com/api/ezoic-brand/sections/style
-- Assets: https://iheartezoic.com/api/ezoic-brand/assets (roots: brand, design-elements, photo-backs, fonts)
-- Grouped: https://iheartezoic.com/api/ezoic-brand/assets/grouped
-- Download: https://iheartezoic.com/api/ezoic-brand/assets/download?root=all
-- MCP: https://iheartezoic.com/api/mcp
-- Index: https://iheartezoic.com/llms.txt
+1. Color audit: no hex/rgb outside #70A92A, #252726, #575757, #969696, #E3E3E3 plus white/alpha tints. No gradients.
+2. Green budget: only the mark, one primary action, and/or one signature moment — never small text on light surfaces.
+3. Caps audit: zero all-caps runs. Headings Title Case closed with a period; body sentence case.
+4. Type spec: headings −5% / 125% Inter Display; body −3% / 150% Inter Text.
+5. Mono audit: Reddit Mono only on code, file paths, hex, page numbers, exact values.
+6. Logo audit: every mark is an approved file in one of the four pairings, full opacity, clear space ≥ emblem height; nothing recolored, stretched, rotated, or shadowed; the wordmark is a file.
+7. Wash audit: max one wash per surface, neutrals only, under content, at approved opacity, never over the mark.
+8. Surface audit: cloud or ink only; ink is a local accent; dark mode does not exist.
+9. Integrity audit: every metric/quote/customer/partner cited or its slot visibly open; no filename-inferred meanings; no retired or draft assets placed.
+10. Terminology audit: Ezoic · ezID · EPMV · JS snippet · Open.Video set exactly; category framing is revenue infrastructure / operating layer.
 
 ## Content Integrity / Source Notes
 

@@ -171,7 +171,7 @@ The machine-readable guide exposes the same source through:
 - `/llms.txt`
 - `/llms-full.txt`
 
-These surfaces use the same section IDs, asset roots, typography rules, Reddit Mono treatment, pixel-wash rules, banned patterns, generation guidance, and Content Integrity / Source Notes. Reference copies generated from this bible live at `brand-site/llms.txt`, `brand-site/llms-full.txt`, and `brand-site/api/ezoic-brand.json` in this repo, ready to lift into the canonical app.
+These surfaces use the same section IDs, asset roots, typography rules, Reddit Mono treatment, pixel-wash rules, banned patterns, generation guidance, and Content Integrity / Source Notes. They are creation surfaces, not just documentation: the payload carries a usage workflow (load standards → resolve real assets → pick the material playbook → compose from tokens/components → run the pre-ship checklist), copy-paste design tokens, component recipes, per-material playbooks (landing page, deck slide, social image, one-pager, case study, email, ad), a status-keyed asset catalog (master / current / draft / duplicate / retired, with dimensions), and the 10-item pre-ship checklist. Reference copies generated from this bible live at `brand-site/llms.txt`, `brand-site/llms-full.txt`, and `brand-site/api/ezoic-brand.json` in this repo, ready to lift into the canonical app.
 
 ## Content Integrity / Source Notes
 

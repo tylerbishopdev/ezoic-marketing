@@ -231,7 +231,7 @@
         "avoid": "Funnels drawn small-to-big, full-sentence bullets, stock AI-hype graphics, all-caps labels."
       },
       "socialImage": {
-        "structure": "One idea, oversized Display type on cloud, or the campaign frame (one green band + one mark over light-washed photography — Frame 120906 is the model).",
+        "structure": "One idea — oversized Display type on cloud, or one green band + one mark over light-washed photography.",
         "logo": "One mark only — emblem or lockup, never both fighting; respect clear space at small sizes.",
         "avoid": "More than one message, more than one green moment, text below legible size."
       },
@@ -251,7 +251,7 @@
         "avoid": "Multiple CTAs, image-heavy layouts, all-caps subject-style headers in the body."
       },
       "adCreative": {
-        "structure": "The campaign frame: one green band, one mark, light-washed people photography; or type-only on cloud with the emblem holding the frame (Frame 120905 model for dark placements).",
+        "structure": "One green band, one mark, light-washed people photography; or type-only on cloud with the emblem holding the frame.",
         "avoid": "Gradients, more than one band, competitor references, unsourced claims."
       }
     },
@@ -299,13 +299,13 @@
     },
     "access": {
       "assetRoots": ["brand", "design-elements", "photo-backs", "fonts"],
-      "assetStatus": "The v0.1 master files ship in this repo under brand-site/assets/ — the live catalog at iheartezoic.com still serves the PREVIOUS system's set. Until the canonical app is refreshed from this payload, the repo files are the authoritative masters; verify against the live catalog before placing from it.",
+      "assetStatus": "ALIGNED — the live catalog at iheartezoic.com serves the v0.1 system (deployed 2026-07-04) and is the authoritative source; this repo mirrors the masters for offline reference. Always verify against the live catalog before placing.",
       "liveCatalogSnapshot": {
-        "checkedAt": "2026-07-04",
-        "records": 77,
-        "byRoot": { "brand": 16, "design-elements": 27, "photo-backs": 25, "fonts": 9 },
-        "finding": "Confirmed previous-system content: /fonts still serves RedHatMono.woff2 (retired — Reddit Mono replaces it), /brand still lists the mint-era finishes, and the design-elements / photo-backs roots carry the prior dark-veil/mint-overlay treatments. One live brand file is not mirrored in this repo: /brand/imagery-grid.png.",
-        "rule": "Treat every live design-element and photo-backdrop as PENDING RE-AUDIT for v0.1 — do not place them in new work until each is re-approved against the light edition (light-washed, neutrals-only). RedHatMono.woff2 and the mint-era marks are retired outright.",
+        "checkedAt": "2026-07-06",
+        "records": 88,
+        "byRoot": { "brand": 18, "design-elements": 31, "photo-backs": 29, "fonts": 10 },
+        "finding": "ALIGNED: the live catalog serves the v0.1 set — /fonts/RedditMono-VF.woff2, the steel pairing masters (/brand/lockup-steel-cloud.png, /brand/lockup-steel-ink.png), and the pixel-wash assets are live. Retired files (mint-era marks, RedHatMono.woff2) remain served only for URL stability.",
+        "rule": "Prior-system design-elements and photo-backdrops remain PENDING RE-AUDIT for v0.1 — do not place them in new work until each is re-approved against the light edition. RedHatMono.woff2 and the mint-era marks are retired outright.",
         "missingFromAllSources": "The guide PDF references export files not present in this repo or the live catalog (e.g. UPDATE/coreLogo.png, UPDATE/Frame 120913.png, and the applied-example collages on the guide's In The Wild page). These ship from the brand owner's v0.1 export pack — catalog them here when supplied."
       },
       "statusKey": {
@@ -318,8 +318,8 @@
       "catalog": [
         { "path": "brand-site/assets/brand/lockup-dark.png", "livePath": "/brand/lockup-dark.png", "status": "master", "role": "Core lockup — emblem left, wordmark right (light surfaces).", "mime": "image/png", "bytes": 52912, "dim": [763, 167] },
         { "path": "brand-site/assets/brand/lockup-light.png", "livePath": "/brand/lockup-light.png", "status": "master", "role": "Reversed lockup — ink surfaces only.", "mime": "image/png", "bytes": 50791, "dim": [763, 167] },
-        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120889.png", "livePath": null, "status": "master", "role": "Steel-on-cloud pairing (quiet). Live path pending the canonical-app refresh.", "mime": "image/png", "bytes": 80867, "dim": [1227, 261] },
-        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120891.png", "livePath": null, "status": "master", "role": "Steel-on-ink pairing (quiet reverse). Live path pending the canonical-app refresh.", "mime": "image/png", "bytes": 76029, "dim": [1227, 261] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120889.png", "livePath": "/brand/lockup-steel-cloud.png", "status": "master", "role": "Steel-on-cloud pairing (quiet).", "mime": "image/png", "bytes": 80867, "dim": [1227, 261] },
+        { "path": "brand-site/assets/brand/truth-assets/UPDATE/Frame 120891.png", "livePath": "/brand/lockup-steel-ink.png", "status": "master", "role": "Steel-on-ink pairing (quiet reverse).", "mime": "image/png", "bytes": 76029, "dim": [1227, 261] },
         { "path": "brand-site/assets/brand/emblem-white.svg", "livePath": "/brand/emblem-white.svg", "status": "master", "role": "Emblem vector master — the one safe-to-recreate-in-code asset; recolor only within the palette finishes.", "mime": "image/svg+xml", "bytes": 1133, "dim": null },
         { "path": "brand-site/assets/brand/emblem-green.png", "livePath": "/brand/emblem-green.png", "status": "current", "role": "Emblem — green finish.", "mime": "image/png", "bytes": 4404, "dim": [128, 127] },
         { "path": "brand-site/assets/brand/mark-muted.png", "livePath": "/brand/mark-muted.png", "status": "current", "role": "Emblem — steel finish.", "mime": "image/png", "bytes": 3175, "dim": [110, 110] },
@@ -329,14 +329,14 @@
         { "path": "brand-site/assets/brand/ezid-light.png", "livePath": "/brand/ezid-light.png", "status": "current", "role": "ezID sub-brand lockup (ink surfaces) — only where that product is represented.", "mime": "image/png", "bytes": 17957, "dim": [489, 338] },
         { "path": "brand-site/assets/brand/logo-alt-dark.png", "livePath": "/brand/logo-alt-dark.png", "status": "current", "role": "Alternate compact lockup (ink) — verify fit with get_brand_asset before placing.", "mime": "image/png", "bytes": 7393, "dim": [447, 102] },
         { "path": "brand-site/assets/brand/logo-alt-light.png", "livePath": "/brand/logo-alt-light.png", "status": "current", "role": "Alternate compact lockup (light) — verify fit with get_brand_asset before placing.", "mime": "image/png", "bytes": 7382, "dim": [426, 97] },
-        { "path": "brand-site/assets/brand/UPDATE/Frame 120911.png", "livePath": null, "status": "master", "role": "Editorial collage — PNG master of the hero-surface wash (14%).", "mime": "image/png", "bytes": 632244, "dim": [2544, 1344] },
-        { "path": "brand-site/assets/overlays/overlay-hero.png", "livePath": null, "status": "current", "role": "Editorial collage — compressed render for hero washes at 14%. NOTE: JPEG data despite the .png extension — serve as image/jpeg or re-encode.", "mime": "image/jpeg", "bytes": 60236, "dim": null },
-        { "path": "brand-site/assets/overlays/overlay-01.png", "livePath": null, "status": "current", "role": "Wash 01 — ink bands at 8%. NOTE: JPEG data despite the .png extension.", "mime": "image/jpeg", "bytes": 23662, "dim": null },
-        { "path": "brand-site/assets/overlays/overlay-02.png", "livePath": null, "status": "current", "role": "Wash 02 — ink bands at 10%. NOTE: JPEG data despite the .png extension.", "mime": "image/jpeg", "bytes": 18897, "dim": null },
-        { "path": "brand-site/assets/brand/truth-assets/Frame 120903.png", "livePath": null, "status": "master", "role": "Cover wash — light ghost-emblem pixel wash (pre-baked opacity).", "mime": "image/png", "bytes": 1142189, "dim": [6380, 3664] },
-        { "path": "brand-site/assets/brand/truth-assets/Frame 120904.png", "livePath": null, "status": "current", "role": "Alternate light ghost-emblem wash (softer). Large file — compress before web use.", "mime": "image/png", "bytes": 14336658, "dim": [6376, 3664] },
-        { "path": "brand-site/assets/brand/truth-assets/Frame 120905.png", "livePath": null, "status": "master", "role": "Applied example — green emblem over ink pixel wash (the mark holds the frame).", "mime": "image/png", "bytes": 134010, "dim": [688, 560] },
-        { "path": "brand-site/assets/brand/truth-assets/Frame 120906.png", "livePath": null, "status": "master", "role": "Applied example — campaign frame: one green band, one mark, light-washed people.", "mime": "image/png", "bytes": 3648413, "dim": [6376, 3665] },
+        { "path": "brand-site/assets/brand/UPDATE/Frame 120911.png", "livePath": "/images/design-elements/pixel-collage.png", "status": "master", "role": "Editorial collage — PNG master of the hero-surface wash (14%).", "mime": "image/png", "bytes": 632244, "dim": [2544, 1344] },
+        { "path": "brand-site/assets/overlays/overlay-hero.png", "livePath": "/images/design-elements/wash-hero.jpg", "status": "current", "role": "Editorial collage — compressed render for hero washes at 14%. NOTE: JPEG data despite the .png extension — serve as image/jpeg or re-encode.", "mime": "image/jpeg", "bytes": 60236, "dim": null },
+        { "path": "brand-site/assets/overlays/overlay-01.png", "livePath": "/images/design-elements/wash-01.jpg", "status": "current", "role": "Wash 01 — ink bands at 8%. NOTE: JPEG data despite the .png extension.", "mime": "image/jpeg", "bytes": 23662, "dim": null },
+        { "path": "brand-site/assets/overlays/overlay-02.png", "livePath": "/images/design-elements/wash-02.jpg", "status": "current", "role": "Wash 02 — ink bands at 10%. NOTE: JPEG data despite the .png extension.", "mime": "image/jpeg", "bytes": 18897, "dim": null },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120903.png", "livePath": "/photo-backs/cover-wash.png", "status": "master", "role": "Cover wash — light ghost-emblem pixel wash (pre-baked opacity).", "mime": "image/png", "bytes": 1142189, "dim": [6380, 3664] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120904.png", "livePath": "/photo-backs/cover-wash-soft.png", "status": "current", "role": "Alternate light ghost-emblem wash (softer). Large file — compress before web use.", "mime": "image/png", "bytes": 14336658, "dim": [6376, 3664] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120905.png", "livePath": "/photo-backs/applied-emblem-ink.png", "status": "draft", "role": "Draft example frame — PENDING RE-AUDIT (treatment defies the v0.1 guide). Do not place or treat as a model until re-approved.", "mime": "image/png", "bytes": 134010, "dim": [688, 560] },
+        { "path": "brand-site/assets/brand/truth-assets/Frame 120906.png", "livePath": "/photo-backs/campaign-frame.png", "status": "draft", "role": "Draft example frame (campaign) — PENDING RE-AUDIT (old-lime band defies the v0.1 guide). Do not place or treat as a model until re-approved.", "mime": "image/png", "bytes": 3648413, "dim": [6376, 3665] },
         { "path": "brand-site/assets/brand/truth-assets/UPDATE/Union.png", "livePath": null, "status": "current", "role": "Emblem glyph cutout (Union series) — check the file's finish before placing; recolor is not permitted.", "mime": "image/png", "bytes": 15464, "dim": [485, 485] },
         { "path": "brand-site/assets/brand/truth-assets/UPDATE/Union-1.png", "livePath": null, "status": "current", "role": "Emblem glyph cutout (Union series) — check finish before placing.", "mime": "image/png", "bytes": 16867, "dim": [485, 485] },
         { "path": "brand-site/assets/brand/truth-assets/UPDATE/Union-2.png", "livePath": null, "status": "current", "role": "Emblem glyph cutout (Union series) — check finish before placing.", "mime": "image/png", "bytes": 15159, "dim": [485, 485] },

@@ -36,5 +36,5 @@
 
 ## Assets
 
-- The v0.1 masters ship in the brand repo under brand-site/assets/ with a full manifest (status, role, dimensions) in the API payload's access.catalog. The live catalog still serves the previous system's set (RedHatMono, mint-era marks, prior design-elements/photo-backs — pending re-audit); the repo files are the authoritative masters until the canonical app is refreshed.
-- Retired — never place: emblem-mint.png, mark-mint.png, mark-lime.png, mark-frog.png (mint-era finishes). Draft sheets (Frame 120894 / 120899) carry superseded values and are reference-only: ink is #252726 (not #222423), line spacing 125%/150% (not 105%/110%).
+- ALIGNED: the live catalog at iheartezoic.com serves the v0.1 set (deployed 2026-07-04) and is the authoritative source — steel pairing masters at /brand/lockup-steel-cloud.png and /brand/lockup-steel-ink.png, the pixel-wash set under /images/design-elements/, cover washes under /photo-backs/, and /fonts/RedditMono-VF.woff2. This repo mirrors the masters for offline reference (manifest in the API payload's access.catalog).
+- Retired — never place: emblem-mint.png, mark-mint.png, mark-lime.png, mark-frog.png (mint-era finishes) and RedHatMono.woff2 (served only for URL stability). Draft sheets (Frame 120894 / 120899) carry superseded values and are reference-only: ink is #252726 (not #222423), line spacing 125%/150% (not 105%/110%). The example frames (applied-emblem-ink, campaign-frame) are pending re-audit — their treatments defy the v0.1 guide; do not place.

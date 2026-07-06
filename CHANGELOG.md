@@ -19,6 +19,7 @@ Full realignment to the ratified visual system: the Ezoic Brand Style Guide, exp
 - **Dark mode explicitly eliminated** (the guide's "Light, always" made binding beyond doubt): stated in the site's Color discipline, the bible, resolver rule 13, the SKILL summary, tokens, theme CSS, and all three machine surfaces — moved out of "known gaps"; ink surfaces are local accents, never a theme, and no `.dark` variant may be built.
 - **Asset manifest for the v0.1 masters** in `api/ezoic-brand.json → sections.access` (repo paths + live paths, wash opacities, roles) with a status note: the repo files are the authoritative masters until the live catalog is refreshed. Mint-era finishes (`emblem-mint` / `mark-mint` / `mark-lime` / `mark-frog`) and the superseded draft sheets are cataloged as retired/reference-only.
 - `BRAND-REALIGNMENT-PROMPT.md` — the reusable master prompt that produced this realignment; re-run it when the guide PDF is revised.
+- **Aligned to the live canonical source (2026-07-06):** iheartezoic.com now serves the v0.1 system (deployed from `ezoic-brand-design-library` on 2026-07-04), so every "live catalog still serves the previous set" note is replaced with the ALIGNED status; the asset manifest carries the real live paths (`/brand/lockup-steel-cloud.png`, `/brand/lockup-steel-ink.png`, the pixel-wash set, `/fonts/RedditMono-VF.woff2`); and the Applied Examples sheet is deferred to mirror the live guide — the draft example frames (Frame 120905/120906) are downgraded to pending re-audit and removed as playbook models.
 
 ## [2.0.0] — 2026-07-01
 

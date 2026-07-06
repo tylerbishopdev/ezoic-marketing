@@ -62,7 +62,7 @@ Supported public asset roots:
 
 Use `/api/ezoic-brand/assets`, `/api/ezoic-brand/assets/grouped`, and `/api/ezoic-brand/assets/download?root=...` for current records, grouped counts, dimensions, MIME types, direct URLs, and ZIP downloads.
 
-Asset status: the v0.1 master files ship in this repo under `brand-site/assets/` (core + reversed lockups, steel pairing masters, emblem finishes, pixel-wash assets, fonts — full manifest in `brand-site/api/ezoic-brand.json → sections.access.masters`). The live catalog may still serve the previous set until the canonical app is refreshed from this system; until then, the repo files are the authoritative masters. Mint-era finishes (`emblem-mint.png`, `mark-mint.png`, `mark-lime.png`, `mark-frog.png`) are retired — never place them.
+Asset status: ALIGNED — the live catalog at `iheartezoic.com` serves the v0.1 set (deployed 2026-07-04) and is the authoritative source: `/brand/lockup-steel-cloud.png`, `/brand/lockup-steel-ink.png`, the pixel-wash set under `/images/design-elements/`, cover washes under `/photo-backs/`, and `/fonts/RedditMono-VF.woff2`. This repo mirrors the masters under `brand-site/assets/` for offline reference (manifest in `brand-site/api/ezoic-brand.json → sections.access.catalog`). Mint-era finishes (`emblem-mint.png`, `mark-mint.png`, `mark-lime.png`, `mark-frog.png`) are retired — never place them.
 
 ## Color System
 

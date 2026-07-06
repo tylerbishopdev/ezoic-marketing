@@ -27,8 +27,9 @@ head, emblem top right, hairline footer with a mono page number):
 | Type In Use | 08 | One Family. Two Optical Sizes. |
 | The Pixel Wash | 09 | Decisive, Concise, Clear. |
 | Voice | 10 | Direct. Confident. Technical. |
-| Applied Examples | 11 | Applied Examples. |
-| Back cover | 12 | Reversed lockup + tagline + machine-readable access |
+| Back cover | — | Reversed lockup + tagline + machine-readable access |
+
+The guide PDF's Applied Examples page is deferred — the draft example frames are pending re-audit and were removed from the live guide and this mirror.
 
 ## The system
 
@@ -72,10 +73,10 @@ Next.js app and the `ezoic-brand` MCP server:
 - Draft asset sheets under `assets/brand/truth-assets/` carry superseded values (ink
   `#222423`; heading/body line spacing 105%/110%). The guide PDF's written spec — ink
   `#252726`, line spacing 125%/150% — is the contract everywhere in this repo.
-- The v0.1 master files ship in this repo under `assets/` — the live catalog at
-  iheartezoic.com may still serve the previous set until the canonical app is refreshed
-  (full manifest: `api/ezoic-brand.json → sections.access.masters`). Until then, the
-  repo files are the authoritative masters.
+- ALIGNED: the live catalog at iheartezoic.com serves the v0.1 set (deployed
+  2026-07-04) and is the authoritative source. This repo mirrors the masters under
+  `assets/` for offline reference (manifest: `api/ezoic-brand.json →
+  sections.access.catalog`).
 - Mint-era finishes still mirrored in `assets/brand/` (`emblem-mint.png`,
   `mark-mint.png`, `mark-lime.png`, `mark-frog.png`) are retired — never place them.
 

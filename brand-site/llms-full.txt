@@ -160,11 +160,9 @@ All playbooks inherit: cloud or ink surfaces · one dominant idea per section ·
 - Email: wordmark file small at top (never typeset) → one headline → short body at 150% → one green pill CTA → quiet footer. White/cloud only; no ink bands or washes in email.
 - Ad creative: the campaign frame — one green band, one mark, light-washed people; or type-only on cloud with the emblem holding the frame. No gradients, no unsourced claims.
 
-## Applied Examples
+## Applied Examples (Deferred)
 
-- Emblem over imagery — the mark holds the frame (Frame 120905).
-- Campaign frame — one green band, one mark (Frame 120906).
-- People, light-washed — imagery sits quiet under the system (editorial collage).
+The draft example frames are pending re-audit — their treatments defy the v0.1 guide (old-lime band, dark treatments) and were removed from the live guide. Do not place or treat them as models until re-approved. The standing principles remain: the mark holds the frame; one green band, one mark; people light-washed — imagery sits quiet under the system.
 
 ## Layout And Surfaces
 
@@ -177,7 +175,7 @@ All playbooks inherit: cloud or ink surfaces · one dominant idea per section ·
 
 Status key: master = v0.1 master, place as supplied · current = approved, place where its role fits · draft = reference only, never ship · duplicate = use the master path · retired = never place.
 
-The v0.1 masters ship in the brand repo under brand-site/assets/; the live catalog at iheartezoic.com still serves the previous system's set (checked 2026-07-04: 77 records — /fonts still carries the retired RedHatMono.woff2, /brand still lists the mint-era finishes, and the design-elements / photo-backs roots hold prior-system treatments pending re-audit for v0.1). Until the canonical app is refreshed, the repo files are the authoritative masters. Export files the guide references but no source yet carries (UPDATE/coreLogo.png, UPDATE/Frame 120913.png, the In The Wild collages) ship from the brand owner's v0.1 export pack.
+ALIGNED: the live catalog at iheartezoic.com serves the v0.1 set (deployed 2026-07-04; 88 records — RedditMono-VF.woff2, the steel pairing masters at /brand/lockup-steel-cloud.png and /brand/lockup-steel-ink.png, and the pixel-wash assets are live) and is the authoritative source. This repo mirrors the masters for offline reference. Prior-system design-elements/photo-backs remain pending re-audit. Export files the guide references but no source yet carries (UPDATE/coreLogo.png, UPDATE/Frame 120913.png, the In The Wild collages) ship from the brand owner's v0.1 export pack.
 
 | File | Status | Role | Size |
 | --- | --- | --- | --- |
@@ -195,8 +193,8 @@ The v0.1 masters ship in the brand repo under brand-site/assets/; the live catal
 | overlays/overlay-hero.png · overlay-01.png · overlay-02.png | current | Wash renders (14% / 8% / 10%). Note: JPEG data despite .png extension | — |
 | brand/truth-assets/Frame 120903.png | master | Cover wash — light ghost-emblem | 6380×3664 |
 | brand/truth-assets/Frame 120904.png | current | Alternate light ghost-emblem wash (large file — compress for web) | 6376×3664 |
-| brand/truth-assets/Frame 120905.png | master | Applied example — emblem over ink wash | 688×560 |
-| brand/truth-assets/Frame 120906.png | master | Applied example — campaign frame | 6376×3665 |
+| brand/truth-assets/Frame 120905.png | draft | Example frame — pending re-audit; do not place | 688×560 |
+| brand/truth-assets/Frame 120906.png | draft | Example frame (campaign) — pending re-audit; do not place | 6376×3665 |
 | brand/truth-assets/UPDATE/Union*.png | current | Emblem glyph cutouts — check each file's finish before placing | 485–852 |
 | fonts/Inter_28pt-{Black,Bold,SemiBold}.woff2 | master | Inter Display 900/700/600 | — |
 | fonts/Inter_18pt-{Light…Bold}.woff2 | master/current | Inter Text 300–700 (body is 400) | — |

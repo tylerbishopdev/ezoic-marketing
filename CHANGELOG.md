@@ -2,6 +2,25 @@
 
 All notable changes to the `ezoic-marketing` skill and its plugin packaging.
 
+## [2.1.0] — 2026-07-04
+
+Full realignment to the ratified visual system: the Ezoic Brand Style Guide, experimental v0.1 (Brand standards / Vol. 02 — 2026 / Light edition).
+
+### Changed
+- **`brand-site/index.html` rebuilt as the web edition of the guide** — the home page now mirrors the PDF sheet for sheet (Cover → Growth Engineering contents → Logo → Logo On Color → Logo Usage → Color → Font → Type In Use → The Pixel Wash → Voice → Applied Examples → back cover), with the guide's page chrome, headlines, rules, captions, and master files (core/reversed lockups, steel pairing masters, wash assets).
+- **Design system aligned to the written spec** (`brand-site/design-system/`): body tracking −3% (was −2%), heading/body line spacing 125%/150%, heading convention Title Case closed with a period, soft-rounded surface scale (16px panels / 24px bands / 999px pills) per the guide's pages, pixel-wash tokens and utilities (collage 14%, ink bands 8%/10%), cloud page surface with white raised-panel tints.
+- **`references/ezoic-style-design-bible.md` rewritten as the Vol. 02 light-edition bible** — palette (Green #70A92A single accent · Charcoal · Graphite · Steel · Cloud), four logo pairings, Inter/Reddit Mono spec, the Pixel Wash, sheet-based layout rhythm, updated component rules and banned patterns. The mint-led dark system (mint/lime/frog, near-black surfaces, grain-over-mint, Red Hat Mono) is fully retired.
+- **Visual contract updated** — `resolver.md` rules 13/16/20 and their `SKILL.md` summaries now carry the light-edition palette, the guide's type spec, and the pixel-wash rule (no sanctioned gradient). Pitch-deck visual calibration in `channel-playbook.md` and the capitalization note in `brand-voice.md` updated to match. Both READMEs realigned.
+- Conflict resolution documented everywhere it matters: the guide's written spec wins over draft asset sheets (ink `#252726`, not `#222423`; line spacing 125%/150%, not 105%/110%).
+
+### Added
+- Machine-readable surfaces regenerated from the new system, ready to lift into the canonical app and the `ezoic-brand` MCP server: `brand-site/llms.txt`, `brand-site/llms-full.txt`, `brand-site/api/ezoic-brand.json`.
+- **Machine surfaces rebuilt as creation tools** for the "generate brand-perfect materials via API/MCP" use case: a 5-step usage workflow (API endpoints + MCP tool patterns), copy-paste design tokens, component recipes (pill/ghost/tag/panel/ink band/ruled rows/sheet chrome/proof slot), per-material playbooks (landing page, deck slide, social image, one-pager, case study, email, ad), a green accent budget, copy guardrails, a 10-item pre-ship checklist, and a complete status-keyed asset catalog (master / current / draft / duplicate / retired) with real dimensions, byte sizes, and MIME types — including the flag that the three overlay washes are JPEG data behind `.png` extensions.
+- **Dark mode explicitly eliminated** (the guide's "Light, always" made binding beyond doubt): stated in the site's Color discipline, the bible, resolver rule 13, the SKILL summary, tokens, theme CSS, and all three machine surfaces — moved out of "known gaps"; ink surfaces are local accents, never a theme, and no `.dark` variant may be built.
+- **Asset manifest for the v0.1 masters** in `api/ezoic-brand.json → sections.access` (repo paths + live paths, wash opacities, roles) with a status note: the repo files are the authoritative masters until the live catalog is refreshed. Mint-era finishes (`emblem-mint` / `mark-mint` / `mark-lime` / `mark-frog`) and the superseded draft sheets are cataloged as retired/reference-only.
+- `BRAND-REALIGNMENT-PROMPT.md` — the reusable master prompt that produced this realignment; re-run it when the guide PDF is revised.
+- **Aligned to the live canonical source (2026-07-06):** iheartezoic.com now serves the v0.1 system (deployed from `ezoic-brand-design-library` on 2026-07-04), so every "live catalog still serves the previous set" note is replaced with the ALIGNED status; the asset manifest carries the real live paths (`/brand/lockup-steel-cloud.png`, `/brand/lockup-steel-ink.png`, the pixel-wash set, `/fonts/RedditMono-VF.woff2`); and the Applied Examples sheet is deferred to mirror the live guide — the draft example frames (Frame 120905/120906) are downgraded to pending re-audit and removed as playbook models.
+
 ## [2.0.0] — 2026-07-01
 
 Full overhaul: re-converted to a native Claude Code skill and re-verified against live sources.

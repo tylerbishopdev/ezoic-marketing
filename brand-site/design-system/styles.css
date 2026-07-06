@@ -1,6 +1,7 @@
 /* ============================================================================
    EZOIC BRAND DESIGN SYSTEM — Tailwind v4 + shadcn/ui theme layer
-   Distilled from brand-site/index.html (Vol. 02 / 2026, light edition).
+   Distilled from the Ezoic Brand Style Guide (experimental v0.1 — Vol. 02 /
+   2026, light edition) via its web edition, brand-site/index.html.
    Source of truth for assets/voice/usage stays brand-site/index.html and
    the live catalog at iheartezoic.com — this file ports VISUAL TOKENS only.
    Re-derive from index.html if the two ever diverge.
@@ -8,82 +9,98 @@
 
    BRAND CONSTRAINTS — read before touching this file or building on it:
 
-   1. Exclusive 5-hex palette. Do not introduce any color outside
+   1. Five declared values. Do not introduce any color outside
       Green #70A92A, Charcoal #252726, Graphite #575757, Steel #969696,
-      Paper #E3E3E3. Tints/shades must be alpha or color-mix() derivatives
-      of these five — never a new hue. (`--color-destructive` and
+      Cloud #E3E3E3. White #FFFFFF and alpha/color-mix() derivatives of
+      these five are permitted only as quiet surface tints (raised
+      panels, washes) — never as new hues. (`--color-destructive` and
       `--color-chart-5` below are the two documented exceptions, both
       flagged and pending brand sign-off — see README "Known gaps".)
-   2. No all-caps. Hierarchy comes from scale/weight/spacing, never
-      text-transform: uppercase.
+   2. No all-caps. Nothing is set in all caps — hierarchy comes from
+      scale and spacing, not caps, not bold runs. Headings are Title
+      Case, closed with a period; body is sentence case.
    3. Mono (Reddit Mono) is reserved for real code, file paths, hex
-      values, and exact technical values. Never decorative, never a
+      values, and exact technical values. Never decoration, never a
       heading or label face.
-   4. Letter-spacing: -5% (-.05em) on headings, -2% (-.02em) on
-      everything else. No exceptions.
-   5. Light, always. There is no approved dark theme — the near-black
-      "ink" surfaces (footer, full-bleed bands) are local accents within
-      the light system, not a global dark mode. Do not add a `.dark`
-      variant without an explicit brand decision.
-   6. Green is the single accent — reserved for fills, the mark, and
-      primary actions. It is NOT used as small text on light backgrounds
-      (2.8:1 contrast — fails WCAG AA) and it is NOT wired to generic
-      hover/accent UI states (`--color-accent` below is neutral on purpose).
-   7. The wordmark is never typeset. Never recreate the Ezoic logo,
-      lockup, or wordmark with CSS/HTML text — always use the approved
-      raster/vector files from the asset catalog (lockup-dark.png /
-      lockup-light.png) via next/image. The one safe-to-recreate-in-code
-      asset is the standalone emblem mark (see brand-emblem.tsx), because
-      its path is the exact approved vector from /brand/emblem-white.svg.
-   8. No border-radius outside this system's one exception: fully pilled
-      buttons (999px). Cards, panels, inputs, and tables stay square-
-      edged and hairline-bordered — never rounded-md "SaaS card" corners.
+   4. Type spec (the guide's written contract): headings — letter
+      spacing -5% (-.05em), line spacing 125%. Body — letter spacing
+      -3% (-.03em), line spacing 150%. Oversized display specimens that
+      mirror the guide's own pages may sit tighter (see .brand-display).
+   5. Light, always. Surfaces are cloud or ink. Dark mode is ELIMINATED
+      — a decision, not a pending question. Ink surfaces (back cover,
+      full-bleed bands) are local accents within the light system, not
+      a global dark mode. Never add a `.dark` variant.
+   6. Green is the single accent — the mark, primary actions, signature
+      moments. It earns every appearance. It is NOT used as small text
+      on light backgrounds (2.8:1 contrast — fails WCAG AA) and it is
+      NOT wired to generic hover/accent UI states (`--color-accent`
+      below is neutral on purpose).
+   7. The wordmark is never typeset. It is a file, placed. Never
+      recreate the Ezoic logo, lockup, or wordmark with CSS/HTML text —
+      always use the approved raster/vector files from the asset catalog
+      (lockup-dark.png / lockup-light.png) via next/image. The one
+      safe-to-recreate-in-code asset is the standalone emblem mark (see
+      brand-emblem.tsx), because its path is the exact approved vector
+      from /brand/emblem-white.svg.
+   8. Soft-rounded surfaces, per the guide's pages: 16px panels/tiles/
+      swatches, 24px large bands, 999px pills. Never stock rounded-md
+      "SaaS card" chrome, and never a new radius outside these three.
+   9. The Pixel Wash is the system's one texture: neutrals only, one
+      wash per surface, always under the content — editorial collage at
+      14% on hero surfaces, ink-band washes at 8% / 10%. A wash never
+      carries color, never crowds the mark, and never substitutes for
+      hierarchy.
    ============================================================================ */
 
 @import "tailwindcss";
 @import "./fonts.css";
 
 :root {
-  /* ---- Exclusive 5-hex palette (brand constraint 1) ---- */
+  /* ---- The five declared values (brand constraint 1) ---- */
   --brand-green: #70A92A;     /* Ezoic Green — the single accent */
-  --brand-ink: #252726;       /* Charcoal — primary text, dark-band surfaces */
+  --brand-ink: #252726;       /* Charcoal — primary text, ink surfaces */
   --brand-graphite: #575757;  /* secondary text, metadata, accessible accent-text */
-  --brand-steel: #969696;     /* muted borders/captions; secondary text on dark */
-  --brand-paper: #E3E3E3;     /* page background, light panels, text-on-dark */
+  --brand-steel: #969696;     /* muted: quiet pairings, borders, secondary text on ink */
+  --brand-cloud: #E3E3E3;     /* the page surface — surfaces are cloud or ink */
+  --brand-paper: var(--brand-cloud); /* legacy alias — some consumers still read paper */
+  --brand-panel: #FFFFFF;     /* raised-panel tint — a cloud tint, not a hue */
 
-  /* Ink-derived hairlines/rules/scrims — the system's only "shadow" language.
-     Standardized from --brand-ink (#252726 = rgb(37 39 38)) for internal
-     consistency; faithfully equivalent to the rgba(36,44,40,*) values still
-     present in brand-site/index.html from an earlier palette pass. */
+  /* Ink-derived hairlines/rules/scrims — the system's only "shadow" language
+     (#252726 = rgb(37 39 38)). */
   --brand-hairline: rgb(37 39 38 / 0.13);
   --brand-hairline-strong: rgb(37 39 38 / 0.18);
   --brand-rule: rgb(37 39 38 / 0.92);
   --brand-scrim: rgb(37 39 38 / 0.42);
   --brand-shadow: rgb(37 39 38 / 0.5);
 
-  /* Paper-on-ink hairline, for dividers drawn on dark surfaces (footer, bands) */
-  --brand-hairline-on-ink: rgb(227 227 227 / 0.1);
+  /* White-on-ink hairline, for dividers drawn on ink surfaces */
+  --brand-hairline-on-ink: rgb(255 255 255 / 0.12);
 
   --brand-container: 1320px;
   --brand-gutter: clamp(1.25rem, 5vw, 4rem);
   --brand-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-  --brand-radius-full: 999px;
 
-  /* Flat, square, hairline-edged system (brand constraint 8). Pill buttons
-     are the one exception — they opt into --brand-radius-full explicitly
-     rather than changing this base value. */
-  --radius: 0rem;
+  /* Soft-rounded surface language, per the guide's pages (constraint 8) */
+  --brand-radius-panel: 16px;
+  --brand-radius-band: 24px;
+  --brand-radius-full: 999px;
+  --radius: 1rem; /* = panel radius; shadcn's scale derives from this */
+
+  /* The Pixel Wash — approved opacities (constraint 9) */
+  --brand-wash-collage: 0.14;
+  --brand-wash-01: 0.08;
+  --brand-wash-02: 0.10;
 }
 
 @theme inline {
-  /* ---- Surfaces ---- */
-  --color-background: var(--brand-paper);
+  /* ---- Surfaces (cloud page, white raised panels) ---- */
+  --color-background: var(--brand-cloud);
   --color-foreground: var(--brand-ink);
 
-  --color-card: var(--brand-paper);
+  --color-card: var(--brand-panel);
   --color-card-foreground: var(--brand-ink);
 
-  --color-popover: var(--brand-paper);
+  --color-popover: var(--brand-panel);
   --color-popover-foreground: var(--brand-ink);
 
   /* Primary — the one accent. Reserved for fills/marks/primary actions. */
@@ -136,18 +153,20 @@
   --font-display: "Inter Display", "Inter Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: "Reddit Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  /* The brand's -5% / -2% rule (brand constraint 4) as real utilities:
-     tracking-heading / tracking-body. */
+  /* The guide's -5% / -3% rule (brand constraint 4) as real utilities:
+     tracking-heading / tracking-body, plus the 125% / 150% leading pair. */
   --tracking-heading: -0.05em;
-  --tracking-body: -0.02em;
+  --tracking-body: -0.03em;
+  --leading-heading: 1.25;
+  --leading-body: 1.5;
 
-  /* Flat radius scale — --radius is 0 (see :root), so every shadcn-
-     generated rounded-sm/md/lg/xl utility resolves flat automatically,
-     with zero per-component overrides needed. */
+  /* Rounded-surface scale (constraint 8): --radius is the 16px panel
+     radius, so shadcn-generated rounded-lg resolves to the panel look;
+     rounded-xl approximates the 24px band. */
   --radius-sm: calc(var(--radius) * 0.75);
   --radius-md: calc(var(--radius) * 0.875);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-xl: var(--brand-radius-band);
 
   /* ---- Motion ---- */
   --ease-brand: var(--brand-ease);
@@ -180,19 +199,17 @@
   }
 
   ::selection {
-    background: var(--brand-paper);
-    color: var(--brand-ink);
+    background: var(--brand-green);
+    color: var(--brand-panel);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    /* Matches brand-site/index.html exactly. Only static 600/700/900
-       faces are loaded (no variable font), so browsers render the
-       nearest available weight (700) — faithfully preserved, not
-       "corrected", since it's the live, working source value. */
-    font-weight: 760;
+    /* The guide's heading spec: Inter Display Black, −5% letter
+       spacing, 125% line spacing. Title Case, closed with a period. */
+    font-weight: 900;
     letter-spacing: var(--tracking-heading);
-    line-height: 1;
+    line-height: var(--leading-heading);
   }
 
   code, pre, kbd, samp {
@@ -219,14 +236,31 @@
   .brand-hairline-b { border-bottom: 1px solid var(--brand-hairline); }
   .brand-rule-t { border-top: 1px solid var(--brand-rule); }
 
-  /* Large display type — weight 900, -5% tracking, tight leading.
-     Use for hero headlines and oversized type specimens. */
+  /* Oversized display specimens mirroring the guide's own pages — the
+     one sanctioned exception to the 125% heading leading standard. */
   .brand-display {
     font-family: var(--font-display);
     font-weight: 900;
     letter-spacing: var(--tracking-heading);
-    line-height: 0.9;
+    line-height: 1.02;
   }
+
+  /* The Pixel Wash (constraint 9) — apply to a position:relative surface;
+     the wash sits under the content, never over the mark, never colored.
+     Point --wash-image at an approved neutral wash asset. */
+  .brand-wash::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--wash-image);
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+  .brand-wash-collage::before { opacity: var(--brand-wash-collage); }
+  .brand-wash-01::before { opacity: var(--brand-wash-01); }
+  .brand-wash-02::before { opacity: var(--brand-wash-02); }
 
   .brand-eyebrow {
     font-family: var(--font-sans);
